@@ -5,4 +5,4 @@
 <h1>Welcome to Yeeters in Rama Lakeline!</h1>
 <p>Yeeting all the day long! From the wonderful city of Cedar Park!</p>
 <p>This change went in at 8:26pm</p>
-<p>fortnite floss win win gang gang fortnite on topppppp all day fortnite is pushing </p>
+<p>To be or not be that is the question, whether tis nobler in the mind to suffer the slz,</p>
