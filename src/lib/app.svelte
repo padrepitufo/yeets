@@ -3,7 +3,7 @@
     let age = "As Old As Your Mom";
 </script>
 
-<style>
+<style> 
     h1 {
         color: purple;
     }
