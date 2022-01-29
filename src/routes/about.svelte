@@ -1,8 +1,3 @@
-<script>
-    
-</script>
-
-
 <svelte:head>
     <title>Yeets | About</title>
 </svelte:head>
