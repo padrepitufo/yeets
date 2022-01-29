@@ -38,3 +38,5 @@ and there is 4 gamemodes you can try! I will right them in a list.
     <li>You can have creativity</li>
     <li>You can really enjoy it!</li>
 </ul>
+
+<img src="https://img.search.brave.com/tuKSpAdrRKpfwnROuMPJX64I8EwxhphkmIK8MJoLngk/rs:fit:1024:683:1/g:ce/aHR0cHM6Ly93d3cu/Z2FtZWRldmlkLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MS8wMS9wb3JfcXVl/X29fbWluZWNhcmZ0/X2Zhel90YW50b19z/dWNlc3NvLjAtMTAy/NHg2ODMuanBn" alt="">
