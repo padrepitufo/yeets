@@ -4,6 +4,7 @@
             <li><a href="/">Yeets</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/nena">nena</a></li>
+            <li><a href="/ruth">Ruth</a></li>
         </ul>
     </nav>
 </header> 
