@@ -32,10 +32,11 @@
 <p>hi Again having fun with your day!</p>
 <p>So am i!</p>
 <p>I think we need a catch our breaths</p>
-<ul><l>
-    Happy
-    Sad
-    Angry
-    frustrated
-    nervose 
-</l></ul>
+
+<ul>
+  <li>Happy</li>
+  <li>Sad</li>
+  <li>Angry</li>
+  <li>nervose</li>
+  <li>frustrated</li>
+</ul>
