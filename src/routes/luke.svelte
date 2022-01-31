@@ -4,7 +4,7 @@
     My thoughts about Minecraft.
 Minecraft I would say it's fun because you have infinite possibilties.
 You can create anything, Like cars, trains, houses, and boats.
-and there is 4 gamemodes you can try! I will right them in a list.
+and there is 4 gamemodes you can try! Now I will write them in a list.
 </p>
 <ul>
     <li>Creative</li>
@@ -37,6 +37,35 @@ and there is 4 gamemodes you can try! I will right them in a list.
     <li>You can play with others</li>
     <li>You can have creativity</li>
     <li>You can really enjoy it!</li>
-</ul>
+</ul> 
 
 <img src="https://img.search.brave.com/tuKSpAdrRKpfwnROuMPJX64I8EwxhphkmIK8MJoLngk/rs:fit:1024:683:1/g:ce/aHR0cHM6Ly93d3cu/Z2FtZWRldmlkLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MS8wMS9wb3JfcXVl/X29fbWluZWNhcmZ0/X2Zhel90YW50b19z/dWNlc3NvLjAtMTAy/NHg2ODMuanBn" alt="">
+
+<p>Today I memorized the seven continents and the four oceans. I can tell you all the continents and the oceans in a list.</p>
+
+<ul>
+    <li>South America</li>
+    <li>North America</li>
+    <li>Europe</li>
+    <li>Africa</li>
+    <li>Asia</li>
+    <li>Antartica</li>
+    <li>Australia</li>
+</ul>
+
+<p>Now all the oceans.</p>
+
+<ul>
+    <li>Indian Ocean</li>
+    <li>Pacific Ocean</li>
+    <li>Artic Ocean</li>
+    <li>Atlantic Ocean</li>
+</ul>
+
+<p>Well I have now told you all the oceans and the continents. Tomorrow I will tell
+    more about my day.
+</p>
+
+<ul>
+<li>Posted on: January 31 at 3:46 pm</li>
+</ul>
