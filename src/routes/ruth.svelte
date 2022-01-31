@@ -28,3 +28,14 @@
 </p>
 
 <img src="https://img.search.brave.com/eNOER2kf1fhYIKinHcYemENfAtpIFCaP2ZCWkCRUnCw/rs:fit:759:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/dVB0aC1KYTNQU3hH/LWhqRlhHMnJ3SGFF/byZwaWQ9QXBp" alt="">
+<h4>Day 2</h4>
+<p>hi Again having fun with your day!</p>
+<p>So am i!</p>
+<p>I think we need a catch our breaths</p>
+<ul><l>
+    Happy
+    Sad
+    Angry
+    frustrated
+    nervose 
+</l></ul>
