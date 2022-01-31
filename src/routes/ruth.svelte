@@ -57,4 +57,4 @@
 <p>(clear's throat!) NoW..Um lets talk about... I Got Nothing!</p>
 <p>I'll have more tomorrow</p>
 <h4>The End! AGAIN</h4>
-<img src="W5YFEy8Tx7CsYMeQ6_YCT4qHpgDx-ZbRxlHRu8hl6qI/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZGVzaWdudHJl/bmRzLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNi8wMS8w/NjA5NDEyMS9TcHJp/bmctTGFuZHNjYXBl/LUJhY2tncm91bmQx/LmpwZw" alt="">
+<img src="https://img.search.brave.com/W5YFEy8Tx7CsYMeQ6_YCT4qHpgDx-ZbRxlHRu8hl6qI/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZGVzaWdudHJl/bmRzLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNi8wMS8w/NjA5NDEyMS9TcHJp/bmctTGFuZHNjYXBl/LUJhY2tncm91bmQx/LmpwZw" alt="">
