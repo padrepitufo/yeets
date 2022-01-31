@@ -24,7 +24,7 @@
 <p>Ya know PIKACHU! Is my Fave Pokemon!</p>
 <p>Whats Yours?
     Wait let me guess charmander! did i guess right? ... THE END I GUESS! 
-    HEHE!
+    HEHE! Oh,and check day 2 scroll down!
 </p>
 
 <img src="https://img.search.brave.com/eNOER2kf1fhYIKinHcYemENfAtpIFCaP2ZCWkCRUnCw/rs:fit:759:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/dVB0aC1KYTNQU3hH/LWhqRlhHMnJ3SGFF/byZwaWQ9QXBp" alt="">
@@ -40,3 +40,20 @@
   <li>nervose</li>
   <li>frustrated</li>
 </ul>
+<p>so have any plans for today No?</p>
+<h4>Then I DO!</h4>
+<p>Well I'll Make a List Right Now!</p>
+<h4>.....</h4>
+<p>sorry i'll get onto the LIST</p>
+<h4>HERE WE GO!</h4>
+<ul>
+   <li>Play OUTSIDE!</li>
+   <li>Doing COdE</li>
+   <li>Do do PAINO!</li>
+   <li>Sing</li>
+   <li>GO TO THE PARK!</li>
+</ul>
+<h4>Thats most of What i HAVE!</h4>
+<p>(clear's throat!) NoW..Um lets talk about... I Got Nothing!</p>
+<p>I'll have more tomorrow</p>
+<h4>The End! AGAIN</h4>
