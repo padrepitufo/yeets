@@ -4,11 +4,13 @@
 
 <style>
 h1 {
-        color: rgb(57, 85, 124);
-    }
-    p {
+        color: #7ed56f;
+}
+p {
         color: rgb(214, 116, 36);
-    }
+}
+
+    
 </style>
 
 <svelte:head>
@@ -21,3 +23,4 @@ h1 {
 <p>Yeeting all the day long! From the wonderful city of Cedar Park!</p>
 <p>This change went in at 8:26pm</p>
 <p>The young women are superior. Change my mind.</p>
+<img src="./pinkie.png" alt="pinkie">
