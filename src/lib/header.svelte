@@ -1,4 +1,4 @@
-<!-- <header>
+<header>
     <nav>
         <ul>
             <li><a href="/">Yeets</a></li>
@@ -8,7 +8,7 @@
             <li><a href="/luke">luke</a></li>
         </ul>
     </nav>
-</header>  -->
+</header> 
 <div class="root">
     <header class="header">
         <div class="logo-box">
