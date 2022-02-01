@@ -1,4 +1,4 @@
-<!-- <header>
+<header>
     <nav>
         <ul>
             <li><a href="/">Yeets</a></li>
@@ -8,17 +8,20 @@
             <li><a href="/luke">luke</a></li>
         </ul>
     </nav>
-</header>  -->
+</header> 
 <div class="root">
     <header class="header">
         <div class="logo-box">
             <img src="./logo-white.png" alt="logo" class="logo">
         </div>
-        <h1 class="heading-primary">
-            <span class="heading-primary-main">Welcome</span>
-            <span class="heading-primary-sub">to rama lakeline</span>
-        </h1>
-        
+        <div class="text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary-main">Welcome</span>
+                <span class="heading-primary-sub">to rama lakeline</span>
+            </h1>    
+        </div>
+       
+
     </header> 
 </div>
 
@@ -62,11 +65,30 @@
      background-position: top;
 
      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
- }   
+ } 
+ 
+ .logo-box {
+     position: absolute;
+     top: 40px;
+     left: 40px;
+ }
+
+ .logo {
+     height: 35px;
+ }
+
+ .text-box {
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
 
  .heading-primary {
      color: #fff;
      text-transform: uppercase;
+
+     backface-visibility: hidden;
 
  }
 
@@ -76,6 +98,16 @@
      font-weight: 400;
      letter-spacing: 35px;
 
+     animation-name: moveInLeft;
+     animation-duration: 1s;
+     animation-timing-function: ease-out;
+
+     
+     /*
+      animation-delay: 3s;
+      animation-iteration-count: 3;
+     */
+
 }
 
  .heading-primary-sub {
@@ -83,5 +115,38 @@
       font-size: 20px;
       font-weight: 700;
       letter-spacing: 17.4px;
+      animation: moveInRight 1s ease-in-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 </style>

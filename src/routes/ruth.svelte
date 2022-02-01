@@ -24,7 +24,37 @@
 <p>Ya know PIKACHU! Is my Fave Pokemon!</p>
 <p>Whats Yours?
     Wait let me guess charmander! did i guess right? ... THE END I GUESS! 
-    HEHE!
+    HEHE! Oh,and check day 2 scroll down!
 </p>
 
 <img src="https://img.search.brave.com/eNOER2kf1fhYIKinHcYemENfAtpIFCaP2ZCWkCRUnCw/rs:fit:759:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/dVB0aC1KYTNQU3hH/LWhqRlhHMnJ3SGFF/byZwaWQ9QXBp" alt="">
+<h4>Day 2</h4>
+<p>hi Again having fun with your day!</p>
+<p>So am i!</p>
+<p>I think we need a catch our breaths</p>
+
+<ul>
+  <li>Happy</li>
+  <li>Sad</li>
+  <li>Angry</li>
+  <li>nervose</li>
+  <li>frustrated</li>
+</ul>
+<p>so have any plans for today No?</p>
+<h4>Then I DO!</h4>
+<p>Well I'll Make a List Right Now!</p>
+<h4>.....</h4>
+<p>sorry i'll get onto the LIST</p>
+<h4>HERE WE GO!</h4>
+<ul>
+   <li>Play OUTSIDE!</li>
+   <li>Doing COdE</li>
+   <li>Do do PAINO!</li>
+   <li>Sing</li>
+   <li>GO TO THE PARK!</li>
+</ul>
+<h4>Thats most of What i HAVE!</h4>
+<p>(clear's throat!) NoW..Um lets talk about... I Got Nothing!</p>
+<p>I'll have more tomorrow</p>
+<h4>The End! AGAIN</h4>
+<img src="https://img.search.brave.com/W5YFEy8Tx7CsYMeQ6_YCT4qHpgDx-ZbRxlHRu8hl6qI/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZGVzaWdudHJl/bmRzLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNi8wMS8w/NjA5NDEyMS9TcHJp/bmctTGFuZHNjYXBl/LUJhY2tncm91bmQx/LmpwZw" alt="">
