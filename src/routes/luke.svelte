@@ -69,3 +69,16 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 <ul>
 <li>Posted on: January 31 at 3:46 pm</li>
 </ul>
+
+<p>Hey it's me again well I did tell you I was gonna come back soooo here I am!
+    so like basically this is like my diary... because my dad told me it was my diary so it's like weird that a boy has a diary... so today I got a backpack to store all my school stuff. well today I have to add some more stuff everyday which is kinda fun I guess.
+    Well today my big sister is learning japanese and my little sister is learning about spanish I know a little spanish just not much well I guess this all im gonna right today.
+    Tomorrow I will add on more then more then more each day and that deserves a YAY!!!
+    well now I am done. Psst... play Minecraft.
+</p>
+
+<ul>
+    <li>Posted on: Febuary 1st at 3:09 pm</li>
+</ul>
+
+<img src="https://img.search.brave.com/IFBa_4TnOAW-fdXe0ZFqy-E2z1a1CRuib23OjeE3Rs4/rs:fit:1200:628:1/g:ce/aHR0cHM6Ly9jZG4u/dm94LWNkbi5jb20v/dGh1bWJvci9lWFdY/dFlrYnRMTlYzTWIw/aHVzRzZXOFRjZDA9/LzB4MDoxOTIweDEw/MDUvZml0LWluLzEy/MDB4NjMwL2Nkbi52/b3gtY2RuLmNvbS91/cGxvYWRzL2Nob3J1/c19hc3NldC9maWxl/LzE5MzU1NTU1L2pi/YXJlaGFtXzE5MTE1/OF9wbHkwOTU4X2Rl/Y2FkZV9taW5lY3Jh/ZnQuanBn" alt="">
