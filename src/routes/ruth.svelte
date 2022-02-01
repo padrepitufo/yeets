@@ -56,5 +56,29 @@
 <h4>Thats most of What i HAVE!</h4>
 <p>(clear's throat!) NoW..Um lets talk about... I Got Nothing!</p>
 <p>I'll have more tomorrow</p>
-<h4>The End! AGAIN</h4>
+<h4>The End! AGAIN SCROLL DOWN DAY 3!</h4>
 <img src="https://img.search.brave.com/W5YFEy8Tx7CsYMeQ6_YCT4qHpgDx-ZbRxlHRu8hl6qI/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZGVzaWdudHJl/bmRzLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNi8wMS8w/NjA5NDEyMS9TcHJp/bmctTGFuZHNjYXBl/LUJhY2tncm91bmQx/LmpwZw" alt="">
+<h4>DAY 3</h4>
+<p>Heyo! Its me again!</p>
+<p>Scroll down!</p>
+<p>So Pets..</p>
+<h4>Are the best!</h4>
+<p>Mabye you have pets!</p>
+<h4>RIGHT!</h4>
+<p>Its like...</p>
+<h4>There a Part OF YOUR FAMILY!</h4>
+<p>sorry..EXCITED!</p>
+<p>HEHE!</p>
+<h4>NoW On tO OTHER THINGS!</h4>
+<h4>LIKE JOKE'S</h4>
+<p>YES OKAY!</p>
+<h4>Answers at the Bottem of JOKES!</h4>
+<ul>
+<l>#1 What can't YOu SeE Butt.. BREAKS</l>
+<l>#2 There are people on a BOAT BUT NO ONE IS ON THE BOAT!</l>
+<l>#3 Why Can'T TIE'S Win THE RACE!</l>
+<l>#4 WHAT HAPpeNs When A SKelETon Has No FRiEndS!</l>
+<l>#5 What HapPenS WhEN a SkeLEtON Says to another SKelETon
+    Your not WORKING!
+</l>
+</ul>
