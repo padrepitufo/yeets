@@ -6,16 +6,22 @@
     let likes = 0;
 
 function incrementLikes() {
-    likes += 1;
+     likes += 1;
+
+};
+
+function incrementDislikes() {
+     likes -= 1;
+
 };
 </script>
 
 <style>
     button {
         color:rgb(255, 172, 77);
+        border: none;
         font-family: Sans;
-        font-size: 5;
-        border-color: rgb(72, 118, 155);
+        font-size: 10;
         background-color:rgb(255, 255, 255);
     }
     h1 {
@@ -30,6 +36,9 @@ function incrementLikes() {
     h3{
       text-decoration: underline; 
       text-decoration-color: rgb(255, 172, 77); 
+    }
+    .numberolikesodislikes{
+        color:goldenrod;
     }
    
 </style>
@@ -50,8 +59,15 @@ function incrementLikes() {
 <br>
 <br>
 
-<button on:click="{incrementLikes}">Thumbs up {likes}</button>
+<button on:click="{incrementLikes}">👍</button>
+
+
+<button on:click="{incrementDislikes}" class="numberolikesodislikes">👎  {likes}</button>
+
 </div>
+
+
+<!-- If statement? -->
 
 
 
