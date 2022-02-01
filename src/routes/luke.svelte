@@ -74,9 +74,11 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     so like basically this is like my diary... because my dad told me it was my diary so it's like weird that a boy has a diary... so today I got a backpack to store all my school stuff. well today I have to add some more stuff everyday which is kinda fun I guess.
     Well today my big sister is learning japanese and my little sister is learning about spanish I know a little spanish just not much well I guess this all im gonna right today.
     Tomorrow I will add on more then more then more each day and that deserves a YAY!!!
-    well now I am done.
+    well now I am done. Psst play Minecraft.
 </p>
 
 <ul>
     <li>Posted on: Febuary 1st at 3:09 pm</li>
 </ul>
+
+<img src="" alt="">
