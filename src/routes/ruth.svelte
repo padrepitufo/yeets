@@ -74,11 +74,64 @@
 <p>YES OKAY!</p>
 <h4>Answers at the Bottem of JOKES!</h4>
 <ul>
-<l>#1 What can't YOu SeE Butt.. BREAKS</l>
-<l>#2 There are people on a BOAT BUT NO ONE IS ON THE BOAT!</l>
-<l>#3 Why Can'T TIE'S Win THE RACE!</l>
-<l>#4 WHAT HAPpeNs When A SKelETon Has No FRiEndS!</l>
-<l>#5 What HapPenS WhEN a SkeLEtON Says to another SKelETon
+    <l>#1 What can't YOu SeE Butt.. BREAKS</l>
+    <l>#2 There are people on a BOAT BUT NO ONE IS ON THE BOAT!</l>
+    <l>#3 Why Can'T TIE'S Win THE RACE!</l>
+    <l>#4 WHAT HAPpeNs When A SKelETon Has No FRiEndS!</l>
+    <l>#5 What HapPenS WhEN a SkeLEtON Says to another SKelETon
     Your not WORKING!
 </l>
 </ul>
+<h4>ANSWERS</h4>
+<ul>
+    <l>#1 Promoise</l>
+    <l>#2 Because they are all couples</l>
+    <l>#3 Because they always Tie</l>
+    <l>#4 HE is BONLEY</l>
+    <l>#5 I have been working a TON! A SKELETON!</l>
+</ul>
+<h4>DID YOU LIKE THE JOKES! I THOUGHT THEY WERE FUNNY!</h4>
+<p>did i talk a lot I THINK I DID!</p>
+<p> DO YOU THINK I SHOULD CALL IT A DAY!</p>
+<h4>YES OR NO?</h4>
+<p>Yes?</p>
+<p>NO?</p>
+<h4>LETS CALL IT A DAY! OKAY...</h4>
+<h4>ThE END AGAIN! SCROLL DOWN FOR DAY 4!</h4>
+<img src="https://img.search.brave.com/ARL5oPJ12W5ALeer72_zGusPCrzcyx0AwU3BxdSYoqc/rs:fit:1200:900:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNi8wMi9TbWFs/bC1jb2xvcmZ1bC1w/YXJyb3RzLXdhbGxw/YXBlcnMtaGQtMTQ0/MHg5MDAuanBn" alt="">
+<h4>Day 4!</h4>
+<h4>FEB 2 2022 </h4>
+<p>Time/3:11</p>
+<h4>Heyo What Up!</h4>
+<h4>Its me!</h4>
+<p>(gasp)<p/>
+<h4>YOU dOnT RemeBer ME!</h4>
+<p>I think we Need A Talk</p>
+<h4>Hmm?</h4>
+<p>Oh,No You want Me to Go!</p>
+<h4>(gasping)...</h4>
+<p>(tears)</p>
+<h4>(instant crying)...</h4>
+<p>Waaaa!</p>
+<h4>Sorry i Have...</h4>
+<h4>EMOTIONALS  THING MAKE ME SAD! ...</h4>
+<p>Sorry done CRYING!</p>
+<h4>...</h4>
+<p>Now you remeber me?</p>
+<h4>(Sniff Sniff)</h4>
+<h4>YAY!</h4>
+<p>I FEEL!</p>
+<h4>HAPPY!</h4>
+<p>Thank YOu!</p>
+<h4>dO YOU kNOw aBOUT SLIME RANCHER ITS THE BEST!</h4>
+<p>I LOVE IT!</p>
+<p>Its a Really Good Game Have You Played it Before</p>
+<h4>I Don't Know WHY NO One Played IT!</h4>
+<h4>Have YOU!</h4>
+<p>No?</p>
+<h4>NOoooOOOOooooOOo!</h4>
+<p>(Sniff sniff)</p>
+<h4>Thats Okay!</h4>
+<p>Its Not The End of The world!</p>
+<h4>The End! Scroll Down To Day 5!</h4>
+<img src="https://img.search.brave.com/iZD9bg0R9N6XcIw4X6hfPH8LIQ0JJZqT1_TfmXhzOzg/rs:fit:720:480:1/g:ce/aHR0cDovL21lZGlh/LmxpcHkuY29tL2lt/YWdlLzMvY3V0ZV9z/bWFsbF9jYXRfMjAx/NDAxMjAyMjA2Mzgu/anBn" alt="">
