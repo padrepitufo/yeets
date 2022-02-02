@@ -1,20 +1,23 @@
 <!-- Nena's stoof. Not tochi! Angrycattoe uwu/ -->
 
 <script>
+import Header from "$lib/header.svelte";
+import About from "./about.svelte";
+import Index from "./index.svelte";
+import Layout from "./__layout.svelte";
+
     let name = "Nena's Face";
     let age = "As Old As Your Mom";
     let likes = 0;
 
-function incrementLikes() {
-     likes += 1;
+    function incrementLikes() {
+        likes += 1;
+    };
 
-};
-
-function incrementDislikes() {
-     likes -= 1;
-
-};
-</script>
+    function incrementDislikes() {
+        likes -= 1;
+    };
+    </script>
 
 <style>
     button {
@@ -51,7 +54,6 @@ function incrementDislikes() {
 <h1>Hello! I Am {name}, And I Am {age}!</h1>
 <sub> Nena's Crappy stoof!! And tests... nu tochi!! - Temm-- err i mean nena </sub>
 <h2>!BLOG POSTS!</h2>
-
 <div class="blog-post">
     <h3> Hero too?</h3>
     <p>
