@@ -1,10 +1,7 @@
 <!-- Nena's stoof. Not tochi! Angrycattoe uwu/ -->
 
-<script>
-import Header from "$lib/header.svelte";
-import About from "./about.svelte";
-import Index from "./index.svelte";
-import Layout from "./__layout.svelte";
+<script>   
+    import PostComp from "$lib/PostComp.svelte"
 
     let name = "Nena's Face";
     let age = "As Old As Your Mom";
@@ -47,7 +44,7 @@ import Layout from "./__layout.svelte";
 </style>
 
 <h1>Hello! I Am {name}, And I Am {age}!</h1>
-<sub> Nena's Crappy stoof!! And tests... nu tochi!! - Temm-- err i mean nena </sub>
+<sub> Nena's Crappy stoof!! And tests... nu tochi!! - Temmie 😃-- err i mean nena </sub>
 <h2>!BLOG POSTS!</h2>
 <div class="blog-post">
     <h3> Hero too?</h3>
@@ -77,9 +74,25 @@ import Layout from "./__layout.svelte";
     </div>
 </div>
 
+<PostComp 
+    PostTitle="Components at Work" 
+    PostContent=" 
+        Instead of writing posts 
+        and all the work for it over and over again, I can just use components. Today, in Udemy,
+        I learned how to do them again ( I'm saying again because I had already learned them, basically
+        this was just a brain refresh ). What you're reading currently, uses components! Isn't that crazy?
+        It looks exactly like the post before, but now it will be easier to write 😃. All I have to do 
+        now is put in the post date, the post's content, and the post's title. Doing this has cut into my
+        math time, but that's okay 👍. If I'm being honest, coding has been getting much more fun.
+        I'll be posting more soon, and updating the looks of this page. Until then, though, adios!" 
+    PostDate="February 2, 2022 - 9:14 AM" 
+></PostComp>
+
 
 <!-- If statement? -->
-
+<!-- Today I'm trying out Components. Yayyy /s.
+I've already learned about some when I was
+learning Vue.  -->
 
 
 
