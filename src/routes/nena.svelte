@@ -46,11 +46,6 @@ import Layout from "./__layout.svelte";
    
 </style>
 
-
-<svelte:head>
-    <title>Yeets | About</title>
-</svelte:head>
-
 <h1>Hello! I Am {name}, And I Am {age}!</h1>
 <sub> Nena's Crappy stoof!! And tests... nu tochi!! - Temm-- err i mean nena </sub>
 <h2>!BLOG POSTS!</h2>
