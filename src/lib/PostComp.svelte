@@ -1,8 +1,8 @@
 <script>
     // import Header from "$lib/header.svelte";
-    export let PostTitle;
-    export let PostContent;
-    export let PostDate;
+    export let postTitle;
+    export let postContent;
+    export let postDate;
 
     let likes = 0;
 
@@ -37,9 +37,9 @@
 
 
 <div class="PostComp">
-    <h3>{PostTitle}</h3>
-    <p>{PostContent}</p>
-    <sub>Posted {PostDate}</sub>
+    <h3>{postTitle}</h3>
+    <p>{postContent}</p>
+    <sub>Posted {postDate}</sub>
     <br>
     <br>
     <div class="tumby">

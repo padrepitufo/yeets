@@ -1,0 +1,1 @@
+<!-- checkout https://www.geeksforgeeks.org/how-to-use-animation-on-favicon-image/ -->

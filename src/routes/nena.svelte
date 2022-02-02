@@ -75,8 +75,8 @@
 </div>
 
 <PostComp 
-    PostTitle="Components at Work" 
-    PostContent=" 
+    postTitle="Components at Work" 
+    postContent=" 
         Instead of writing posts 
         and all the work for it over and over again, I can just use components. Today, in Udemy,
         I learned how to do them again ( I'm saying again because I had already learned them, basically
@@ -85,7 +85,7 @@
         now is put in the post date, the post's content, and the post's title. Doing this has cut into my
         math time, but that's okay 👍. If I'm being honest, coding has been getting much more fun.
         I'll be posting more soon, and updating the looks of this page. Until then, though, adios!" 
-    PostDate="February 2, 2022 - 9:14 AM" 
+    postDate="February 2, 2022 - 9:14 AM" 
 ></PostComp>
 
 
