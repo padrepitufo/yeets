@@ -92,7 +92,7 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     goodbye. Psst... I'm gonna add a Minecraft snow image.
 </p>
 
-<img src="mg.search.brave.com/06SV_9Y0iBTEPZoyfQtKaMp0tt86QpiTxE08t-7jpVs/rs:fit:1200:838:1/g:ce/aHR0cDovL2kuaW1n/dXIuY29tL2NKTFNT/NEkuanBn" alt="">
+<img src="https://img.search.brave.com/mmugVsOGy8s25i5H1TKcV00_JqMJDKGVSZd5clZyy7c/rs:fit:700:394:1/g:ce/aHR0cHM6Ly9teS5t/Y3BlZGwuY29tL3N0/b3JhZ2UvYWRkb25z/LzIwNDIvaW1hZ2Vz/L2luZmluaXRlLXNu/b3ctd29ybGQtYWRk/b24tMTE0XzcucG5n" alt="">
 
 <ul>
     <li>Posted on: Febuary 3rd at 11:15 am </li>
