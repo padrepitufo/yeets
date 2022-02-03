@@ -16,7 +16,7 @@
 <div class="root">
     <header class="header" style="--image: url({image_url});">
         <div class="logo-box">
-            <img src="./logo-white.png" alt="logo" class="logo">
+            <img src="/img/logo-white.png" alt="logo" class="logo">
         </div>
         <div class="text-box">
             <h1 class="heading-primary">
