@@ -1,3 +1,9 @@
+<script>
+import Header from "$lib/header.svelte";
+import About from "./about.svelte";
+import Index from "./index.svelte";
+
+</script>
 <h1>Ruth's Log</h1>
 <h3>January 29 2022</h3>
 <h4>Things I've Been Doing!</h4>
@@ -161,7 +167,7 @@
     let number = '3 or 5'
 
     function incrementNumber() {
-        number = 1;
+        number = 1 & 2;
     }
 </script>
 
@@ -173,3 +179,8 @@
 <h1>Testing Testing {name}, my numbers is {number}</h1>
 <h4>LET ME MAKE UP A FAKE NAME!</h4>
 <button on:click="{incrementNumber}">Change Number</button>
+<h4>Sorry Still working on it!</h4>
+<h4>Let me try another one of the's</h4>
+<p>huh? it didin't Work?</p>
+<h4>sad!</h4>
+<p>But it did work a little bit!</p>
