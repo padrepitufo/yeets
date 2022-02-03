@@ -73,7 +73,8 @@
         {likes}
     </div>
 </div>
-
+<br>
+<br>
 <PostComp 
     postTitle="Components at Work" 
     postContent=" 
@@ -88,6 +89,8 @@
     postDate="February 2, 2022 - 9:14 AM" 
 ></PostComp>
 
+<br>
+<br>
 
 <!-- If statement? -->
 <!-- Today I'm trying out Components. Yayyy /s.
