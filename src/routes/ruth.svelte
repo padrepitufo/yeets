@@ -157,12 +157,19 @@
 <h4>Okay Now i'm gonna SHOW 2 NUMBERS AND ONE OF THEM IS...</h4>
 <h4>R I G H T !</h4>
 <script>
-    export let name;
+    let name = 'Smantha';
+    let number = '3 or 5'
+
+    function incrementNumber() {
+        number = 1;
+    }
 </script>
 
 <style>
     h1 {
-        color: cyan;
+        color: red;
     }
 </style>
-<h1>Testing Testing {name}</h1>
+<h1>Testing Testing {name}, my numbers is {number}</h1>
+<h4>LET ME MAKE UP A FAKE NAME!</h4>
+<button on:click="{incrementNumber}">Change Number</button>
