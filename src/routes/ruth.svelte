@@ -135,3 +135,34 @@
 <p>Its Not The End of The world!</p>
 <h4>The End! Scroll Down To Day 5!</h4>
 <img src="https://img.search.brave.com/iZD9bg0R9N6XcIw4X6hfPH8LIQ0JJZqT1_TfmXhzOzg/rs:fit:720:480:1/g:ce/aHR0cDovL21lZGlh/LmxpcHkuY29tL2lt/YWdlLzMvY3V0ZV9z/bWFsbF9jYXRfMjAx/NDAxMjAyMjA2Mzgu/anBn" alt="">
+<h4>Date 2/3/2022</h4>
+<h4>Feb</h4>
+<h4>Day 5</h4>
+<p>hi</p>
+<p>EVERYONE!</p>
+<h4>Dance when i say STOP PAUSE!</h4>
+<p>Dancing dancing all around dancing dancing dancing!</p>
+<h4>PAUSE WHEN I SAY STOP!</h4>
+<h4>NOW SKIP</h4>
+<p>Skiping skiping all around SKIPING SKIPING!</p>
+<h4>Stop when i Says PAUSE!</h4>
+<p>Hey bro can you get off my computer?</p>
+<h4>But we were DANCING</h4>
+<p>Please?</p>
+<h4>Just for two hours THEN I'LL BE BACK!</h4>
+<p>Heyo its me again!</p>
+<p>Ruth!</p>
+<p>HAPPY DAY!</p>
+<h4>Right Right? YEs nO!</h4>
+<h4>Okay Now i'm gonna SHOW 2 NUMBERS AND ONE OF THEM IS...</h4>
+<h4>R I G H T !</h4>
+<script>
+    export let name;
+</script>
+
+<style>
+    h1 {
+        color: cyan;
+    }
+</style>
+<h1>Testing Testing {name}</h1>
