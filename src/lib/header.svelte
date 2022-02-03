@@ -42,7 +42,7 @@
  */
 
  * {
-   margin: 0;
+   margin: 60;
    padding: 0;
    box-sizing: border-box;
  } 
@@ -92,7 +92,7 @@
      text-transform: uppercase;
 
      backface-visibility: hidden;
-     margin-bottom: 60;
+     margin-bottom: 60 ;
 
  }
 
