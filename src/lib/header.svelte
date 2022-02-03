@@ -14,7 +14,7 @@
     </nav>
 </header> 
 <div class="root">
-    <header class="header" style="--image: url({image_url});">
+    <header class="header" style="--image: url('{image_url}');">
         <div class="logo-box">
             <img src="/img/logo-white.png" alt="logo" class="logo">
         </div>
