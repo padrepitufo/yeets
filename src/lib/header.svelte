@@ -18,7 +18,9 @@
             <h1 class="heading-primary">
                 <span class="heading-primary-main">Welcome</span>
                 <span class="heading-primary-sub">to rama lakeline</span>
-            </h1>    
+            </h1> 
+            
+            <a href="/nena" class="btn btn-white btn-animated">Discover our tours</a>
         </div>
        
 
@@ -82,6 +84,7 @@
      top: 40%;
      left: 50%;
      transform: translate(-50%, -50%);
+     text-align: center;
  }
 
  .heading-primary {
@@ -89,6 +92,7 @@
      text-transform: uppercase;
 
      backface-visibility: hidden;
+     margin-bottom: 60;
 
  }
 
@@ -149,4 +153,69 @@
         transform: translate(0);
     }
 }
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,02);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,02);
+}
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+
+}
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
 </style>

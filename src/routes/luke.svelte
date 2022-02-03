@@ -82,3 +82,18 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 </ul>
 
 <img src="https://img.search.brave.com/IFBa_4TnOAW-fdXe0ZFqy-E2z1a1CRuib23OjeE3Rs4/rs:fit:1200:628:1/g:ce/aHR0cHM6Ly9jZG4u/dm94LWNkbi5jb20v/dGh1bWJvci9lWFdY/dFlrYnRMTlYzTWIw/aHVzRzZXOFRjZDA9/LzB4MDoxOTIweDEw/MDUvZml0LWluLzEy/MDB4NjMwL2Nkbi52/b3gtY2RuLmNvbS91/cGxvYWRzL2Nob3J1/c19hc3NldC9maWxl/LzE5MzU1NTU1L2pi/YXJlaGFtXzE5MTE1/OF9wbHkwOTU4X2Rl/Y2FkZV9taW5lY3Jh/ZnQuanBn" alt="">
+
+<p>Hello today I will explain my day again... well today there was a power outage when 
+    I was sleeping I woke up around 5 am and cleaned my room so I can play Minecraft.
+    also Minecraft always updates their game and everthing else! Theres always new 
+    stuff in all the updates. Well also today it SNOWED!!! a little butt not much
+    but it was good enough so like right now I think im going to play in it so I
+    guess thats fun. well I think I said enough for today well I got to get going
+    goodbye. Psst... I'm gonna add a Minecraft snow image.
+</p>
+
+<img src="https://img.search.brave.com/mmugVsOGy8s25i5H1TKcV00_JqMJDKGVSZd5clZyy7c/rs:fit:700:394:1/g:ce/aHR0cHM6Ly9teS5t/Y3BlZGwuY29tL3N0/b3JhZ2UvYWRkb25z/LzIwNDIvaW1hZ2Vz/L2luZmluaXRlLXNu/b3ctd29ybGQtYWRk/b24tMTE0XzcucG5n" alt="">
+
+<ul>
+    <li>Posted on: Febuary 3rd at 11:15 am </li>
+</ul>
