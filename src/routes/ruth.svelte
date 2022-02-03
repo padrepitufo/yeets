@@ -167,7 +167,7 @@ import Index from "./index.svelte";
     let number = '3 or 5'
 
     function incrementNumber() {
-        number = 1 & 2;
+        number = 5;
     }
 </script>
 
