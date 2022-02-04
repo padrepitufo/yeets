@@ -6,13 +6,45 @@
     let number = '3 or 5'
 
     function incrementNumber() {
-        number = 5;
+        number += 1;
     }
 </script>
 <style>
     h1 {
-        color: red;
+        color: rgb(0, 255, 157);
     }
+    body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+  background: #f3f3f3;
+}
+
+button {
+  font: inherit;
+  border: 1px solid #cf0056;
+  background: #cf0056;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background: #e40763;
+  border-color: #e40763;
+  box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
+}
+
 </style>
 
 <h1>Ruth's Log</h1>
