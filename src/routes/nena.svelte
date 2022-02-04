@@ -103,11 +103,30 @@
         desaturated and more towards white. Just because they didn't draw them to look like their ethnicity doesn't 
         give you permission to just go dis their work. Did you ever think that maybe they're a beginner?
         Or that maybe they forgot, or  don't know how? There is no correct way to do art, so don't 
-        go correcting people. YES, PEOPLE DO HAVE OPINIONS, JUST DON'T FORCE IT ON THEM. If you wish to suggest
-        or give criticism, do it nicely. ACTUALLY TELL THEM ON WHAT THEY CAN IMPROVE ON, don't just tell them
+        go correcting people. YES,👏 PEOPLE 👏 DO 👏 HAVE 👏 OPINIONS 👏, JUST 👏 DON'T 👏 FORCE 👏 IT 👏 ON 👏 THEM 👏. If you wish to suggest
+        or give criticism, do it nicely. ACTUALLY 👏 TELL 👏 THEM 👏 ON 👏 WHAT 👏 THEY 👏 CAN 👏 IMPROVE 👏 ON 👏, don't just tell them
         'Oh, you're bad'. There's a fine line between constructive criticism and criticism. Please don't insult
         people because they didn't draw certain characters the same as the movie. Thank you 😇✨ " 
     postDate="February 3, 2022 - 2:24 PM"
+></PostComp>
+
+<br>
+<br>
+
+<PostComp 
+    postTitle="Some stuff I'd like to add" 
+    postContent="Hey hey! This is just some notes for my-self and stuff I'd like to add to my smol page ✨.
+        Stoof: Comment buttons, Database, Post buttons, Profiles, Names under profile pictures, Sign-In, 
+        images in posts, taking back your likes//dislikes, updating thumbs up icons ( it's literally just
+        emoji's right now LOL), more actions on the post ( hearts and other emotes??), Replies to comments,
+        Follow button, Admin thingies ( So certain people are allowed to change things, moderate, delete things
+        ,etc.), My social medias on the bottom, and possibly an about the creators ( of the website) page? 
+        Hopefully, alot of these thoughts come true. I AM STILL JUST a beginner at programming, but I think 
+        I've come far 😄 . I am a Minecraft skin creator if you didn't know. Something I'd really like to do
+        is make myself a website where i can advertise my skins and sell them! It's not bad to want to make 
+        some money out of your hobbies right 😏🤔? I tried to do the comment thing today, but
+        haha... It didn't turn out so well-- I hope to get a hang of s v e l t e. Anywho, that's all. " 
+    postDate="February 4, 2022 - 5:31 PM"
 ></PostComp>
 
 <br>
