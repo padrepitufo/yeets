@@ -1,3 +1,7 @@
+<script>
+    export let image_url;
+</script>
+
 <header>
     <nav>
         <ul>
@@ -10,20 +14,17 @@
     </nav>
 </header> 
 <div class="root">
-    <header class="header">
+    <header class="header" style="--image: url('{image_url}');">
         <div class="logo-box">
-            <img src="./logo-white.png" alt="logo" class="logo">
+            <img src="/img/logo-white.png" alt="logo" class="logo">
         </div>
         <div class="text-box">
             <h1 class="heading-primary">
                 <span class="heading-primary-main">Welcome</span>
                 <span class="heading-primary-sub">to rama lakeline</span>
             </h1> 
-            
             <a href="/nena" class="btn btn-white btn-animated">Discover our tours</a>
         </div>
-       
-
     </header> 
 </div>
 
@@ -42,7 +43,7 @@
  */
 
  * {
-   margin: 0;
+   margin: 60;
    padding: 0;
    box-sizing: border-box;
  } 
@@ -59,10 +60,10 @@
  .header {
      height: 95vh;
      background-image: linear-gradient(
-     to right bottom,
-     #7ed56fc5,
-     #28b485d0), 
-     url(./hero.jpg);
+            to right bottom,
+            #7ed56fc5,
+            #28b485d0), 
+        var(--image);
      background-size: cover;
      background-position: top;
 
@@ -92,7 +93,7 @@
      text-transform: uppercase;
 
      backface-visibility: hidden;
-     margin-bottom: 60;
+     margin-bottom: 60 ;
 
  }
 

@@ -44,7 +44,7 @@
    
 </style>
 
-<h1>Hello! I Am {name}, And I Am {age}!</h1>
+<h1>Hello! I Am not {name}, And I Am {age}!</h1>
 <sub> Nena's Crappy stoof!! And tests... nu tochi!! - Temmie 😃-- err i mean nena </sub>
 <h2>!BLOG POSTS!</h2>
 <div class="blog-post">

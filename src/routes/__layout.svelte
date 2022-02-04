@@ -4,7 +4,7 @@ import Header from "$lib/header.svelte";
 
 </script>
 
-<Header />
+<Header image_url="/img/hero.jpg" />
 <main>
     <slot/>
 </main>

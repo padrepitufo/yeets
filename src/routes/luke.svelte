@@ -86,7 +86,7 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 <p>Hello today I will explain my day again... well today there was a power outage when 
     I was sleeping I woke up around 5 am and cleaned my room so I can play Minecraft.
     also Minecraft always updates their game and everthing else! Theres always new 
-    stuff in all the updates. Well also today it SNOWED!!! a little butt not much
+    stuff in all the updates. Well also today it SNOWED!!! a little but not much
     but it was good enough so like right now I think im going to play in it so I
     guess thats fun. well I think I said enough for today well I got to get going
     goodbye. Psst... I'm gonna add a Minecraft snow image.
@@ -96,4 +96,109 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 
 <ul>
     <li>Posted on: Febuary 3rd at 11:15 am </li>
+</ul>
+
+<p>Hello it's me again okay I will tell you about my day but first let me tell you 
+    all the updates that have been in Minecraft in a list from oldest update to 
+    newest update.
+
+</p>
+
+<ul>
+    <li>1.0</li>
+    <li>1.1</li>
+    <li>1.2.1</li>
+    <li>1.2.2</li>
+    <li>1.2.3</li>
+    <li>1.2.4</li>
+    <li>1.2.5</li>
+    <li>1.3</li>
+    <li>1.3.1</li>
+    <li>1.3.2</li>
+    <li>1.4</li>
+    <li>1.4.1</li>
+    <li>1.4.2</li>
+    <li>1.4.3</li>
+    <li>1.4.4</li>
+    <li>1.4.6</li>
+    <li>1.4.5</li>
+    <li>1.4.7</li>
+    <li>1.5</li>
+    <li>1.5.1</li>
+    <li>1.5.2</li>
+    <li>1.6</li>
+    <li>1.6.1</li>
+    <li>1.6.2</li>
+    <li>1.6.3</li>
+    <li>1.6.4</li>
+    <li>1.7</li>
+    <li>1.7.1</li>
+    <li>1.7.2</li>
+    <li>1.7.3</li>
+    <li>1.7.4</li>
+    <li>1.7.5</li>
+    <li>1.7.6</li>
+    <li>1.7.7</li>
+    <li>1.7.8</li>
+    <li>1.7.9</li>
+    <li>1.7.10</li>
+    <li>1.8</li>
+    <li>1.8.1</li>
+    <li>1.8.2</li>
+    <li>1.8.3</li>
+    <li>1.8.4</li>
+    <li>1.8.5</li>
+    <li>1.8.6</li>
+    <li>1.8.7</li>
+    <li>1.8.8</li>
+    <li>1.8.9</li>
+    <li>1.9</li>
+    <li>1.9.1</li>
+    <li>1.9.2</li>
+    <li>1.9.3</li>
+    <li>1.9.4</li>
+    <li>1.10</li>
+    <li>1.10.1</li>
+    <li>1.10.2</li>
+    <li>1.11</li>
+    <li>1.11.1</li>
+    <li>1.11.2</li>
+    <li>1.12</li>
+    <li>1.12.1</li>
+    <li>1.12.2</li>
+    <li>1.13</li>
+    <li>1.13.1</li>
+    <li>1.13.2</li>
+    <li>1.14</li>
+    <li>1.14.1</li>
+    <li>1.14.2</li>
+    <li>1.14.3</li>
+    <li>1.14.4</li>
+    <li>1.15</li>
+    <li>1.15.1</li>
+    <li>1.15.2</li>
+    <li>1.16</li>
+    <li>1.16.1</li>
+    <li>1.16.2</li>
+    <li>1.16.3</li>
+    <li>1.16.4</li>
+    <li>1.16.5</li>
+    <li>1.17</li>
+    <li>1.17.1</li>
+    <li>1.18</li>
+    <li>1.18.1</li>
+</ul>
+
+<p>So now I haved told you all the updates in Minecraft but there is one that
+    the Minecraft developers are still working on it will release some time around
+    2022 and it is the 1.19 update adding more animals. and that will be FUN!!!
+    the update will be called the wild update so thats an actual good name.
+    So I will show a picture of it and I think I said enough today I will say
+    some more tomorrow. goodbye and have a nice day.
+</p>
+
+<img src="mg.search.brave.com/a7MikeILxloTJGzNZSuIjmHV3sMCRZB9PSO43RYQRRo/rs:fit:1024:576:1/g:ce/aHR0cHM6Ly93d3cu/ZGV4ZXJ0by5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MTAvMTgvTWluZWNy/YWZ0LVRoZS1XaWxk/LVVwZGF0ZS1yZWxl/YXNlLWRhdGUtMTAy/NHg1NzYuanBn" alt="">
+
+<ul>
+    <li>Posted on: Febuary 4th at 9:46 AM</li>
 </ul>
