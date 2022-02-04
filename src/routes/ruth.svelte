@@ -95,22 +95,22 @@
 <h4>NoW On tO OTHER THINGS!</h4>
 <h4>LIKE JOKE'S</h4>
 <p>YES OKAY!</p>
-<h4>Answers at the Bottem of JOKES!</h4>
-<ul>
-    <li>#1 What can't YOu SeE Butt.. BREAKS</li>
-    <li>#2 There are people on a BOAT BUT NO ONE IS ON THE BOAT!</li>
-    <li>#3 Why Can'T TIE'S Win THE RACE!</li>
-    <li>#4 WHAT HAPpeNs When A SKelETon Has No FRiEndS!</li>
-    <li>#5 What HapPenS WhEN a SkeLEtON Says to another SKelETon</li>
-    <li>Your not WORKING!</li>
-</ul>
+<h4>JOKES</h4>
+<p>Answers at the Bottem</p>
+<ol>
+    <li>What can't YOu SeE Butt.. BREAKS</li>
+    <li>There are people on a BOAT BUT NO ONE IS ON THE BOAT!</li>
+    <li>Why Can'T TIE'S Win THE RACE!</li>
+    <li>WHAT HAPpeNs When A SKelETon Has No FRiEndS!</li>
+    <li>What HapPenS WhEN a SkeLEtON Says to another SKelETon, "Your not WORKING!"</li>
+</ol>
 <h4>ANSWERS</h4>
 <ol>
     <li>Promoise</li>
     <li>Because they are all couples</li>
     <li>Because they always Tie</li>
     <li>HE is BONLEY</li>
-    <li>I have been working a TON! A SKELETON!</li>
+    <li>He said "I have been working a TON! A SKELETON!"</li>
 </ol>
 <h4>DID YOU LIKE THE JOKES! I THOUGHT THEY WERE FUNNY!</h4>
 <p>did i talk a lot I THINK I DID!</p>
