@@ -167,26 +167,26 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     <li>1.12.1/li>
     <li>1.12.2</li>
     <li>1.13</li>
-<li>1.13.1</li>
-<li>1.13.2</li>
-<li>1.14</li>
-<li>1.14.1</li>
-<li>1.14.2</li>
-<li>1.14.3</li>
-<li>1.14.4</li>
-<li>1.15</li>
-<li>1.15.1</li>
-<li>1.15.2</li>
-<li>1.16</li>
-<li>1.16.1</li>
-<li>1.16.2</li>
-<li>1.16.3</li>
-<li>1.16.4</li>
-<li>1.16.5</li>
-<li>1.17</li>
-<li>1.17.1</li>
-<li>1.18</li>
-<li>1.18.1</li>
+    <li>1.13.1</li>
+    <li>1.13.2</li>
+    <li>1.14</li>
+    <li>1.14.1</li>
+    <li>1.14.2</li>
+    <li>1.14.3</li>
+    <li>1.14.4</li>
+    <li>1.15</li>
+    <li>1.15.1</li>
+    <li>1.15.2</li>
+    <li>1.16</li>
+    <li>1.16.1</li>
+    <li>1.16.2</li>
+    <li>1.16.3</li>
+    <li>1.16.4</li>
+    <li>1.16.5</li>
+    <li>1.17</li>
+    <li>1.17.1</li>
+    <li>1.18</li>
+    <li>1.18.1</li>
 </ul>
 
 <p>So now I haved told you all the updates in Minecraft but there is one that
