@@ -1,5 +1,6 @@
 <!-- Nena's stoof. Not tochi! Angrycattoe uwu/ -->
-
+      <!-- Only nene may toch >:) uwu -->
+  
 <script>   
     import PostComp from "$lib/PostComp.svelte"
 
@@ -43,7 +44,7 @@
    
 </style>
 
-<h1>Hello! I Am {name}, And I Am {age}!</h1>
+<h1>Hello! I Am not {name}, And I Am {age}!</h1>
 <sub> Nena's Crappy stoof!! And tests... nu tochi!! - Temmie 😃-- err i mean nena </sub>
 <h2>!BLOG POSTS!</h2>
 <div class="blog-post">
@@ -73,7 +74,8 @@
         {likes}
     </div>
 </div>
-
+<br>
+<br>
 <PostComp 
     postTitle="Components at Work" 
     postContent=" 
@@ -88,11 +90,28 @@
     postDate="February 2, 2022 - 9:14 AM" 
 ></PostComp>
 
+<br>
+<br>
 
-<!-- If statement? -->
-<!-- Today I'm trying out Components. Yayyy /s.
-I've already learned about some when I was
-learning Vue.  -->
+<PostComp 
+    postTitle="Encanto art fandom thoughts." 
+    postContent="I have watched several rants and discussion videos about the Encanto fandom. 
+        In some parts of the video, these youtubers were talking about how a lot of arguements 
+        going on because people aren't 'drawing the characters right (white-washing, outfits, ethnicity)'. 
+        First of all, people have their own styles.
+        Let them draw it however they want to. Some people have a pastel style, so it's going to be very
+        desaturated and more towards white. Just because they didn't draw them to look like their ethnicity doesn't 
+        give you permission to just go dis their work. Did you ever think that maybe they're a beginner?
+        Or that maybe they forgot, or  don't know how? There is no correct way to do art, so don't 
+        go correcting people. YES, PEOPLE DO HAVE OPINIONS, JUST DON'T FORCE IT ON THEM. If you wish to suggest
+        or give criticism, do it nicely. ACTUALLY TELL THEM ON WHAT THEY CAN IMPROVE ON, don't just tell them
+        'Oh, you're bad'. There's a fine line between constructive criticism and criticism. Please don't insult
+        people because they didn't draw certain characters the same as the movie. Thank you 😇✨ " 
+    postDate="February 3, 2022 - 2:24 PM"
+></PostComp>
+
+<br>
+<br>
 
 
 

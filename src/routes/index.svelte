@@ -23,4 +23,4 @@ p {
 <p>Yeeting all the day long! From the wonderful city of Cedar Park!</p>
 <p>This change went in at 8:26pm</p>
 <p>The young women are superior. Change my mind.</p>
-<img src="./pinkie.png" alt="pinkie">
+<img src="/img/pinkie.png" alt="pinkie">
