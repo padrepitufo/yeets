@@ -164,7 +164,7 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     <li>1.11.1</li>
     <li>1.11.2</li>
     <li>1.12</li>
-    <li>1.12.1/li>
+    <li>1.12.1</li>
     <li>1.12.2</li>
     <li>1.13</li>
     <li>1.13.1</li>
