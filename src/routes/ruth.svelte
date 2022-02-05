@@ -9,12 +9,24 @@
 
     $: uppercaseName = name.toUpperCase();
 
+    $: console.log(name);
+
+    $: if (name === 'Velma' ) {
+        console.log('It runs!')
+        number = 10;
+    }
+
     function incrementNumber() {
         number += 1;
     }
 
     function changeName() {
         name = 'Velma';
+    }
+
+    function nameInput(event) {
+       const enteredValue = event.target.value; 
+       name = enteredValue;
     }
 </script>
 <style>
@@ -221,7 +233,8 @@ button:active {
 <h1>Testing Testing {uppercaseName}, my numbers is {number}</h1>
 <h4>LET ME MAKE UP A FAKE NAME!</h4>
 <button on:click="{incrementNumber}">Change Number</button>
-<button on:click="{changeName}">Change Name</button>
+<!-- <button on:click="{changeName}">Change Name</button> -->
+<input type="text" value="{name}" on:input={nameInput}>
 <h4>Sorry Still working on it!</h4>
 <h4>Let me try another one of these</h4>
 <p>huh? it didin't Work?</p>
