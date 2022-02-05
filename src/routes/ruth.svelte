@@ -2,8 +2,9 @@
     import Header from "$lib/header.svelte";
     import About from "./about.svelte";
     import Index from "./index.svelte";
-    let name = 'Smantha';
-    let number = '3 or 5'
+    let name = 'Samantha';
+    let number = 1;
+    let pressed = "";
 
     // let uppercaseName; not required
 
@@ -25,8 +26,13 @@
     }
 
     function nameInput(event) {
-       const enteredValue = event.target.value; 
-       name = enteredValue;
+        console.log(event);
+        const enteredValue = event.target.value; 
+        name = enteredValue;
+        if(event.data == null){
+            return;
+        }
+        pressed = event.data;
     }
 </script>
 <style>
@@ -220,9 +226,8 @@
 <h1>Testing Testing {uppercaseName}, my numbers is {number}</h1>
 <h4>LET ME MAKE UP A FAKE NAME!</h4>
 <button on:click="{incrementNumber}">Change Number</button>
-<!-- <button on:click="{changeName}">Change Name</button> -->
 <input type="text" value="{name}" on:input={nameInput}>
-<h4>Sorry Still working on it!</h4>
+<h4>Sorry Still working on it (I just got your key press though {pressed})!</h4>
 <h4>Let me try another one of these</h4>
 <p>huh? it didin't Work?</p>
 <h4>sad!</h4>
