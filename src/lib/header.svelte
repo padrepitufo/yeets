@@ -14,16 +14,17 @@
     </nav>
 </header> 
 <div class="root">
-    <header class="header" style="--image: url('{image_url}');">
-        <div class="logo-box">
-            <img src="/img/logo-white.png" alt="logo" class="logo">
+    <header class="header" style="--image: url('{55445}');">
+        <div class="header__logo-box">
+            <img src="/img/logo-white.png" alt="logo" class="header__logo">
         </div>
-        <div class="text-box">
+
+        <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary-main">Welcome</span>
-                <span class="heading-primary-sub">to rama lakeline</span>
+                <span class="heading-primary--main">Welcome</span>
+                <span class="heading-primary--sub">to rama lakeline</span>
             </h1> 
-            <a href="/nena" class="btn btn-white btn-animated">Discover our tours</a>
+            <a href="/nena" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
     </header> 
 </div>
@@ -42,45 +43,54 @@
 
  */
 
- * {
+ *,
+ *::after,
+ *::before {
    margin: 60;
    padding: 0;
-   box-sizing: border-box;
+   box-sizing: inherit;
  } 
 
+ html {
+    font-size: 10px;
+ }
+
   .root {
-     font-family: sans-serif;
+     font-family: "lato", sans-serif;
      font-weight: 400;
-     font-size: 16px;
+     /* font-size: 16px; */
      line-height: 1.7;
      color: #777;
-     padding: 30px;
+     padding: 3rem;
+
+     box-sizing: border-box;
  }
 
  .header {
      height: 95vh;
      background-image: linear-gradient(
-            to right bottom,
+         to right bottom,
             #7ed56fc5,
             #28b485d0), 
         var(--image);
      background-size: cover;
      background-position: top;
+     position: relative;
 
      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
  } 
  
- .logo-box {
+ .header__logo-box {
      position: absolute;
-     top: 40px;
-     left: 40px;
+     top: 4rem;
+     left: 4rem;
  }
 
- .logo {
-     height: 35px;
+ .header__logo {
+     height: 3.5rem;
  }
 
- .text-box {
+ .header__text-box {
      position: absolute;
      top: 40%;
      left: 50%;
@@ -93,15 +103,15 @@
      text-transform: uppercase;
 
      backface-visibility: hidden;
-     margin-bottom: 60 ;
+     margin-bottom: 6rem ;
 
  }
 
- .heading-primary-main {
+ .heading-primary--main {
      display: block;
-     font-size: 60px;
+     font-size: 6rem;
      font-weight: 400;
-     letter-spacing: 35px;
+     letter-spacing: 3.5rem;
 
      animation-name: moveInLeft;
      animation-duration: 1s;
@@ -115,22 +125,22 @@
 
 }
 
- .heading-primary-sub {
+ .heading-primary--sub {
       display: block;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: 17.4px;
+      letter-spacing: 1.75rem;
       animation: moveInRight 1s ease-in-out;
 }
 
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -142,11 +152,11 @@
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -159,7 +169,7 @@
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
 
     100% {
@@ -171,23 +181,23 @@
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,02);
+    box-shadow: 0 1rem 2rem rgba(0,0,02);
 }
 
 .btn:active{
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,02);
+    box-shadow: 0 .5rem 1rem rgba(0,0,02);
 }
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -197,7 +207,7 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -205,7 +215,7 @@
     transition: all .4s;
 
 }
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -214,7 +224,7 @@
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
