@@ -5,8 +5,16 @@
     let name = 'Smantha';
     let number = '3 or 5'
 
+    // let uppercaseName; not required
+
+    $: uppercaseName = name.toUpperCase();
+
     function incrementNumber() {
         number += 1;
+    }
+
+    function changeName() {
+        name = 'Velma';
     }
 </script>
 <style>
@@ -210,11 +218,12 @@ button:active {
 <h4>Right Right? YEs nO!</h4>
 <h4>Okay Now i'm gonna SHOW 2 NUMBERS AND ONE OF THEM IS...</h4>
 <h4>R I G H T !</h4>
-<h1>Testing Testing {name}, my numbers is {number}</h1>
+<h1>Testing Testing {uppercaseName}, my numbers is {number}</h1>
 <h4>LET ME MAKE UP A FAKE NAME!</h4>
 <button on:click="{incrementNumber}">Change Number</button>
+<button on:click="{changeName}">Change Name</button>
 <h4>Sorry Still working on it!</h4>
-<h4>Let me try another one of the's</h4>
+<h4>Let me try another one of these</h4>
 <p>huh? it didin't Work?</p>
 <h4>sad!</h4>
 <p>But it did work a little bit!</p>
