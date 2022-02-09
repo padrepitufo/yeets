@@ -1,16 +1,11 @@
 .DS_Store
 
 # UI
-/svc/ui/node_modules
-/svc/ui/build
-/svc/ui/.svelte-kit
-/svc/ui/package
+node_modules
+build
+.svelte-kit
+package
 .env
 .env.*
 !.env.example
 .netlify/*
-
-# PYTHON
-__pycache__/
-*.py[cod]
-*$py.class
