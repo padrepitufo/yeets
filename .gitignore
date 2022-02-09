@@ -9,3 +9,8 @@
 .env.*
 !.env.example
 .netlify/*
+
+# PYTHON
+__pycache__/
+*.py[cod]
+*$py.class
