@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 WORKDIR $PYSETUP_PATH
-COPY ./poetry.lock ./pyproject.toml ./README.md ./
+COPY svc/api/app/poetry.lock svc/api/app//pyproject.toml svc/api/app//README.md ./
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-root --no-dev
 
@@ -35,7 +35,7 @@ COPY --from=builder $POETRY_HOME $POETRY_HOME
 COPY --from=builder $PYSETUP_PATH $PYSETUP_PATH
 
 WORKDIR $PYSETUP_PATH
-COPY ./app ./app
+COPY svc/api/app/app ./app
 # Install CLI globally
 # note, editable does not work
 RUN pip install .
