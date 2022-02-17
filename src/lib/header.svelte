@@ -10,213 +10,215 @@
             <li><a href="/nena">nena</a></li>
             <li><a href="/ruth">Ruth</a></li>
             <li><a href="/luke">luke</a></li>
+            <li><a href="/nenasudemy">nena dos? O:</a></li>
         </ul>
     </nav>
 </header> 
 <div class="root">
     <header class="header" style="--image: url('{image_url}');">
-        <div class="logo-box">
-            <img src="/img/logo-white.png" alt="logo" class="logo">
+        <div class="header__logo-box">
+            <img src="/img/logo-white.png" alt="logo" class="header__logo">
         </div>
-        <div class="text-box">
+        <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary-main">Welcome</span>
-                <span class="heading-primary-sub">to rama lakeline</span>
+                <span class="heading-primary--main">Welcome</span>
+                <span class="heading-primary--sub">to rama lakeline</span>
             </h1> 
-            <a href="/nena" class="btn btn-white btn-animated">Discover our tours</a>
+            <a href="/nena" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
     </header> 
 </div>
-
-
-
 <style>
+    /*
+    COLORS:
 
+    Light green: #7ed56f
+    Medium green: #55c5ya
+    Dark green: #28b485
 
- /*
- COLORS:
+    */
 
- Light green: #7ed56f
- Medium green: #55c5ya
- Dark green: #28b485
+    *,
+    *::after,
+    *::before {
+    margin: 60;
+    padding: 0;
+    box-sizing: inherit;
+    } 
 
- */
+    .root {
+        font-family: "lato", sans-serif;
+        font-weight: 400;
+        /* font-size: 16px; */
+        line-height: 1.7;
+        color: #777;
+        padding: 3rem;
 
- * {
-   margin: 60;
-   padding: 0;
-   box-sizing: border-box;
- } 
+        box-sizing: border-box;
+    }
 
-  .root {
-     font-family: sans-serif;
-     font-weight: 400;
-     font-size: 16px;
-     line-height: 1.7;
-     color: #777;
-     padding: 30px;
- }
-
- .header {
-     height: 95vh;
-     background-image: linear-gradient(
+    .header {
+        height: 95vh;
+        background-image: linear-gradient(
             to right bottom,
             #7ed56fc5,
             #28b485d0), 
         var(--image);
-     background-size: cover;
-     background-position: top;
+        background-size: cover;
+        background-position: top;
+        position: relative;
 
-     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
- } 
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    } 
  
- .logo-box {
-     position: absolute;
-     top: 40px;
-     left: 40px;
- }
+    .header__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
 
- .logo {
-     height: 35px;
- }
+    .header__logo {
+        height: 3.5rem;
+    }
 
- .text-box {
-     position: absolute;
-     top: 40%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     text-align: center;
- }
+    .header__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
- .heading-primary {
-     color: #fff;
-     text-transform: uppercase;
+    .heading-primary {
+        color: #fff;
+        text-transform: uppercase;
 
-     backface-visibility: hidden;
-     margin-bottom: 60 ;
+        backface-visibility: hidden;
+        margin-bottom: 6rem ;
 
- }
+    }
 
- .heading-primary-main {
-     display: block;
-     font-size: 60px;
-     font-weight: 400;
-     letter-spacing: 35px;
+    .heading-primary--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
 
-     animation-name: moveInLeft;
-     animation-duration: 1s;
-     animation-timing-function: ease-out;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
 
-     
-     /*
-      animation-delay: 3s;
-      animation-iteration-count: 3;
-     */
+        
+        /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
 
-}
+    }
 
- .heading-primary-sub {
-      display: block;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 17.4px;
-      animation: moveInRight 1s ease-in-out;
-}
+    .heading-primary--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-in-out;
+    }
 
-@keyframes moveInLeft {
-    0% {
+    @keyframes moveInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-10rem);
+        }
+
+        80% {
+            transform: translateX(1rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    @keyframes moveInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(10rem);
+        }
+
+        80% {
+            transform: translateX(-1rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    @keyframes moveInBottom {
+        0% {
+            opacity: 0;
+            transform: translateY(3rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    .btn:link,
+    .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0,0,02);
+    }
+
+    .btn:active{
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,02);
+    }
+
+    .btn--white {
+        background-color: #fff;
+        color: #777;
+    }
+
+    .btn::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+
+    }
+
+    .btn--white::after {
+        background-color: #fff;
+    }
+
+    .btn:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
-        transform: translateX(-100px);
     }
 
-    80% {
-        transform: translateX(10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    80% {
-        transform: translateX(-10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all .2s;
-    position: relative;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,02);
-}
-
-.btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,02);
-}
-.btn-white {
-    background-color: #fff;
-    color: #777;
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-
-}
-.btn-white::after {
-    background-color: #fff;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-.btn-animated {
-    animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards;
-}
-
+    .btn--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    } 
 </style>

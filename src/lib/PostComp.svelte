@@ -1,3 +1,5 @@
+<!-- Blog Post Component. NENAS-- NO TOCHI ANGRYCATTOE -->
+
 <script>
     // import Header from "$lib/header.svelte";
     export let postTitle;

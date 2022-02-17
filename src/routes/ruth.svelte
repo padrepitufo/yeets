@@ -2,17 +2,64 @@
     import Header from "$lib/header.svelte";
     import About from "./about.svelte";
     import Index from "./index.svelte";
-    let name = 'Smantha';
-    let number = '3 or 5'
+    
+    import ContactCard from "$lib/ContactCard.svelte";
+    let name = 'Samantha';
+    let number = 1;
+    let pressed = "";
+
+    // let uppercaseName; not required
+
+    $: uppercaseName = name.toUpperCase();
+
+    $: console.log(name);
+
+    $: if (name === 'Velma' ) {
+        console.log('It runs!')
+        number = 10;
+    }
 
     function incrementNumber() {
-        number = 5;
+        number += 1;
+    }
+
+    function changeName() {
+        name = 'Velma';
+    }
+
+    function nameInput(event) {
+        console.log(event);
+        const enteredValue = event.target.value; 
+        name = enteredValue;
+        if(event.data == null){
+            return;
+        }
+        pressed = event.data;
     }
 </script>
 <style>
     h1 {
-        color: red;
+        color: rgb(0, 255, 157);
     }
+
+    button {
+        font: inherit;
+        border: 1px solid #cf0056;
+        background: #cf0056;
+        padding: 0.5rem 1rem;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
+        cursor: pointer;
+    }
+
+    button:hover,
+    button:active {
+        background: #e40763;
+        border-color: #e40763;
+        box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
+    }
+
 </style>
 
 <h1>Ruth's Log</h1>
@@ -178,11 +225,15 @@
 <h4>Right Right? YEs nO!</h4>
 <h4>Okay Now i'm gonna SHOW 2 NUMBERS AND ONE OF THEM IS...</h4>
 <h4>R I G H T !</h4>
-<h1>Testing Testing {name}, my numbers is {number}</h1>
+<h1>Testing Testing {uppercaseName}, my numbers is {number}</h1>
 <h4>LET ME MAKE UP A FAKE NAME!</h4>
 <button on:click="{incrementNumber}">Change Number</button>
-<h4>Sorry Still working on it!</h4>
-<h4>Let me try another one of the's</h4>
+<input type="text" value="{name}" on:input={nameInput}>
+<input type="text" bind:value={name}>
+
+<ContactCard />
+<h4>Sorry Still working on it (I just got your key press though {pressed})!</h4>
+<h4>Let me try another one of these</h4>
 <p>huh? it didin't Work?</p>
 <h4>sad!</h4>
 <p>But it did work a little bit!</p>
