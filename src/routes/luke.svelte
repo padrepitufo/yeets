@@ -1,3 +1,52 @@
+<script>
+    export let name;
+    let paragraphClass = 'water';
+    const changer = () => {
+        if (paragraphClass == 'water') {
+            paragraphClass = 'fire';
+
+        }else{
+            paragraphClass = 'water';
+        }
+
+
+    }
+</script>
+<style>
+    h1 {
+        color: red
+    }
+    h2 {
+        color: orange
+    }
+    h3 {
+        color: rgba(255, 255, 0, 0.856)
+    }
+    h4 {
+        color: green
+    }
+
+    h5 {
+        color: blue
+    }
+
+    h6 {
+        color: purple
+
+    }
+    .heading{
+        font-size:20px;
+    }
+    .water {
+        color: blue;
+    }
+
+    .fire {
+        color: red;
+    }
+</style>
+
+
 <h1>Luke's space</h1>
 <h3>January 29</h3>
 <p>
@@ -12,7 +61,7 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     <li>Hardcore</li>
     <li>Adveture</li>
 </ul>
-<p>Now i will explain all the gamemodes, Creative has infinite possibilties to try.
+<p on:click="{changer}" class="{paragraphClass}">Now i will explain all the gamemodes, Creative has infinite possibilties to try.
     Survival is about surviving and trying not to die.
     But if you do you can always respawn! Hardcore is like survival
     but do not die! Because if you do you can not respawn.
@@ -203,28 +252,19 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     <li>Posted on: Febuary 4th at 9:46 AM</li>
 </ul>
 
-<p>Okay so i'm gonna test somthing so its gonna be a two words colored red and blue so i'm 
-    just gonna post it right on my page.
-</p>
+<p>Hello everyone today i'm gonna right in rainbow so lets get to it, I'm gonna right all of my favorite fruit</p>
 
-<h1>Minecraft is the best!</h1>
+<h1>Apples</h1>
 
-<script>
-    export let name;
-</script>
+<h2>Oranges</h2>
 
-<style>
-    h1 {
-        color: red
-    }
+<h3>Bananas</h3>
 
-    h2 {
-        color: blue;
-    }
-</style>
+<h4>Kiwi</h4>
 
-<h2>Chicken sandwiches are the best!</h2>
+<h5>Blue berries</h5>
 
-<p>YO it actually worked Oh my gosh,Well that was COOOOL. so I guess i'm done for the 
-    day. I think I don't really know but goodbye
-</p>
+<h6>Grapes</h6>
+
+  
+<div class="heading">Hover over this code!</div>
