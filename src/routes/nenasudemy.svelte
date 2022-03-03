@@ -19,20 +19,20 @@
       box-sizing: border-box;
     }
 
-    html,
+    /* html,
     body {
         position: relative;
         width: 100%;
         height: 100%;
         font-family: 'Lato', sans-serif;
-    }
+    } */
 
-    body {
+    /* body {
         color: #333;
         margin: 0;
         padding: 2rem;
         background: #f3f3f3;
-    }
+    } */
 
     button {
         font: inherit;
@@ -57,5 +57,5 @@
 
 </style>
 
-<h1>Konnichiwa! Watashi wa {name}desu. {age}-saidesu! </h1>
+<h1>Konnichiwa! Watashi wa {name} desu. {age}-sai desu! </h1>
 <button on:click="{incrementAge}">Nenrei henko!</button>

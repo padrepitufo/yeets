@@ -1,20 +1,40 @@
 <!-- Blog Post Component. NENAS-- NO TOCHI ANGRYCATTOE -->
 
 <script>
-    // import Header from "$lib/header.svelte";
-    export let postTitle;
-    export let postContent;
-    export let postDate;
 
+    import axios from "axios";
+    import PostComp from "$lib/PostComp.svelte"
+
+    const api = axios.create({
+        baseURL: "http://localhost:8081"
+    });
+    let name = "Nena's Face";
+    let age = "As Old As Your Mom";
     let likes = 0;
 
-    function thumbsup () {
+    function thumbsup() {
+        console.error("increment likes!");
         likes += 1;
     };
 
     function thumbsdown() {
+        console.error("decrementing likes");
         likes -= 1;
+        api.get("/stars/")
+        .then(res => {
+            console.log(`got data ${res.data}`);
+            return Promise.resolve(res.data);
+        })
+        .catch(err => {
+            console.log(`got err ${err}`);
+            return Promise.reject(err);
+        });
     };
+    
+    // import Header from "$lib/header.svelte";
+    export let postTitle;
+    export let postContent;
+    export let postDate;
 </script>
 
 <style>
