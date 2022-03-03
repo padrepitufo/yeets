@@ -2,6 +2,8 @@
     import Header from "$lib/header.svelte";
     import About from "./about.svelte";
     import Index from "./index.svelte";
+    
+    import ContactCard from "$lib/ContactCard.svelte";
     let name = 'Samantha';
     let number = 1;
     let pressed = "";
@@ -227,6 +229,9 @@
 <h4>LET ME MAKE UP A FAKE NAME!</h4>
 <button on:click="{incrementNumber}">Change Number</button>
 <input type="text" value="{name}" on:input={nameInput}>
+<input type="text" bind:value={name}>
+
+<ContactCard />
 <h4>Sorry Still working on it (I just got your key press though {pressed})!</h4>
 <h4>Let me try another one of these</h4>
 <p>huh? it didin't Work?</p>
