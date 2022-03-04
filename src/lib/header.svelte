@@ -2,7 +2,7 @@
     export let image_url;
 </script>
 
-<header>
+<header> 
     <nav>
         <ul>
             <li><a href="/">Yeets</a></li>
@@ -37,7 +37,29 @@
     Dark green: #28b485
 
     */
-
+    /* --color-primary: #55c57a; */
+    /* --color-primary-light: #7ed56f; */
+    /* --color-primary-dark: #28b485; */
+    /* $color-grey-dark: #777 */
+    :root {
+        --color-primary-dark: #28b485;              
+    }    
+    :root {
+        --color-primary-light: #040938;
+    }
+    :root {
+        --color-primary:  #040333;
+    }
+    :root {
+        --color-grey-dark: #777;
+    }
+    :root {
+        --color-white: #fff;
+    }
+    :root {
+        --color-black: #000;
+    }
+    
     *,
     *::after,
     *::before {
@@ -46,12 +68,13 @@
     box-sizing: inherit;
     } 
 
+
     .root {
         font-family: "lato", sans-serif;
         font-weight: 400;
         /* font-size: 16px; */
         line-height: 1.7;
-        color: #777;
+        color: var(--color-grey-dark);
         padding: 3rem;
 
         box-sizing: border-box;
@@ -61,8 +84,8 @@
         height: 95vh;
         background-image: linear-gradient(
             to right bottom,
-            #7ed56fc5,
-            #28b485d0), 
+            var(--color-primary-light),
+            var(--color-primary-dark)), 
         var(--image);
         background-size: cover;
         background-position: top;
@@ -90,7 +113,7 @@
     }
 
     .heading-primary {
-        color: #fff;
+        color: var(--color-white);
         text-transform: uppercase;
 
         backface-visibility: hidden;
@@ -177,6 +200,7 @@
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
+        font-size: 1.6rem;
     }
 
     .btn:hover {
@@ -190,8 +214,8 @@
     }
 
     .btn--white {
-        background-color: #fff;
-        color: #777;
+        background-color: var(--color-white);
+        color: var(--color-grey-dark);
     }
 
     .btn::after {
@@ -209,7 +233,7 @@
     }
 
     .btn--white::after {
-        background-color: #fff;
+        background-color: var(--color-white);
     }
 
     .btn:hover::after {
