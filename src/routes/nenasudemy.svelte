@@ -1,10 +1,11 @@
 <!-- ACTUALLY FOLLOWING UDEMY STUFF -->
 
 <script>
+    import ContactCard from "$lib/ContactCard.svelte";
     let name = 'Nena';
     let age = 0;
 
-// let uppercaseName; not required!
+// let uppercaseName; not required! - not using too~
 
 $: beegerName = name.toUpperCase();
 
@@ -20,6 +21,10 @@ $: if(name === 'Fina') {
     }
     function changeNamaeDesu() {
         name = 'Fina';
+    }
+    function namaeInput(event) {
+        const enteredValue = event.target.value;
+        name = enteredValue;
     }
 </script>
 
@@ -39,9 +44,9 @@ $: if(name === 'Fina') {
         width: 100%;
         height: 100%;
         font-family: 'Lato', sans-serif;
-    } */
+    }
 
-    /* body {
+    body {
         color: #333;
         margin: 0;
         padding: 2rem;
@@ -66,11 +71,18 @@ $: if(name === 'Fina') {
         box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
     }
     h1{
-        color:cadetblue;
+        color:rgb(107, 194, 197);
     }
 
 </style>
 
 <h1>Konnichiwa! Watashi wa {name} desu. {age}-sai desu! </h1>
 <button on:click="{incrementToshi}">Nenrei o kaeyou!</button>
-<button on:click="{changeNamaeDesu}">Namae o henkō suru!</button>
+
+<!-- Old Un-Used Buttons -->
+<!-- <button on:click="{changeNamaeDesu}">Namae o henkō suru!</button>  Change name button --> 
+<!-- <input type="text" value="{name}" on:input="{namaeInput}"> Type out a name button -->
+
+<input type="text" bind:value="{name}"> <!-- Shortcut from the above versions!! -->
+
+<ContactCard></ContactCard>
