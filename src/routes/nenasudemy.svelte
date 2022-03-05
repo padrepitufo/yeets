@@ -4,8 +4,22 @@
     let name = 'Nena';
     let age = 0;
 
-    function incrementAge() {
+// let uppercaseName; not required!
+
+$: beegerName = name.toUpperCase();
+
+$: console.log(name);
+
+$: if(name === 'Fina') {
+    console.log('Deez Nuts');
+    age = 69;
+}
+
+    function incrementToshi() {
         age += 1;
+    }
+    function changeNamaeDesu() {
+        name = 'Fina';
     }
 </script>
 
@@ -19,20 +33,20 @@
       box-sizing: border-box;
     }
 
-    html,
+    /* html,
     body {
         position: relative;
         width: 100%;
         height: 100%;
         font-family: 'Lato', sans-serif;
-    }
+    } */
 
-    body {
+    /* body {
         color: #333;
         margin: 0;
         padding: 2rem;
         background: #f3f3f3;
-    }
+    } */
 
     button {
         font: inherit;
@@ -57,5 +71,6 @@
 
 </style>
 
-<h1>Konnichiwa! Watashi wa {name}desu. {age}-saidesu! </h1>
-<button on:click="{incrementAge}">Nenrei henko!</button>
+<h1>Konnichiwa! Watashi wa {name} desu. {age}-sai desu! </h1>
+<button on:click="{incrementToshi}">Nenrei o kaeyou!</button>
+<button on:click="{changeNamaeDesu}">Namae o henkō suru!</button>

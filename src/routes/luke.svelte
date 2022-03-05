@@ -1,3 +1,51 @@
+<script>
+    let paragraphClass = 'water';
+    const changer = () => {
+        if (paragraphClass == 'water') {
+            paragraphClass = 'fire';
+
+        }else{
+            paragraphClass = 'water';
+        }
+
+
+    }
+</script>
+<style>
+    h1 {
+        color: red
+    }
+    h2 {
+        color: orange
+    }
+    h3 {
+        color: rgba(255, 255, 0, 0.856)
+    }
+    h4 {
+        color: green
+    }
+
+    h5 {
+        color: blue
+    }
+
+    h6 {
+        color: purple
+
+    }
+    .heading{
+        font-size:20px;
+    }
+    .water {
+        color: blue;
+    }
+
+    .fire {
+        color: red;
+    }
+</style>
+
+
 <h1>Luke's space</h1>
 <h3>January 29</h3>
 <p>
@@ -12,7 +60,7 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     <li>Hardcore</li>
     <li>Adveture</li>
 </ul>
-<p>Now i will explain all the gamemodes, Creative has infinite possibilties to try.
+<p on:click="{changer}" class="{paragraphClass}">Now i will explain all the gamemodes, Creative has infinite possibilties to try.
     Survival is about surviving and trying not to die.
     But if you do you can always respawn! Hardcore is like survival
     but do not die! Because if you do you can not respawn.
@@ -197,8 +245,25 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     some more tomorrow. goodbye and have a nice day.
 </p>
 
-<img src="https://img.search.brave.com/a7MikeILxloTJGzNZSuIjmHV3sMCRZB9PSO43RYQRRo/rs:fit:1024:576:1/g:ce/aHR0cHM6Ly93d3cu/ZGV4ZXJ0by5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MTAvMTgvTWluZWNy/YWZ0LVRoZS1XaWxk/LVVwZGF0ZS1yZWxl/YXNlLWRhdGUtMTAy/NHg1NzYuanBn" alt="">
+
 
 <ul>
     <li>Posted on: Febuary 4th at 9:46 AM</li>
 </ul>
+
+<p>Hello everyone today i'm gonna right in rainbow so lets get to it, I'm gonna right all of my favorite fruit</p>
+
+<h1>Apples</h1>
+
+<h2>Oranges</h2>
+
+<h3>Bananas</h3>
+
+<h4>Kiwi</h4>
+
+<h5>Blue berries</h5>
+
+<h6>Grapes</h6>
+
+  
+<div class="heading">Hover over this code!</div>
