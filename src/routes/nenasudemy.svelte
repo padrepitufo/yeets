@@ -1,11 +1,30 @@
 <!-- ACTUALLY FOLLOWING UDEMY STUFF -->
 
 <script>
+    import ContactCard from "$lib/ContactCard.svelte";
     let name = 'Nena';
     let age = 0;
 
-    function incrementAge() {
+// let uppercaseName; not required! - not using too~
+
+$: beegerName = name.toUpperCase();
+
+$: console.log(name);
+
+$: if(name === 'Fina') {
+    console.log('Deez Nuts');
+    age = 69;
+}
+
+    function incrementToshi() {
         age += 1;
+    }
+    function changeNamaeDesu() {
+        name = 'Fina';
+    }
+    function namaeInput(event) {
+        const enteredValue = event.target.value;
+        name = enteredValue;
     }
 </script>
 
@@ -19,7 +38,7 @@
       box-sizing: border-box;
     }
 
-    html,
+    /* html,
     body {
         position: relative;
         width: 100%;
@@ -32,7 +51,7 @@
         margin: 0;
         padding: 2rem;
         background: #f3f3f3;
-    }
+    } */
 
     button {
         font: inherit;
@@ -52,10 +71,18 @@
         box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
     }
     h1{
-        color:cadetblue;
+        color:rgb(107, 194, 197);
     }
 
 </style>
 
-<h1>Konnichiwa! Watashi wa {name}desu. {age}-saidesu! </h1>
-<button on:click="{incrementAge}">Nenrei henko!</button>
+<h1>Konnichiwa! Watashi wa {name} desu. {age}-sai desu! </h1>
+<button on:click="{incrementToshi}">Nenrei o kaeyou!</button>
+
+<!-- Old Un-Used Buttons -->
+<!-- <button on:click="{changeNamaeDesu}">Namae o henkō suru!</button>  Change name button --> 
+<!-- <input type="text" value="{name}" on:input="{namaeInput}"> Type out a name button -->
+
+<input type="text" bind:value="{name}"> <!-- Shortcut from the above versions!! -->
+
+<ContactCard></ContactCard>

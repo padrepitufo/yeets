@@ -1,13 +1,9 @@
-<!-- Nena's stoof. Not tochi! Angrycattoe uwu/ -->
-      <!-- Only nene may toch >:) uwu -->
-  
-<script>   
+<script>
     import PostComp from "$lib/PostComp.svelte"
-
     let name = "Nena's Face";
     let age = "As Old As Your Mom";
     let likes = 0;
-
+    
     function incrementLikes() {
         likes += 1;
     };
@@ -132,8 +128,18 @@
 <br>
 <br>
 
+<PostComp
+postTitle="Starting again.."
+postContent="Hey shawties, stalkers, and stupids. I just used alliteration- yayyy. I haven't posted in some time
+    ( Though I think you can tell hehe. ) I have posted a post as a refresh for my brain to make sure 
+    I remember how to do things 👍. So far, I remember how to do a few things, I haven't yet uncovered something I don't know. 
+    I take that as a good sign. Starting tomorrow I'll be doing more and new things and following my udemy course more. 
+    -Fina"
+postDate="March 2, 2022 - 8:15 PM"
+></PostComp>
 
-
+<br>
+<br>
 
 
 
