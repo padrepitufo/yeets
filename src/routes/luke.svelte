@@ -19,6 +19,7 @@
     h2 {
         color: orange
     }
+
     h3 {
         color: rgba(255, 255, 0, 0.856)
     }
