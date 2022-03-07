@@ -10,7 +10,7 @@
             <li><a href="/nena">nena</a></li>
             <li><a href="/ruth">Ruth</a></li>
             <li><a href="/luke">luke</a></li>
-            <li><a href="/nenasudemy">nena dos? O:</a></li>
+            <li><a href="/nenasudemy">nenados?O:</a></li>
         </ul>
     </nav>
 </header> 

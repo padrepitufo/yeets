@@ -1,14 +1,14 @@
 <script>
-    import Header from "$lib/header.svelte";
-    import About from "./about.svelte";
-    import Index from "./index.svelte";
-    
     import ContactCard from "$lib/ContactCard.svelte";
     let name = 'Samantha';
+    let title = "";
+    let image = "";
+    let description = "";
     let number = 1;
     let pressed = "";
-
-    // let uppercaseName; not required
+    const imgPikachu = "https://img.search.brave.com/-lLDW2QYHL6j8kN-kl8WLjhAW3lflpx4CKuAvAKxKOc/rs:fit:207:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/ZDFnQ1luMW9OVV9V/MW5jdTNoZ1lBQUFB/QSZwaWQ9QXBp";
+    const imgReverse = "https://img.search.brave.com/IM6ko6Wsxcn6uMnmgW18hlLthM85byv5MUzyvp1PKMA/rs:fit:128:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5r/QkhyOGMtaFJXX19B/R19tMEo4WFFBQUFB/QSZwaWQ9QXBp";
+    let togglePic = `${imgPikachu}`;
 
     $: uppercaseName = name.toUpperCase();
 
@@ -36,8 +36,31 @@
         }
         pressed = event.data;
     }
+    function switchTogglePic() { 
+        // when someone clicks on the image
+        // the image is supposed to change to
+        // another image
+        // we only have two images right now
+        // so right now, if the image is set to 
+        // pikachu and they click it, the image should
+        // turn to uno reverse
+
+        if (togglePic == imgPikachu) {
+        console.log ('imgPikachu is not equal') 
+            togglePic = imgReverse;
+
+        } else {
+        console.log ('imgReverse is equal')
+        togglePic = imgPikachu;
+        }
+            
+
+        
+            
+        
+    }
 </script>
-<style>
+<style lang="scss">
     h1 {
         color: rgb(0, 255, 157);
     }
@@ -51,18 +74,20 @@
         border-radius: 5px;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
         cursor: pointer;
+
+        &:hover,
+        &:active {
+            background: #e40763;
+            border-color: blue;
+            box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
+        }
     }
 
-    button:hover,
-    button:active {
-        background: #e40763;
-        border-color: #e40763;
-        box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
-    }
+    
 
 </style>
 
-<h1>Ruth's Log</h1>
+<h1>Ruth's Log/ COOL STUFF AT THE BOTTEM</h1>
 <h3>January 29 2022</h3>
 <h4>Things I've Been Doing!</h4>
 <p>Yesterday, I Haved Indian Food! And Whatched Encanto!</p>
@@ -150,6 +175,7 @@
     <li>Why Can'T TIE'S Win THE RACE!</li>
     <li>WHAT HAPpeNs When A SKelETon Has No FRiEndS!</li>
     <li>What HapPenS WhEN a SkeLEtON Says to another SKelETon, "Your not WORKING!"</li>
+    <li>What language dose Dog speak!</li>
 </ol>
 <h4>ANSWERS</h4>
 <ol>
@@ -158,6 +184,7 @@
     <li>Because they always Tie</li>
     <li>HE is BONLEY</li>
     <li>He said "I have been working a TON! A SKELETON!"</li>
+    <li>they SPEAK YAPANIES</li>
 </ol>
 <h4>DID YOU LIKE THE JOKES! I THOUGHT THEY WERE FUNNY!</h4>
 <p>did i talk a lot I THINK I DID!</p>
@@ -228,12 +255,21 @@
 <h1>Testing Testing {uppercaseName}, my numbers is {number}</h1>
 <h4>LET ME MAKE UP A FAKE NAME!</h4>
 <button on:click="{incrementNumber}">Change Number</button>
-<input type="text" value="{name}" on:input={nameInput}>
-<input type="text" bind:value={name}>
+<input placeholder="name" type="text" value="{name}" on:input={nameInput}>
+<input placeholder="title" type="text" bind:value={title}>
+<input placeholder="image" type="text" bind:value={image}>
+<textarea rows="3" bind:value={description}></textarea>
 
-<ContactCard />
+<ContactCard 
+    userName={name}
+    jobTitle={title}
+    description={description}
+    userImage={image}
+/>
 <h4>Sorry Still working on it (I just got your key press though {pressed})!</h4>
-<h4>Let me try another one of these</h4>
-<p>huh? it didin't Work?</p>
-<h4>sad!</h4>
-<p>But it did work a little bit!</p>
+<h4>TRY CLICKING ON THE PICTURE</h4>
+<p>IT SHOULD WORK</p>
+<h4>YA!</h4>
+<p>IT WORKED</p>
+
+<img on:click="{switchTogglePic}" src="{togglePic}" alt="">
