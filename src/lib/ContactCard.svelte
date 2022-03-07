@@ -1,6 +1,11 @@
 <!-- Hey ruthi! Nena was using this, sorryy. But we can do it together B) -->
 <script>
     import ContactCard from "$lib/ContactCard.svelte";
+
+  export let userNamae;
+  export let jobNamae;
+  export let shortDeskuu;
+  export let profilePikuu;
 </script>
 
 <style>
@@ -34,6 +39,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 5px;
   }
 
   h1 {
@@ -62,15 +68,15 @@
 <div class="contact-card">
     <header>
       <div class="thumb">
-        <img src="" alt="" />
+        <img src="{profilePikuu}" alt="{userNamae}" />
       </div>
       <div class="user-data">
-        <h1>User Name</h1>
-        <h2>Job Title</h2>
+        <h1>{userNamae}</h1>
+        <h2>{jobNamae}</h2>
       </div>
     </header>
     <div class="description">
-      <p>A short description</p>
+      <p>{shortDeskuu}</p>
     </div>
   </div>
 

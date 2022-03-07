@@ -2,8 +2,11 @@
 
 <script>
     import ContactCard from "$lib/ContactCard.svelte";
-    let name = 'Nena';
-    let age = 0;
+    let name = 'Insert';
+    let age = 2;
+    let title = "";
+    let profilePic = "";
+    let description = "";
 
 // let uppercaseName; not required! - not using too~
 
@@ -14,6 +17,8 @@ $: console.log(name);
 $: if(name === 'Fina') {
     console.log('Deez Nuts');
     age = 69;
+} else {
+    age = 2;
 }
 
     function incrementToshi() {
@@ -84,5 +89,13 @@ $: if(name === 'Fina') {
 <!-- <input type="text" value="{name}" on:input="{namaeInput}"> Type out a name button -->
 
 <input type="text" bind:value="{name}"> <!-- Shortcut from the above versions!! -->
+<input type="text" bind:value="{title}">
+<input type="text" bind:value="{profilePic}">
+<textarea rows="3" bind:value="{description}"></textarea>
 
-<ContactCard></ContactCard>
+<ContactCard 
+userNamae={name} 
+jobNamae={title} 
+profilePikuu={profilePic} 
+shortDeskuu={description}
+></ContactCard>
