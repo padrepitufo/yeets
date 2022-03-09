@@ -9,6 +9,8 @@
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
 .contact-card {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     max-width: 30rem;
@@ -77,8 +79,8 @@
         <img src="{profilePikuu}" alt="{userNamae}" />
       </div>
       <div class="user-data">
-        <h1 class="user-data--name">{userNamae}</h1>
-        <h2 class="user-data--job">{jobNamae}</h2>
+        <h1>{userNamae}</h1>
+        <h2>{jobNamae}</h2>
       </div>
     </header>
     <div class="description">
