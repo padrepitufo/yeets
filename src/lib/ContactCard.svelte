@@ -14,6 +14,7 @@
     max-width: 30rem;
     border-radius: 5px;
     margin: 1rem 0;
+    background: white;
   }
 
   header {
@@ -28,6 +29,10 @@
     height: 100%;
   }
 
+  .thumb-placeholder {
+    background: #ccc;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -39,20 +44,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5px;
+    padding-left: 1rem;
   }
 
   h1 {
     font-size: 1.25rem;
     font-family: "Roboto Slab", sans-serif;
     margin: 0.5rem 0;
-    color: rgb(107, 194, 197);
   }
 
   h2 {
     font-size: 1rem;
     font-weight: normal;
-    color: #5a5a5a;
+    color: rgb(107, 194, 197);
     margin: 0;
     margin-bottom: 0.5rem;
   }
@@ -62,17 +66,19 @@
     padding: 1rem;
   }
 
+  /* color: rgb(107, 194, 197); */
 </style>
 
 
 <div class="contact-card">
     <header>
-      <div class="thumb">
+      <!-- <div class="{profilePikuu ? 'thumb' : 'thumb thumb-placeholder'}"> -->
+        <div class="thumb" class:thumb-placeholder="{!profilePikuu}">
         <img src="{profilePikuu}" alt="{userNamae}" />
       </div>
       <div class="user-data">
-        <h1>{userNamae}</h1>
-        <h2>{jobNamae}</h2>
+        <h1 class="user-data--name">{userNamae}</h1>
+        <h2 class="user-data--job">{jobNamae}</h2>
       </div>
     </header>
     <div class="description">

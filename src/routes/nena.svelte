@@ -11,7 +11,7 @@
     function incrementDislikes() {
         likes -= 1;
     };
-    </script>
+</script>
 
 <style>
     button {

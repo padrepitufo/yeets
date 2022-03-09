@@ -78,6 +78,10 @@ $: if(name === 'Fina') {
     h1{
         color:rgb(107, 194, 197);
     }
+    /* #form {
+    width: 30rem;
+    max-width: 100%;
+  } */
 
 </style>
 
@@ -88,10 +92,29 @@ $: if(name === 'Fina') {
 <!-- <button on:click="{changeNamaeDesu}">Namae o henkō suru!</button>  Change name button --> 
 <!-- <input type="text" value="{name}" on:input="{namaeInput}"> Type out a name button -->
 
-<input type="text" bind:value="{name}"> <!-- Shortcut from the above versions!! -->
+<input type="text" bind:value="{name}"> Shortcut from the above versions!!
 <input type="text" bind:value="{title}">
 <input type="text" bind:value="{profilePic}">
 <textarea rows="3" bind:value="{description}"></textarea>
+
+<!-- <div id="form">
+    <div class="form-control">
+      <label for="userName">User Name</label>
+      <input type="text" bind:value={name} id="userName" />
+    </div>
+    <div class="form-control">
+      <label for="jobTitle">Job Title</label>
+      <input type="text" bind:value={title} id="jobTitle" />
+    </div>
+    <div class="form-control">
+      <label for="image">Image URL</label>
+      <input type="text" bind:value={profilePic} id="image" />
+    </div>
+    <div class="form-control">
+      <label for="desc">Description</label>
+      <textarea rows="3" bind:value={description} id="desc" />
+    </div>
+  </div> -->
 
 <ContactCard 
 userNamae={name} 
