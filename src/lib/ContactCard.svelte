@@ -2,10 +2,10 @@
 <script>
     import ContactCard from "$lib/ContactCard.svelte";
 
-  export let userNamae;
-  export let jobNamae;
-  export let shortDeskuu;
-  export let profilePikuu;
+  export let userName;
+  export let jobTitle;
+  export let description;
+  export let userImage;
 </script>
 
 <style>
@@ -75,16 +75,15 @@
 <div class="contact-card">
     <header>
       <!-- <div class="{profilePikuu ? 'thumb' : 'thumb thumb-placeholder'}"> -->
-        <div class="thumb" class:thumb-placeholder="{!profilePikuu}">
-        <img src="{profilePikuu}" alt="{userNamae}" />
+        <div class="thumb" class:thumb-placeholder="{!userImage}">
+          <img src={userImage} alt={userName} />
+        </div>
+        <div class="user-data">
+          <h1>{userName}</h1>
+          <h2>{jobTitle}</h2>
+        </div>
+      </header>
+      <div class="description">
+        <p>{description}</p>
       </div>
-      <div class="user-data">
-        <h1>{userNamae}</h1>
-        <h2>{jobNamae}</h2>
-      </div>
-    </header>
-    <div class="description">
-      <p>{shortDeskuu}</p>
     </div>
-  </div>
-

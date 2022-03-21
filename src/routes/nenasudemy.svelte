@@ -4,22 +4,33 @@
   import ContactCard from "$lib/ContactCard.svelte";
   let name = 'You';
   let title = "";
-  let profilePic = "";
+  let image = "";
   let description = "";
-  let formState = 'empty';
+  let formState = "empty";
+
+  let createdContacts = [];
 
   function addContact() {
-    if(
+    if (
       name.trim().length == 0 ||
       title.trim().length == 0 ||
-      profilePic.trim().length == 0 ||
+      image.trim().length == 0 ||
       description.trim().length == 0
-      ) {
-        formState = 'invalid';
-        alert('Missing Input! Please fill out all the boxes! - yeets.me 😊');
+    ) {
+        formState = "invalid";
+        alert("Missing Input! Please fill out all the boxes! - yeets.me 😊");
         return;
       }
-    formState = 'done';
+      createdContacts = [
+      ...createdContacts,
+      {
+        name: name,
+        jobTitle: title,
+        imageUrl: image,
+        desc: description
+      }
+    ];
+    formState = "done";
   }
 
 </script>
@@ -45,35 +56,39 @@
 </style>
 
 <div id="form">
-    <div class="form-control">
-      <label for="userName">User Name</label>
-      <input type="text" bind:value={name} id="userName" />
-    </div>
-    <div class="form-control">
-      <label for="jobTitle">Job Title</label>
-      <input type="text" bind:value={title} id="jobTitle" />
-    </div>
-    <div class="form-control">
-      <label for="image">Image URL</label>
-      <input type="text" bind:value={profilePic} id="image" />
-    </div>
-    <div class="form-control">
-      <label for="desc">Description</label>
-      <textarea rows="3" bind:value={description} id="desc" />
-    </div>
+  <div class="form-control">
+    <label for="userName">User Name</label>
+    <input type="text" bind:value={name} id="userName" />
   </div>
+  <div class="form-control">
+    <label for="jobTitle">Job Title</label>
+    <input type="text" bind:value={title} id="jobTitle" />
+  </div>
+  <div class="form-control">
+    <label for="image">Image URL</label>
+    <input type="text" bind:value={image} id="image" />
+  </div>
+  <div class="form-control">
+    <label for="desc">Description</label>
+    <textarea rows="3" bind:value={description} id="desc" />
+  </div>
+</div>>
 
 <button on:click={addContact}>Add Contact Card</button>
 
-{#if formState == 'done'}
-  <ContactCard 
-  userNamae={name} 
-  jobNamae={title} 
-  profilePikuu={profilePic} 
-  shortDeskuu={description}
-  ></ContactCard>
-  {:else if formState === 'invalid'}
-  <p>Inavlid input.</p>
-  {:else}
+{#if formState === 'invalid'}
+<p>Invalid input.</p>
+{:else}
   <p class="pbegin">Please fill out the boxes! Then, once you're done, hit the button!!</p>
-{/if}
+  {/if}
+
+  {#each createdContacts as contact, i}
+    <h2># {i + 1}</h2>
+    <ContactCard
+      userName={contact.name}
+      jobTitle={contact.jobTitle}
+      description={contact.desc}
+      userImage={contact.imageUrl} />
+  {:else}
+    <p>Please start adding some contacts, we found none!</p>
+  {/each}
