@@ -10,6 +10,13 @@
 
 
     }
+
+    let name = 'Max';
+    let age = 15;
+
+    function incrementAge() {
+        age += 1;
+    }
 </script>
 <style>
     h1 {
@@ -246,7 +253,7 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     some more tomorrow. goodbye and have a nice day.
 </p>
 
-
+<img src="img.search.brave.com/a7MikeILxloTJGzNZSuIjmHV3sMCRZB9PSO43RYQRRo/rs:fit:1024:576:1/g:ce/aHR0cHM6Ly93d3cu/ZGV4ZXJ0by5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MTAvMTgvTWluZWNy/YWZ0LVRoZS1XaWxk/LVVwZGF0ZS1yZWxl/YXNlLWRhdGUtMTAy/NHg1NzYuanBn" alt="">
 
 <ul>
     <li>Posted on: Febuary 4th at 9:46 AM</li>
@@ -268,3 +275,16 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 
   
 <div class="heading">Hover over this code!</div>
+
+<p>Today I will test something ordinary.</p>
+
+<h1>Hello {name}, my age is {age}!</h1>
+<button on:click="{incrementAge}">Change Age</button>
+
+<p>So it worked actually looks cool I guess... so that's fun. Right? or Wrong.</p>
+
+<p>So like my day was like basically cleaning. but the best part about it, was to eat cookies!</p>
+
+<p>The cookies were so delicious the cookies were sugar cookies which are really good! so yeah well hope to post something tomorrow, goodbye.</p>
+
+<list>Posted on March 24th at 6:41 PM 2022</list>
