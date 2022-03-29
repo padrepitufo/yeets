@@ -1,5 +1,8 @@
 <!-- ACTUALLY FOLLOWING UDEMY STUFF -->
 
+
+<!-- CONTACT CARD PROJECT COMPLETE // FINAL PRODUCT -->
+
 <script>
   import ContactCard from "$lib/ContactCard.svelte";
   let name = 'You';
