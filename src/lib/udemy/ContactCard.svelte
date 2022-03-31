@@ -1,6 +1,6 @@
-<!-- Hey ruthi! Nena was using this, sorryy. But we can do it together B) -->
+<!-- Hey ruthi! Nena was using this, sorryy. But now it's yours! -->
 <script>
-    import ContactCard from "$lib/ContactCard.svelte";
+    import ContactCard from "$lib/udemy/ContactCard.svelte";
 
   export let userName;
   export let jobTitle;

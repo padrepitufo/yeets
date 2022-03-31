@@ -24,7 +24,7 @@
                 <span class="heading-primary--main">Welcome</span>
                 <span class="heading-primary--sub">to rama lakeline</span>
             </h1> 
-            <a href="/nena" class="btn btn--white btn--animated">Discover our tours</a>
+            <a href="/nenasudemy" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
     </header> 
 </div>
@@ -221,4 +221,10 @@
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
     } 
+
+    ul {
+        padding-left: 100px;
+        margin-top: 100px;
+        color: rgb(119, 158, 150);
+    }
 </style>

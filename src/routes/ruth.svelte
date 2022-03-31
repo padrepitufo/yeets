@@ -1,5 +1,6 @@
 <script>
-    import ContactCard from "$lib/ContactCard.svelte";
+    import ContactCard from "$lib/udemy/ContactCard.svelte";
+
     let name = 'Samantha';
     let title = "";
     let image = "";
