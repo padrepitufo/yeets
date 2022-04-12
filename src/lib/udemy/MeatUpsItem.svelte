@@ -1,12 +1,22 @@
-<script></script>
+<script>
+  export let title;
+  export let subtitle;
+  export let imageUrl;
+  export let description;
+  export let address;
+  export let email;
+</script>
 
 <style>
-article {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    border-radius: 5px;
-    background: white;
-    margin: 1rem;
-  }
+
+  @import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab');
+  @import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wdth,wght@87.1,400;100,300&family=Hind+Siliguri&display=swap');
+  article {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      border-radius: 5px;
+      background: white;
+      margin: 1rem;
+    }
 
   header,
   .content,
@@ -39,7 +49,7 @@ article {
   }
 
   h2 {
-    font-family: "Roboto Slab", sans-serif;
+    font-family: 'Anek Tamil', sans-serif;
     font-size: 1rem;
     color: #808080;
     margin: 0.5rem 0;
@@ -48,6 +58,7 @@ article {
   p {
     font-size: 1.25rem;
     margin: 0;
+    font-family: 'Anek Tamil', sans-serif;
   }
 
   div {
@@ -61,23 +72,25 @@ article {
     border-color: #ffdaaa;
     color: rgb(74, 111, 146);
   }
+
   </style>
 
-
-
+<!-- Card thing o//o -->
 
 <article>
     <header>
-        <h1>TITLE</h1>
-        <h2>SUBTITLE</h2>  
+        <h1>{title}</h1>
+        <h2>{subtitle}</h2>  
+        <p>{address}</p>
     </header>
     <div class="image">
-        <img src="" alt="">
+        <img src="{imageUrl}" alt="{title}">
     </div>
     <div class="content">
-        <p></p>
+        <p>{description}</p>
     </div>
     <footer>
+        <a href="mailto:{email}">Contact Us</a>
         <button>Show Details</button>
         <button>Favorite</button>
     </footer>
