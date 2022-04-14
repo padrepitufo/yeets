@@ -3,7 +3,7 @@
 
 <script>
   import Hederr from "$lib/udemy/Hederr.svelte";
-  import MeatUpsItem from "$lib/udemy/MeatUpsItem.svelte";
+  import MeatUpGrid from "$lib/udemy/MeatUpGrid.svelte";
 
   const meatups = [
 	{
@@ -29,30 +29,18 @@
 </script>
 
 <style>
-	@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab');
-
-	* {
-	box-sizing: border-box;
-	}
-	html, body {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		font-family: 'Lato', sans-serif;
-	}
-
 	body {
 		color: #333;
 		margin: 0;
 		padding: 8px;
 		box-sizing: border-box;
 	}
-
+ 
 	a {
 		color: rgb(0,100,200);
 		text-decoration: none;
 	}
-
+q
 	a:hover {
 		text-decoration: underline;
 	}
@@ -97,24 +85,40 @@
 	button:focus {
 		border-color: #666;
 	}
-	#meatups {
+	main {
 		margin-top: 5rem;
 	}
 </style>
 
 <Hederr></Hederr>
 
-<section id="meatups"></section>
-
-{#each meatups as meatup}
-<MeatUpsItem 
-title={meatup.title} 
-subtitle={meatup.subtitle} 
-description={meatup.description}
-imageUrl={meatup.imageUrl}
-email={meatup.contactEmail}
-address={meatup.address}
-/>
-{/each}
-
+<main>
+	<form>
+		<div class="form-control">
+			<label for="title">Title</label>
+			<input type="text" id="title">
+		</div>
+		<div class="form-control">
+			<label for="subtitle">Subtitle</label>
+			<input type="text" id="subtitle">
+		</div>
+		<div class="form-control">
+			<label for="address">Address</label>
+			<input type="text" id="address">
+		</div>
+		<div class="form-control">
+			<label for="email">E-Mail</label>
+			<input type="email" id="email">
+		</div>
+		<div class="form-control">
+			<label for="imageURL">Image URL</label>
+			<input type="text" id="imageURL">
+		</div>
+		<div class="form-control">
+			<label for="description">Description</label>
+			<textarea rows="3" id="description"/>
+		</div>
+	</form>
+	<MeatUpGrid meatups={meatups}></MeatUpGrid>
+</main>
 

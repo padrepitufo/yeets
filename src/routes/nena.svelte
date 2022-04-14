@@ -1,5 +1,18 @@
 <script>
+    import { getYeets, getYeeps } from "$lib/yeets.js";
+    import { onMount } from 'svelte';
     import PostComp from "$lib/PostComp.svelte"
+    let pokemonDetail = {};
+    let yeets = [];
+    let yeeps = [];
+
+    // Get the data from the api, after the page is mounted.
+    onMount(async () => {
+        const resYeets = await getYeets();
+        yeets = resYeets;
+        const resYeeps = await getYeeps();
+        yeeps = resYeeps;
+    });
     let name = "Nena's Face";
     let age = "As Old As Your Mom";
     let likes = 0;
@@ -137,7 +150,15 @@ postContent="Hey shawties, stalkers, and stupids. I just used alliteration- yayy
     -Fina"
 postDate="March 2, 2022 - 8:15 PM"
 ></PostComp>
-
+<div  class="yeets">
+    {#each yeets as yeet}
+        <PostComp
+            postTitle={yeet.title}
+            postContent={yeet.content}
+            postDate={yeet.created_at}
+        ></PostComp>
+    {/each}
+</div>
 <br>
 <br>
 

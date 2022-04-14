@@ -66,11 +66,11 @@
   }
   button {
     font-family: "Roboto Slab", sans-serif;
-    background-color: rgb(255, 252, 249);
+    background-color: #cf0056;
     border-style: solid;
     border-radius: 11px;
-    border-color: #ffdaaa;
-    color: rgb(74, 111, 146);
+    border-color: #5ee1eb;
+    color: rgb(255, 255, 255);
   }
 
   </style>
