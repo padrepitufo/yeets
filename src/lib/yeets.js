@@ -25,3 +25,18 @@ export const getStars = async () => {
         console.error(error);
     }
 };
+
+export const postYeets = async (title, content) => {
+    try {
+        const response = await Api.post("/yeets/", {
+            title,
+            content,
+            snippet: "Trash",
+            slug: "trash-again",
+            yeep_id: "a58b9204-3c46-49e8-8ad6-d7caaab04b83",
+        });
+        return response.data;
+    } catch (error) {
+        console.error(error);
+    }
+}

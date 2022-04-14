@@ -71,6 +71,8 @@
     border-radius: 11px;
     border-color: #5ee1eb;
     color: rgb(255, 255, 255);
+		outline: none;
+
   }
 
   </style>

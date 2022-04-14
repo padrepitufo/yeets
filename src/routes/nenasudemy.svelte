@@ -2,10 +2,19 @@
 
 
 <script>
+  import { postYeets } from "$lib/yeets.js";
   import Hederr from "$lib/udemy/Hederr.svelte";
   import MeatUpGrid from "$lib/udemy/MeatUpGrid.svelte";
+  import TextInput from "$lib/udemy/TextInput.svelte";
 
-  const meatups = [
+  let title = '';
+  let subtitle = '';
+  let address = '';
+  let description = '';
+  let email = '';
+  let imageUrl = '';
+
+  let meatups = [
 	{
 		id:'m1',
 		title:'Coding Bootcamp',
@@ -25,6 +34,23 @@
 		contactEmail:'AquaMansMothersHusbandsWife@test.com',
 	}
   ];
+
+	// const addMeatup = async () => {
+    //     // const resYeets = await postYeets(title, description);
+        // console.log(resYeets);
+	function addMeatup () {
+		const newMeatup = {
+			id: Math.random().toString(),
+			title: title,
+			subtitle: subtitle,
+			description: description,
+			imageUrl: imageUrl,
+			contactEmail: email,
+			address: address
+		};
+		// meatups.push(newMeatup); // DOES NOT WORK!
+		meatups = [newMeatup,...meatups];
+	};
 
 </script>
 
@@ -69,8 +95,12 @@ q
 	}
 
 	button {
-		color: #333;
-		background-color: #f4f4f4;
+		font-family: "Roboto Slab", sans-serif;
+		background-color: #cf0056;
+		border-style: solid;
+		border-radius: 11px;
+		border-color: #5ee1eb;
+		color: rgb(255, 255, 255);
 		outline: none;
 	}
 
@@ -88,37 +118,57 @@ q
 	main {
 		margin-top: 5rem;
 	}
+
+	form {
+		width: 30 rem;
+		max-width:90%;
+		margin:auto;
+	}
 </style>
 
 <Hederr></Hederr>
 
 <main>
-	<form>
-		<div class="form-control">
-			<label for="title">Title</label>
-			<input type="text" id="title">
-		</div>
-		<div class="form-control">
-			<label for="subtitle">Subtitle</label>
-			<input type="text" id="subtitle">
-		</div>
-		<div class="form-control">
-			<label for="address">Address</label>
-			<input type="text" id="address">
-		</div>
-		<div class="form-control">
-			<label for="email">E-Mail</label>
-			<input type="email" id="email">
-		</div>
-		<div class="form-control">
-			<label for="imageURL">Image URL</label>
-			<input type="text" id="imageURL">
-		</div>
-		<div class="form-control">
-			<label for="description">Description</label>
-			<textarea rows="3" id="description"/>
-		</div>
+	<form on:submit|preventDefault="{addMeatup}">
+	<TextInput 
+		id="title" 
+		label="Title" 
+		type="text"
+		value={title} 
+		on:input={event => (title = event.target.value)} />
+	<TextInput 
+		id="subtitle" 
+		label="Subtitle" 
+		type="text"
+		value={subtitle} 
+		on:input={event => (subtitle = event.target.value)} />
+	<TextInput 
+		id="address" 
+		label="Address" 
+		type="text"
+		value={address} 
+		on:input={event => (address = event.target.value)} />
+	<TextInput 
+		id="imageUrl" 
+		label="Image URL" 
+		type="text"
+		value={imageUrl} 
+		on:input={event => (imageUrl = event.target.value)} />
+	<TextInput 
+		id="email" 
+		label="E-Mail" 
+		value={email} 
+		type="email"
+		on:input={event => (email = event.target.value)} />
+	<TextInput 
+		id="description" 
+		label="Description" 
+		value={description} 
+		controlType="textarea"
+		rows="3"
+		on:input={event => (description = event.target.value)} />
+		<button type="submit">Save</button>
 	</form>
-	<MeatUpGrid meatups={meatups}></MeatUpGrid>
+	<MeatUpGrid {meatups}/>
 </main>
 
