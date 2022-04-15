@@ -26,7 +26,7 @@ label {
 
 .form-control {
   padding: 0.5rem 0;
-  width: 100%;
+  width: 60%;
   margin: 0.25rem 0;
 }
 </style>

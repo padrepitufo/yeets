@@ -2,16 +2,20 @@
 
 
 <script>
-  import { postYeets } from "$lib/yeets.js";
+//   import { postYeets } from "$lib/yeets.js";
   import Hederr from "$lib/udemy/Hederr.svelte";
   import MeatUpGrid from "$lib/udemy/MeatUpGrid.svelte";
   import TextInput from "$lib/udemy/TextInput.svelte";
+  import Button from "$lib/udemy/Button.svelte";
+  
 
   let title = '';
   let subtitle = '';
   let address = '';
   let description = '';
   let email = '';
+
+
   let imageUrl = '';
 
   let meatups = [
@@ -36,8 +40,8 @@
   ];
 
 	// const addMeatup = async () => {
-    //     // const resYeets = await postYeets(title, description);
-        // console.log(resYeets);
+    //     const resYeets = await postYeets(title, description);
+    //     console.log(resYeets);
 	function addMeatup () {
 		const newMeatup = {
 			id: Math.random().toString(),
@@ -55,66 +59,7 @@
 </script>
 
 <style>
-	body {
-		color: #333;
-		margin: 0;
-		padding: 8px;
-		box-sizing: border-box;
-	}
- 
-	a {
-		color: rgb(0,100,200);
-		text-decoration: none;
-	}
-q
-	a:hover {
-		text-decoration: underline;
-	}
 
-	a:visited {
-		color: rgb(0,80,160);
-	}
-
-	label {
-		display: block;
-	}
-
-	input, button, select, textarea {
-		font-family: 'Lato', sans-serif;
-		font-size: inherit;
-		-webkit-padding: 0.4em 0;
-		padding: 0.4em;
-		margin: 0 0 0.5em 0;
-		box-sizing: border-box;
-		border: 1px solid #ccc;
-		border-radius: 2px;
-	}
-
-	input:disabled {
-		color: #ccc;
-	}
-
-	button {
-		font-family: "Roboto Slab", sans-serif;
-		background-color: #cf0056;
-		border-style: solid;
-		border-radius: 11px;
-		border-color: #5ee1eb;
-		color: rgb(255, 255, 255);
-		outline: none;
-	}
-
-	button:disabled {
-		color: #999;
-	}
-
-	button:not(:disabled):active {
-		background-color: #ddd;
-	}
-
-	button:focus {
-		border-color: #666;
-	}
 	main {
 		margin-top: 5rem;
 	}
@@ -167,7 +112,7 @@ q
 		controlType="textarea"
 		rows="3"
 		on:input={event => (description = event.target.value)} />
-		<button type="submit">Save</button>
+		<Button type="submit" caption="Save"/>
 	</form>
 	<MeatUpGrid {meatups}/>
 </main>

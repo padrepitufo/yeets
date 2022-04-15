@@ -1,4 +1,6 @@
 <script>
+   import Button from "$lib/udemy/Button.svelte";
+
   export let title;
   export let subtitle;
   export let imageUrl;
@@ -41,13 +43,6 @@
     font-family: "Roboto Slab", sans-serif;
   }
 
-  h1.is-favorite {
-    background: #01a129;
-    color: white;
-    padding: 0 0.5rem;
-    border-radius: 5px;
-  }
-
   h2 {
     font-family: 'Anek Tamil', sans-serif;
     font-size: 1rem;
@@ -64,17 +59,10 @@
   div {
     text-align: right;
   }
-  button {
-    font-family: "Roboto Slab", sans-serif;
-    background-color: #cf0056;
-    border-style: solid;
-    border-radius: 11px;
-    border-color: #5ee1eb;
-    color: rgb(255, 255, 255);
-		outline: none;
+  .content {
+    height:4rem;
 
   }
-
   </style>
 
 <!-- Card thing o//o -->
@@ -92,8 +80,8 @@
         <p>{description}</p>
     </div>
     <footer>
-        <a href="mailto:{email}">Contact Us</a>
-        <button>Show Details</button>
-        <button>Favorite</button>
+        <Button href="mailto:{email}" caption="Contact"/>
+        <Button mode="outline"type="button" caption="Show More"/>
+        <Button type="button" caption="Favorite"/>
     </footer>
 </article>
