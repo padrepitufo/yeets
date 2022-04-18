@@ -11,6 +11,7 @@
             <li><a href="/ruth">Ruth</a></li>
             <li><a href="/luke">luke</a></li>
             <li><a href="/nenasudemy">nenados?O:</a></li>
+            <li><a href="/makeyeets">Make a Post? O:</a></li>
         </ul>
     </nav>
 </header> 

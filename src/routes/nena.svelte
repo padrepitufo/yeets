@@ -150,12 +150,16 @@ postContent="Hey shawties, stalkers, and stupids. I just used alliteration- yayy
     -Fina"
 postDate="March 2, 2022 - 8:15 PM"
 ></PostComp>
+
+
+
 <div  class="yeets">
     {#each yeets as yeet}
         <PostComp
             postTitle={yeet.title}
             postContent={yeet.content}
             postDate={yeet.created_at}
+            yeetId={yeet.id}
         ></PostComp>
     {/each}
 </div>

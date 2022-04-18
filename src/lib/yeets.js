@@ -17,9 +17,33 @@ export const getYeeps = async () => {
     }
 };
 
-export const getStars = async () => {
+export const getStars = async (yeetId) => {
     try {
-        const response = await Api.get("/stars/");
+        const response = await Api.get(`/stars/?yeet_id=${yeetId}`);
+        return response.data;
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+export const giveStars = async (yeetId) => {
+    try {
+        const response = await Api.post(`/stars/yeet/${yeetId}/yaaaaaay`, {
+            yeep_id: "a58b9204-3c46-49e8-8ad6-d7caaab04b83",
+        });
+        console.log(response);
+        return response.data;
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+export const takeStars = async (yeetId) => {
+    try {
+        const response = await Api.post(`/stars/yeet/${yeetId}/booooooo`, {
+            yeep_id: "a58b9204-3c46-49e8-8ad6-d7caaab04b83",
+        });
+        console.log(response);
         return response.data;
     } catch (error) {
         console.error(error);
