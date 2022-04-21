@@ -1,5 +1,5 @@
 <script>
-import ContactCard from "$lib/ContactCard.svelte";
+import ContactCard from "$lib/nenasudemy/ContactCard.svelte";
 
     let paragraphClass = 'water';
     const changer = () => {
