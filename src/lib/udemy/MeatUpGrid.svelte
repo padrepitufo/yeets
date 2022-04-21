@@ -1,0 +1,38 @@
+<style>
+  section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+  @media (min-width: 768px) {
+    section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+
+
+<script>
+  import MeatUpsItem from "./MeatUpsItem.svelte";
+
+  export let meatups;
+
+</script>
+
+
+
+<section id="meatups">
+
+  {#each meatups as meatup}
+  <MeatUpsItem 
+  title={meatup.title} 
+  subtitle={meatup.subtitle} 
+  description={meatup.description}
+  imageUrl={meatup.imageUrl}
+  email={meatup.contactEmail}
+  address={meatup.address}
+  />
+  {/each}
+</section>

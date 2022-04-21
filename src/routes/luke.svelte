@@ -275,7 +275,7 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     some more tomorrow. goodbye and have a nice day.
 </p>
 
-<img src="img.search.brave.com/a7MikeILxloTJGzNZSuIjmHV3sMCRZB9PSO43RYQRRo/rs:fit:1024:576:1/g:ce/aHR0cHM6Ly93d3cu/ZGV4ZXJ0by5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MTAvMTgvTWluZWNy/YWZ0LVRoZS1XaWxk/LVVwZGF0ZS1yZWxl/YXNlLWRhdGUtMTAy/NHg1NzYuanBn" alt="">
+
 
 <ul>
     <li>Posted on: Febuary 4th at 9:46 AM</li>
