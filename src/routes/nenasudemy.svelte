@@ -1,88 +1,49 @@
-<!-- ACTUALLY FOLLOWING UDEMY STUFF -->
-
 <script>
-    import ContactCard from "$lib/ContactCard.svelte";
-    let name = 'Nena';
-    let age = 0;
+	import Product from '$lib/nenasudemy/Product.svelte';
+	import Modal from '$lib/nenasudemy/Modal.svelte'
 
-// let uppercaseName; not required! - not using too~
+	let products = [
+		{
+			id: 'p1',
+			title: 'A Hard Cover Book',
+			price: 12.99,
+		}
+	]
 
-$: beegerName = name.toUpperCase();
+		let showModal = false;
+		let closeable = false;
 
-$: console.log(name);
+	function addToCart(event) {
+		console.log(event);
+	}
 
-$: if(name === 'Fina') {
-    console.log('Deez Nuts');
-    age = 69;
-}
-
-    function incrementToshi() {
-        age += 1;
-    }
-    function changeNamaeDesu() {
-        name = 'Fina';
-    }
-    function namaeInput(event) {
-        const enteredValue = event.target.value;
-        name = enteredValue;
-    }
+	function deleteProduct(event) {
+		console.log(event.detail);
+	}
 </script>
 
 <style>
 
-
-
-    @import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab');
-
-    * {
-      box-sizing: border-box;
-    }
-
-    /* html,
-    body {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        font-family: 'Lato', sans-serif;
-    }
-
-    body {
-        color: #333;
-        margin: 0;
-        padding: 2rem;
-        background: #f3f3f3;
-    } */
-
-    button {
-        font: inherit;
-        border: 1px solid #cf0056;
-        background: #cf0056;
-        padding: 0.5rem 1rem;
-        color: white;
-        border-radius: 5px;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
-        cursor: pointer;
-    }
-
-    button:hover,
-    button:active {
-        background: #e40763;
-        border-color: #e40763;
-        box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
-    }
-    h1{
-        color:rgb(107, 194, 197);
-    }
-
 </style>
 
-<h1>Konnichiwa! Watashi wa {name} desu. {age}-sai desu! </h1>
-<button on:click="{incrementToshi}">Nenrei o kaeyou!</button>
+{#each products as product}
+	<Product 
+		{...product}
+		title={product.title}
+		price={product.price}
+		on:add-to-cart={addToCart}
+		on:delete={deleteProduct} />
+{/each}
 
-<!-- Old Un-Used Buttons -->
-<!-- <button on:click="{changeNamaeDesu}">Namae o henkō suru!</button>  Change name button --> 
-<!-- <input type="text" value="{name}" on:input="{namaeInput}"> Type out a name button -->
+<button on:click="{() => showModal = true}">Show Modal</button>
 
-<input type="text" bind:value="{name}"> <!-- Shortcut from the above versions!! -->
+{#if showModal}
+<Modal 
+	on:cancel={() => (showModal = false)}
+	on:close={() => (showModal = false)}
+	let:didAgree={closeable}>
+	<h1 slot="header">Hello!</h1>
+	<p>This really works!</p>
+</Modal>
 
-<ContactCard></ContactCard>
+{/if}

@@ -1,9 +1,17 @@
 <!-- Blog Post Component. NENAS-- NO TOCHI ANGRYCATTOE -->
 
 <script>
-
+    import { onMount } from 'svelte';
+    export let postTitle;
+    export let postContent;
+    export let postDate;
+    export let yeetId;
     import axios from "axios";
-    import PostComp from "$lib/PostComp.svelte"
+    import { 
+        getStars,
+        giveStars,
+        takeStars 
+    } from "$lib/yeets.js";
 
     const api = axios.create({
         baseURL: "http://localhost:8081"
@@ -11,14 +19,24 @@
     let name = "Nena's Face";
     let age = "As Old As Your Mom";
     let likes = 0;
+    onMount(async () => {
+       const thumbs = await getStars(yeetId);
+       for (const thumb of thumbs) {
+           likes = likes + thumb.rating;
+       }
+       console.log(thumbs);
+    });
 
-    function thumbsup() {
+    const thumbsup  = async () => {
+        const response = await giveStars(yeetId);
+        console.log(response);
         console.error("increment likes!");
         likes += 1;
     };
 
-    function thumbsdown() {
+    const thumbsdown  = async () => {
         console.error("decrementing likes");
+        const response = await takeStars(yeetId);
         likes -= 1;
         api.get("/stars/")
         .then(res => {
@@ -32,9 +50,7 @@
     };
     
     // import Header from "$lib/header.svelte";
-    export let postTitle;
-    export let postContent;
-    export let postDate;
+    
 </script>
 
 <style>
@@ -90,8 +106,6 @@
     <h3>{postTitle}</h3>
     <p>{postContent}</p>
     <sub>Posted {postDate}</sub>
-    <br>
-    <br>
     <div class="tumby">
         <button on:click="{thumbsup}">👍</button>
         <button on:click="{thumbsdown}">👎</button>

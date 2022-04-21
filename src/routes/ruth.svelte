@@ -1,5 +1,6 @@
 <script>
-    import ContactCard from "$lib/ContactCard.svelte";
+    import ContactCard from "$lib/nenasudemy/ContactCard.svelte";
+
     let name = 'Samantha';
     let title = "";
     let image = "";
@@ -74,15 +75,26 @@
         border-radius: 5px;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
         cursor: pointer;
+<<<<<<< HEAD
 
     }
 
+=======
+    }
+>>>>>>> 1eee5e3071cb55ed875610170eb45eecfbfe80e2
         /* &:hover,
         &:active {
             background: #e40763;
             border-color: blue;
             box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
+<<<<<<< HEAD
         } */
+=======
+        }
+    } */
+
+    
+>>>>>>> 1eee5e3071cb55ed875610170eb45eecfbfe80e2
 
 </style>
 
