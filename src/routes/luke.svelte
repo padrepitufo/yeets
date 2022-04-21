@@ -1,5 +1,5 @@
 <script>
-import ContactCard from "$lib/ContactCard.svelte";
+import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
 
     let paragraphClass = 'water';
     const changer = () => {
@@ -13,10 +13,11 @@ import ContactCard from "$lib/ContactCard.svelte";
 
     }
 
-    let name = 'Max';
-    let age = 15;
-
-    // let uppercaseName: not required
+    let name = "Max";
+    let title = "";
+    let image = "";
+    let description = "";
+    let age = 10;
 
     $:  uppercaseName = name.toUpperCase();
 
@@ -176,123 +177,13 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
     <li>Posted on: Febuary 3rd at 11:15 am </li>
 </ul>
 
-<p>Hello it's me again okay I will tell you about my day but first let me tell you 
-    all the updates that have been in Minecraft in a list from oldest update to 
-    newest update.
-
-</p>
-
-<ul>
-    <li>1.0</li>
-    <li>1.1</li>
-    <li>1.2.1</li>
-    <li>1.2.2</li>
-    <li>1.2.3</li>
-    <li>1.2.4</li>
-    <li>1.2.5</li>
-    <li>1.3</li>
-    <li>1.3.1</li>
-    <li>1.3.2</li>
-    <li>1.4</li>
-    <li>1.4.1</li>
-    <li>1.4.2</li>
-    <li>1.4.3</li>
-    <li>1.4.4</li>
-    <li>1.4.6</li>
-    <li>1.4.5</li>
-    <li>1.4.7</li>
-    <li>1.5</li>
-    <li>1.5.1</li>
-    <li>1.5.2</li>
-    <li>1.6</li>
-    <li>1.6.1</li>
-    <li>1.6.2</li>
-    <li>1.6.3</li>
-    <li>1.6.4</li>
-    <li>1.7</li>
-    <li>1.7.1</li>
-    <li>1.7.2</li>
-    <li>1.7.3</li>
-    <li>1.7.4</li>
-    <li>1.7.5</li>
-    <li>1.7.6</li>
-    <li>1.7.7</li>
-    <li>1.7.8</li>
-    <li>1.7.9</li>
-    <li>1.7.10</li>
-    <li>1.8</li>
-    <li>1.8.1</li>
-    <li>1.8.2</li>
-    <li>1.8.3</li>
-    <li>1.8.4</li>
-    <li>1.8.5</li>
-    <li>1.8.6</li>
-    <li>1.8.7</li>
-    <li>1.8.8</li>
-    <li>1.8.9</li>
-    <li>1.9</li>
-    <li>1.9.1</li>
-    <li>1.9.2</li>
-    <li>1.9.3</li>
-    <li>1.9.4</li>
-    <li>1.10</li>
-    <li>1.10.1</li>
-    <li>1.10.2</li>
-    <li>1.11</li>
-    <li>1.11.1</li>
-    <li>1.11.2</li>
-    <li>1.12</li>
-    <li>1.12.1</li>
-    <li>1.12.2</li>
-    <li>1.13</li>
-    <li>1.13.1</li>
-    <li>1.13.2</li>
-    <li>1.14</li>
-    <li>1.14.1</li>
-    <li>1.14.2</li>
-    <li>1.14.3</li>
-    <li>1.14.4</li>
-    <li>1.15</li>
-    <li>1.15.1</li>
-    <li>1.15.2</li>
-    <li>1.16</li>
-    <li>1.16.1</li>
-    <li>1.16.2</li>
-    <li>1.16.3</li>
-    <li>1.16.4</li>
-    <li>1.16.5</li>
-    <li>1.17</li>
-    <li>1.17.1</li>
-    <li>1.18</li>
-    <li>1.18.1</li>
-</ul>
-
-<p>So now I haved told you all the updates in Minecraft but there is one that
-    the Minecraft developers are still working on it will release some time around
-    2022 and it is the 1.19 update adding more animals. and that will be FUN!!!
-    the update will be called the wild update so thats an actual good name.
-    So I will show a picture of it and I think I said enough today I will say
-    some more tomorrow. goodbye and have a nice day.
-</p>
-
-
-
-<ul>
-    <li>Posted on: Febuary 4th at 9:46 AM</li>
-</ul>
-
-<p>Hello everyone today i'm gonna right in rainbow so lets get to it, I'm gonna right all of my favorite fruit</p>
+<p>Hello everyone today i'm going to write in rainbow so lets get to it, I'm gonna right all of my favorite fruit</p>
 
 <h1>Apples</h1>
-
 <h2>Oranges</h2>
-
 <h3>Bananas</h3>
-
 <h4>Kiwi</h4>
-
 <h5>Blue berries</h5>
-
 <h6>Grapes</h6>
 
   
@@ -302,16 +193,19 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 
 <h1>Hello {uppercaseName}, my age is {age}!</h1>
 <button on:click="{incrementAge}">Change Age</button>
-<!--<button on:click="{changeName}">Change Name</button> -->
-<!-- <input type="text" value={name} on:input={nameInput} /> -->
-<input type="text" bind:value="{name}" />
+<input type="text" bind:value={name} />
+<input type="text" bind:value={title} />
+<input type="text" bind:value={image}>
+<textarea rows="3" bind:value={description}></textarea>
 
-<ContactCard />
+<ContactCard 
+userName="{name}" 
+jobTitle={title}  
+{description} 
+userImage={image} />
 
 <p>So it worked actually looks cool I guess... so that's fun. Right? or Wrong.</p>
-
 <p>So like my day was like basically cleaning. but the best part about it, was to eat cookies!</p>
-
 <p>The cookies were so delicious the cookies were sugar cookies which are really good! so yeah well I hope to post something tomorrow, goodbye.</p>
 
 <list>Posted on March 24th at 6:41 PM 2022</list>  
