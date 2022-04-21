@@ -1,4 +1,6 @@
 <script>
+import ContactCard from "$lib/ContactCard.svelte";
+
     let paragraphClass = 'water';
     const changer = () => {
         if (paragraphClass == 'water') {
@@ -14,8 +16,28 @@
     let name = 'Max';
     let age = 15;
 
+    // let uppercaseName: not required
+
+    $:  uppercaseName = name.toUpperCase();
+
+    $: console.log(name);
+
+    $: if (name === 'Maximilian') {
+        console.log('It runs!');
+        age = 31;
+    }
+
     function incrementAge() {
         age += 1;
+    }
+
+    function changeName() {
+        name = 'Maximilian';
+    }
+
+    function nameInput(event) {
+        const enteredValue = event.target.value;
+        name = enteredValue;
     }
 </script>
 <style>
@@ -278,13 +300,18 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 
 <p>Today I will test something ordinary.</p>
 
-<h1>Hello {name}, my age is {age}!</h1>
+<h1>Hello {uppercaseName}, my age is {age}!</h1>
 <button on:click="{incrementAge}">Change Age</button>
+<!--<button on:click="{changeName}">Change Name</button> -->
+<!-- <input type="text" value={name} on:input={nameInput} /> -->
+<input type="text" bind:value="{name}" />
+
+<ContactCard />
 
 <p>So it worked actually looks cool I guess... so that's fun. Right? or Wrong.</p>
 
 <p>So like my day was like basically cleaning. but the best part about it, was to eat cookies!</p>
 
-<p>The cookies were so delicious the cookies were sugar cookies which are really good! so yeah well hope to post something tomorrow, goodbye.</p>
+<p>The cookies were so delicious the cookies were sugar cookies which are really good! so yeah well I hope to post something tomorrow, goodbye.</p>
 
-<list>Posted on March 24th at 6:41 PM 2022</list>
+<list>Posted on March 24th at 6:41 PM 2022</list>  
