@@ -88,7 +88,7 @@
 
 </style>
 
-<h1>Ruth's Log/ COOL STUFF AT THE BOTTEM</h1>
+<h1>Ruth's Log/ COOL STUFF AT THE BOTTEM-ish</h1>
 <h3>January 29 2022</h3>
 <h4>Things I've Been Doing!</h4>
 <p>Yesterday, I Haved Indian Food! And Whatched Encanto!</p>
@@ -272,5 +272,47 @@
 <p>IT SHOULD WORK</p>
 <h4>YA!</h4>
 <p>IT WORKED</p>
+
+<h4>Hi (again) umm... Sorry i have not been on for to long
+    but I'm Back!
+</h4>
+
+<h4>So i watched Sing 2 yesterday and It was amazing
+    I loved it!
+</h4>
+<p>SPIDER AHHHHHHHH!</p>
+<p>Let me start from the start!</p>
+<h4>Hi my name is ruth!</h4>
+
+<p>and i am stupid</p>
+<h4>Hehe</h4>
+
+<p>lalala ya i'm amazzzzing</p>
+<h4>Snap out of it RUth!</h4>
+<h4>okay okay I'm me AGAIN!</h4>
+<p>Ya here me!</p>
+<p>(echo-ing)</p>
+
+<h4>sorry to INTENSE</h4>
+<p>What is wrong with me AHHHHH!</p>
+
+<h4>None WILL JUDGE ME!</h4>
+
+<h4>HAHAH!!</h4>
+
+<h4>I tell you NONE!</h4>
+<p>posted april 15 12:47 pm</p>
+
+<h4>:Stickers:</h4>
+<p>stickers are very 
+    Ccccool and they Stick To YOU!
+</p>
+<h4>DoO yOu YyoOUu hhhhAAAVeee Sssssssstttttiiiickers!</h4>
+
+<p>(Nvm) So WhO has StIcKeRs</p>
+<h4>ANYONE! (Sobs)</h4>
+
+<p>ughhh So bored  plew tahw od ew od txen hhgu </p>
+<h4>Guess what it was back wards</h4>
 
 <img on:click="{switchTogglePic}" src="{togglePic}" alt="">
