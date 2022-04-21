@@ -13,8 +13,8 @@
 
 <script>
 	import { postYeets } from "$lib/yeets.js";
-    import TextInput from "$lib/udemy/TextInput.svelte";
-    import Button from "$lib/udemy/Button.svelte";
+    import TextInput from "$lib/nenasudemy/TextInput.svelte";
+    import Button from "$lib/nenasudemy/Button.svelte";
 
     let title = '';
     let content = '';
