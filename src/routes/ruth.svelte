@@ -1,9 +1,6 @@
 <script>
 
     let name = 'Samantha';
-    let title = "";
-    let image = "";
-    let description = "";
     let number = 1;
     let pressed = "";
     const imgPikachu = "https://img.search.brave.com/-lLDW2QYHL6j8kN-kl8WLjhAW3lflpx4CKuAvAKxKOc/rs:fit:207:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/ZDFnQ1luMW9OVV9V/MW5jdTNoZ1lBQUFB/QSZwaWQ9QXBp";
@@ -19,23 +16,6 @@
         number = 10;
     }
 
-    function incrementNumber() {
-        number += 1;
-    }
-
-    function changeName() {
-        name = 'Velma';
-    }
-
-    function nameInput(event) {
-        console.log(event);
-        const enteredValue = event.target.value; 
-        name = enteredValue;
-        if(event.data == null){
-            return;
-        }
-        pressed = event.data;
-    }
     function switchTogglePic() { 
         // when someone clicks on the image
         // the image is supposed to change to
@@ -65,7 +45,7 @@
         color: rgb(0, 255, 157);
     }
 
-    button {
+    /* button {
         font: inherit;
         border: 1px solid #cf0056;
         background: #cf0056;
@@ -74,9 +54,7 @@
         border-radius: 5px;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
         cursor: pointer;
-
-    }
-
+    } */
         /* &:hover,
         &:active {
             background: #e40763;

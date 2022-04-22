@@ -14,7 +14,7 @@
 		let closeable = false;
 
 	function addToCart(event) {
-		console.log(event);
+		console.log(event); 
 	}
 
 	function deleteProduct(event) {
@@ -41,9 +41,9 @@
 <Modal 
 	on:cancel={() => (showModal = false)}
 	on:close={() => (showModal = false)}
-	let:didAgree={closeable}>
-	<h1 slot="header">Hello!</h1>
-	<p>This really works!</p>
+	let:didAgree={closeable} >
+		<h1 slot="header">Hello!</h1>
+		<p>This really works!</p>
 </Modal>
 
 {/if}
