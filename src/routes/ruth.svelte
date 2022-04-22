@@ -1,10 +1,6 @@
 <script>
-    import ContactCard from "$lib/nenasudemy/ContactCard.svelte";
 
     let name = 'Samantha';
-    let title = "";
-    let image = "";
-    let description = "";
     let number = 1;
     let pressed = "";
     const imgPikachu = "https://img.search.brave.com/-lLDW2QYHL6j8kN-kl8WLjhAW3lflpx4CKuAvAKxKOc/rs:fit:207:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/ZDFnQ1luMW9OVV9V/MW5jdTNoZ1lBQUFB/QSZwaWQ9QXBp";
@@ -20,23 +16,6 @@
         number = 10;
     }
 
-    function incrementNumber() {
-        number += 1;
-    }
-
-    function changeName() {
-        name = 'Velma';
-    }
-
-    function nameInput(event) {
-        console.log(event);
-        const enteredValue = event.target.value; 
-        name = enteredValue;
-        if(event.data == null){
-            return;
-        }
-        pressed = event.data;
-    }
     function switchTogglePic() { 
         // when someone clicks on the image
         // the image is supposed to change to
@@ -66,7 +45,7 @@
         color: rgb(0, 255, 157);
     }
 
-    button {
+    /* button {
         font: inherit;
         border: 1px solid #cf0056;
         background: #cf0056;
@@ -75,16 +54,13 @@
         border-radius: 5px;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
         cursor: pointer;
-    }
+    } */
         /* &:hover,
         &:active {
             background: #e40763;
             border-color: blue;
             box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
-        }
-    } */
-
-    
+        } */
 
 </style>
 
@@ -255,18 +231,6 @@
 <h4>R I G H T !</h4>
 <h1>Testing Testing {uppercaseName}, my numbers is {number}</h1>
 <h4>LET ME MAKE UP A FAKE NAME!</h4>
-<button on:click="{incrementNumber}">Change Number</button>
-<input placeholder="name" type="text" value="{name}" on:input={nameInput}>
-<input placeholder="title" type="text" bind:value={title}>
-<input placeholder="image" type="text" bind:value={image}>
-<textarea rows="3" bind:value={description}></textarea>
-
-<ContactCard 
-    userName={name}
-    jobTitle={title}
-    description={description}
-    userImage={image}
-/>
 <h4>Sorry Still working on it (I just got your key press though {pressed})!</h4>
 <h4>TRY CLICKING ON THE PICTURE</h4>
 <p>IT SHOULD WORK</p>
@@ -314,5 +278,6 @@
 
 <p>ughhh So bored  plew tahw od ew od txen hhgu </p>
 <h4>Guess what it was back wards</h4>
+<p>Posted apr 21</p>
 
 <img on:click="{switchTogglePic}" src="{togglePic}" alt="">
