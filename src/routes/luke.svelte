@@ -13,11 +13,43 @@ import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
 
     }
 
-    let name = "Max";
+    let name = "You";
     let title = "";
     let image = "";
     let description = "";
-    let age = 10;
+    let formState = 'empty';
+
+    let createdContacts = [];
+
+    function addContact() {
+      if (
+        name.trim().length == 0 || 
+        title.trim().length == 0 || 
+        image.trim().length == 0 || 
+        description.trim().length == 0 
+       ) {
+            formState = 'invalid';
+            return;
+        }
+        createdContacts = [
+            ...createdContacts,
+            {
+             id: Math.random(),
+            name: name, 
+            jobTitle: title, 
+            imageUrl: image, 
+            desc: description 
+        }];
+        formState = 'done';
+      }
+
+      function deleteFirst() {
+          createdContacts = createdContacts.slice(1);
+      }
+
+      function deleteLast() {
+          createdContacts = createdContacts.slice(0, -1);
+      }
 
     $:  uppercaseName = name.toUpperCase();
 
@@ -42,6 +74,10 @@ import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
     }
 </script>
 <style>
+    #form {
+        width: 30rem;
+        max-width: 100%;
+    }
     h1 {
         color: red
     }
@@ -191,21 +227,43 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 
 <p>Today I will test something ordinary.</p>
 
-<h1>Hello {uppercaseName}, my age is {age}!</h1>
-<button on:click="{incrementAge}">Change Age</button>
-<input type="text" bind:value={name} />
-<input type="text" bind:value={title} />
-<input type="text" bind:value={image}>
-<textarea rows="3" bind:value={description}></textarea>
+<div id="form">
+    <div class="form-control">
+      <label for="userName">User Name</label>
+      <input type="text" bind:value={name} id="userName" />
+    </div>
+    <div class="form-control">
+      <label for="jobTitle">Job Title</label>
+      <input type="text" bind:value={title} id="jobTitle" />
+    </div>
+    <div class="form-control">
+      <label for="image">Image URL</label>
+      <input type="text" bind:value={image} id="image" />
+    </div>
+    <div class="form-control">
+      <label for="desc">Description</label>
+      <textarea rows="3" bind:value={description} id="desc" />
+    </div>
+  </div>
 
+  <button on:click={addContact}>Add Contact Card</button>
+  <button on:click={deleteFirst}>Delete First</button>
+  <button on:click={deleteLast}>Delete Last</button>
+
+{#if formState === 'invalid'}
+<p>Invalid input.</p>
+{:else}
+  <p>Please enter some data and hit the button! </p>
+{/if}
+
+{#each createdContacts as contact, i (contact.id)}
+    <h2># {i + 1}</h2>
 <ContactCard 
-userName="{name}" 
-jobTitle={title}  
-{description} 
-userImage={image} />
-
-<p>So it worked actually looks cool I guess... so that's fun. Right? or Wrong.</p>
-<p>So like my day was like basically cleaning. but the best part about it, was to eat cookies!</p>
-<p>The cookies were so delicious the cookies were sugar cookies which are really good! so yeah well I hope to post something tomorrow, goodbye.</p>
-
-<list>Posted on March 24th at 6:41 PM 2022</list>  
+    userName={contact.name} 
+    jobTitle={contact.jobTitle} 
+    description ={contact.desc}
+    userImage={contact.imageUrl} 
+    />
+    {:else}
+      <p>Please start adding some contacts, we found none!</p>
+    {/each}
