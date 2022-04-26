@@ -2,18 +2,15 @@
 
 
 <script>
-	//   import { postYeets } from "$lib/yeets.js";
 	import Hederr from "$lib/nenasudemy/Hederr.svelte";
 	import MeatUpGrid from "$lib/nenasudemy/MeatUpGrid.svelte";
 	import TextInput from "$lib/nenasudemy/TextInput.svelte";
 	import Button from "$lib/nenasudemy/Button.svelte";
-	  
-	let title = '';
-	let subtitle = '';
-	let address = '';
-	let description = '';
-	let email = '';
-	let imageUrl = '';
+	import EditNewMeatup from "$lib/nenasudemy/EditNewMeatup.svelte";
+	
+
+	let editMode = null;
+
 	let meatups = [
 		{
 			id:'m1',
@@ -36,9 +33,7 @@
 			isFavorite:false,
 		}
 	  ];
-		// const addMeatup = async () => {
-		//     const resYeets = await postYeets(title, description);
-		//     console.log(resYeets);
+
 	function addMeatup () {
 		const newMeatup = {
 			id: Math.random().toString(),
@@ -49,7 +44,6 @@
 			contactEmail: email,
 			address: address
 		};
-			// meatups.push(newMeatup); // DOES NOT WORK!
 			meatups = [newMeatup,...meatups];
 	};
 
@@ -70,51 +64,14 @@
 		main {
 			margin-top: 5rem;
 		}
-		form {
-			width: 30 rem;
-			max-width:90%;
-			margin:auto;
-		}
 	</style>
 
 	<Hederr></Hederr>
 
 	<main>
-		<form on:submit|preventDefault="{addMeatup}">
-		<TextInput 
-			id="title" 
-			label="Title" 
-			value={title} 
-			on:input={event => (title = event.target.value)} />
-		<TextInput 
-			id="subtitle" 
-			label="Subtitle" 
-			value={subtitle} 
-			on:input={event => (subtitle = event.target.value)} />
-		<TextInput 
-			id="address" 
-			label="Address" 
-			value={address} 
-			on:input={event => (address = event.target.value)} />
-		<TextInput 
-			id="imageUrl" 
-			label="Image URL" 
-			value={imageUrl} 
-			on:input={event => (imageUrl = event.target.value)} />
-		<TextInput 
-			id="email" 
-			label="E-Mail" 
-			value={email} 
-			type="email"
-			on:input={event => (email = event.target.value)} />
-		<TextInput 
-			id="description" 
-			label="Description" 
-			value={description} 
-			controlType="textarea"
-			rows="3"
-			on:input={event => (description = event.target.value)} />
-			<Button type="submit" caption="Save"/>
-		</form>
+		<Button caption="New Meatup" on:click="{() => editMode = 'add'}"/>
+		{#if editMode === 'add'}
+			<EditNewMeatup/>
+		{/if}
 		<MeatUpGrid {meatups} on:togglefavorite="{toggleFavorite}" />
 	</main>
