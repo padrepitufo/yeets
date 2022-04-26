@@ -55,7 +55,7 @@
    h2 {
      font-family: 'Anek Tamil', sans-serif;
      font-size: 1rem;
-     color: #808080;
+     color: #947c97;
      margin: 0.5rem 0;
    }
 

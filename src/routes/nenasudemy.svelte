@@ -34,17 +34,18 @@
 		}
 	  ];
 
-	function addMeatup () {
+	function addMeatup (event) {
 		const newMeatup = {
 			id: Math.random().toString(),
-			title: title,
-			subtitle: subtitle,
-			description: description,
-			imageUrl: imageUrl,
-			contactEmail: email,
-			address: address
+			title: event.detail.title,
+			subtitle: event.detail.subtitle,
+			description: event.detail.description,
+			imageUrl: event.detail.imageUrl,
+			contactEmail: event.detail.email,
+			address: event.detail.address
 		};
 			meatups = [newMeatup,...meatups];
+			editMode = null;
 	};
 
 	function toggleFavorite(event) {
@@ -64,14 +65,20 @@
 		main {
 			margin-top: 5rem;
 		}
+
+		.meatups-controls {
+			margin: 1rem;
+		}
 	</style>
 
 	<Hederr></Hederr>
 
 	<main>
-		<Button caption="New Meatup" on:click="{() => editMode = 'add'}"/>
+		<div class="meatups-controls">
+			<Button caption="New Meatup" on:click="{() => editMode = 'add'}"/>
+		</div>
 		{#if editMode === 'add'}
-			<EditNewMeatup/>
+			<EditNewMeatup on:save="{addMeatup}"/>
 		{/if}
 		<MeatUpGrid {meatups} on:togglefavorite="{toggleFavorite}" />
 	</main>

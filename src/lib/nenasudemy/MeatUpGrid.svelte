@@ -20,19 +20,19 @@
   
   
   
-  <section id="meatups">
+<section id="meatups">
   
-    {#each meatups as meatup}
+  {#each meatups as meatup}
     <MeatUpsItem 
-    id={meatup.id}
-    title={meatup.title} 
-    subtitle={meatup.subtitle} 
-    description={meatup.description}
-    imageUrl={meatup.imageUrl}
-    email={meatup.contactEmail}
-    address={meatup.address}
-    isFav={meatup.isFavorite}
-    on:togglefavorite
+      id={meatup.id}
+      title={meatup.title} 
+      subtitle={meatup.subtitle} 
+      description={meatup.description}
+      imageUrl={meatup.imageUrl}
+      email={meatup.contactEmail}
+      address={meatup.address}
+      isFav={meatup.isFavorite}
+      on:togglefavorite 
     />
-    {/each}
-  </section>
+  {/each}
+</section>
