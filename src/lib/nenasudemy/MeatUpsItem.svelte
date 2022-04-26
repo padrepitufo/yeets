@@ -1,6 +1,7 @@
 <script>
     import Button from "$lib/nenasudemy/Button.svelte";
     import { createEventDispatcher } from "svelte";
+    import Badge from "$lib/nenasudemy/Badge.svelte";
 
     export let id;
     export let title;
@@ -78,7 +79,12 @@
 
 <article>
     <header>
-        <h1>{title}</h1>
+        <h1>
+          {title} 
+          {#if isFav}
+            <Badge>FAVORITE</Badge>
+          {/if}
+        </h1>
         <h2>{subtitle}</h2>  
         <p>{address}</p>
     </header>
@@ -93,6 +99,7 @@
 
         <Button 
         mode="outline"
+        color={isFav ? null : 'success'}
         type="button" 
         caption="{isFav ? 'Unfavorite' : 'Favorite'}"
         on:click={() => dispatch('togglefavorite', id)}/>
