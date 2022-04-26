@@ -12,71 +12,51 @@ import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
 
 
     }
+    let name = "Max";
+  let title = "";
+  let image = "";
+  let description = "";
+  let formState = "empty";
 
-    let name = "You";
-    let title = "";
-    let image = "";
-    let description = "";
-    let formState = 'empty';
+  let createdContacts = [];
 
-    let createdContacts = [];
-
-    function addContact() {
-      if (
-        name.trim().length == 0 || 
-        title.trim().length == 0 || 
-        image.trim().length == 0 || 
-        description.trim().length == 0 
-       ) {
-            formState = 'invalid';
-            return;
-        }
-        createdContacts = [
-            ...createdContacts,
-            {
-             id: Math.random(),
-            name: name, 
-            jobTitle: title, 
-            imageUrl: image, 
-            desc: description 
-        }];
-        formState = 'done';
+  function addContact() {
+    // event.preventDefault();
+    if (
+      name.trim().length == 0 ||
+      title.trim().length == 0 ||
+      image.trim().length == 0 ||
+      description.trim().length == 0
+    ) {
+      formState = "invalid";
+      return;
+    }
+    createdContacts = [
+      ...createdContacts,
+      {
+          id: Math.random(),
+        name: name,
+        jobTitle: title,
+        imageUrl: image,
+        desc: description
       }
+    ];
+    formState = "done";
+  }
 
-      function deleteFirst() {
-          createdContacts = createdContacts.slice(1);
-      }
+  function deleteFirst() {
+      createdContacts = createdContacts.slice(1);
+  }
 
-      function deleteLast() {
-          createdContacts = createdContacts.slice(0, -1);
-      }
-
-    $:  uppercaseName = name.toUpperCase();
-
-    $: console.log(name);
-
-    $: if (name === 'Maximilian') {
-        console.log('It runs!');
-        age = 31;
-    }
-
-    function incrementAge() {
-        age += 1;
-    }
-
-    function changeName() {
-        name = 'Maximilian';
-    }
-
-    function nameInput(event) {
-        const enteredValue = event.target.value;
-        name = enteredValue;
-    }
+  function deleteLast() {
+      createdContacts = createdContacts.slice(0, -1);
+  }
 </script>
 <style>
     #form {
         width: 30rem;
         max-width: 100%;
+        margin: 1rem 0;
     }
     h1 {
         color: red
@@ -223,11 +203,7 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 <h6>Grapes</h6>
 
   
-<div class="heading">Hover over this code!</div>
-
-<p>Today I will test something ordinary.</p>
-
-<div id="form">
+<form id="form">
     <div class="form-control">
       <label for="userName">User Name</label>
       <input type="text" bind:value={name} id="userName" />
@@ -244,26 +220,28 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
       <label for="desc">Description</label>
       <textarea rows="3" bind:value={description} id="desc" />
     </div>
-  </div>
-
-  <button on:click={addContact}>Add Contact Card</button>
-  <button on:click={deleteFirst}>Delete First</button>
-  <button on:click={deleteLast}>Delete Last</button>
-
-{#if formState === 'invalid'}
-<p>Invalid input.</p>
-{:else}
-  <p>Please enter some data and hit the button! </p>
-{/if}
-
-{#each createdContacts as contact, i (contact.id)}
+    <button on:click|preventDefault={addContact} type="submit">Add Contact Card</button>
+  </form>
+  
+<button 
+  on:click={(event) => {createdContacts = createdContacts = createdContacts.slice(1)}}> 
+  Delete First
+</button>
+<button on:click={deleteLast}>Delete Last</button>
+  
+  {#if formState === 'invalid'}
+    <p>Invalid input.</p>
+  {:else}
+    <p>Please enter some data and hit the button!</p>
+  {/if}
+  
+  {#each createdContacts as contact, i (contact.id)}
     <h2># {i + 1}</h2>
-<ContactCard 
-    userName={contact.name} 
-    jobTitle={contact.jobTitle} 
-    description ={contact.desc}
-    userImage={contact.imageUrl} 
-    />
-    {:else}
-      <p>Please start adding some contacts, we found none!</p>
-    {/each}
+    <ContactCard
+      userName={contact.name}
+      jobTitle={contact.jobTitle}
+      description={contact.desc}
+      userImage={contact.imageUrl} />
+  {:else}
+    <p>Please start adding some contacts, we found none!</p>
+  {/each}

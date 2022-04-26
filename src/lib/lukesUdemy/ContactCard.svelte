@@ -4,7 +4,7 @@
   export let description;
   export let userImage;
 
-  const initialName = userName;
+  const intialName = userName
 </script>
 
 <style>
@@ -72,7 +72,7 @@
       <img src={userImage} alt={userName} />
     </div>
     <div class="user-data">
-      <h1>{userName} / {initialName}</h1>
+      <h1>{userName} / {intialName}</h1>
       <h2>{jobTitle}</h2>
     </div>
   </header>
