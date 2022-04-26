@@ -2,18 +2,15 @@
 
 
 <script>
-	//   import { postYeets } from "$lib/yeets.js";
 	import Hederr from "$lib/nenasudemy/Hederr.svelte";
 	import MeatUpGrid from "$lib/nenasudemy/MeatUpGrid.svelte";
 	import TextInput from "$lib/nenasudemy/TextInput.svelte";
 	import Button from "$lib/nenasudemy/Button.svelte";
-	  
-	let title = '';
-	let subtitle = '';
-	let address = '';
-	let description = '';
-	let email = '';
-	let imageUrl = '';
+	import EditNewMeatup from "$lib/nenasudemy/EditNewMeatup.svelte";
+	
+
+	let editMode = null;
+
 	let meatups = [
 		{
 			id:'m1',
@@ -36,21 +33,19 @@
 			isFavorite:false,
 		}
 	  ];
-		// const addMeatup = async () => {
-		//     const resYeets = await postYeets(title, description);
-		//     console.log(resYeets);
-	function addMeatup () {
+
+	function addMeatup (event) {
 		const newMeatup = {
 			id: Math.random().toString(),
-			title: title,
-			subtitle: subtitle,
-			description: description,
-			imageUrl: imageUrl,
-			contactEmail: email,
-			address: address
+			title: event.detail.title,
+			subtitle: event.detail.subtitle,
+			description: event.detail.description,
+			imageUrl: event.detail.imageUrl,
+			contactEmail: event.detail.email,
+			address: event.detail.address
 		};
-			// meatups.push(newMeatup); // DOES NOT WORK!
 			meatups = [newMeatup,...meatups];
+			editMode = null;
 	};
 
 	function toggleFavorite(event) {
@@ -70,51 +65,20 @@
 		main {
 			margin-top: 5rem;
 		}
-		form {
-			width: 30 rem;
-			max-width:90%;
-			margin:auto;
+
+		.meatups-controls {
+			margin: 1rem;
 		}
 	</style>
 
 	<Hederr></Hederr>
 
 	<main>
-		<form on:submit|preventDefault="{addMeatup}">
-		<TextInput 
-			id="title" 
-			label="Title" 
-			value={title} 
-			on:input={event => (title = event.target.value)} />
-		<TextInput 
-			id="subtitle" 
-			label="Subtitle" 
-			value={subtitle} 
-			on:input={event => (subtitle = event.target.value)} />
-		<TextInput 
-			id="address" 
-			label="Address" 
-			value={address} 
-			on:input={event => (address = event.target.value)} />
-		<TextInput 
-			id="imageUrl" 
-			label="Image URL" 
-			value={imageUrl} 
-			on:input={event => (imageUrl = event.target.value)} />
-		<TextInput 
-			id="email" 
-			label="E-Mail" 
-			value={email} 
-			type="email"
-			on:input={event => (email = event.target.value)} />
-		<TextInput 
-			id="description" 
-			label="Description" 
-			value={description} 
-			controlType="textarea"
-			rows="3"
-			on:input={event => (description = event.target.value)} />
-			<Button type="submit" caption="Save"/>
-		</form>
+		<div class="meatups-controls">
+			<Button caption="New Meatup" on:click="{() => editMode = 'add'}"/>
+		</div>
+		{#if editMode === 'add'}
+			<EditNewMeatup on:save="{addMeatup}"/>
+		{/if}
 		<MeatUpGrid {meatups} on:togglefavorite="{toggleFavorite}" />
 	</main>
