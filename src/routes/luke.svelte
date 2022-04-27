@@ -1,5 +1,28 @@
 <script>
-import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
+
+import Hedar from "$lib/LukesMeetups/Hedar.svelte";  
+import MeetupItem from "$lib/LukesMeetups/MeetupItem.svelte";
+
+    const meetups = [
+        {
+            id: "m1",
+            title: "Computer Geek Club",
+            subtitle: "Learn to be a Computer Geek in 2 hours of watching computers",
+            description: "In this meetup, we will have some experts that teach you how to be a Computer Geek. ",
+            imageUrl: ".bp.blogspot.com/-3Rv2Pg9Y2nw/WnKNaho6Y8I/AAAAAAAAo6U/He6tXZX_jz8hOAz_AEpFx68qzqugRZe-ACK4BGAYYCw/s1600/Geek%2B-%2BComputer%2BGeek-745390.png",
+            address: "29th Geek road, 41579 New York",
+            contactEmail: "computergeek@test.com",
+        },
+        {
+            id:"m2",
+            title: "Swim Together" ,
+            subtitle: "Let's go for some swimming",
+            description: "We will simply swim some rounds!",
+            imageUrl: "5.walmartimages.com/asr/937a786e-81a4-4b76-a88e-0584849b602d.e1090a8e863a4a223131a30a79618636.jpeg",
+            addressL: "30th Cherry Road, 54675 North Carolina",
+            contactEmail: "swim@test.com",
+        }
+    ];
 
     let paragraphClass = 'water';
     const changer = () => {
@@ -12,39 +35,13 @@ import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
 
 
     }
-
-    let name = "Max";
-    let title = "";
-    let image = "";
-    let description = "";
-    let age = 10;
-
-    $:  uppercaseName = name.toUpperCase();
-
-    $: console.log(name);
-
-    $: if (name === 'Maximilian') {
-        console.log('It runs!');
-        age = 31;
-    }
-
-    function incrementAge() {
-        age += 1;
-    }
-
-    function changeName() {
-        name = 'Maximilian';
-    }
-
-    function nameInput(event) {
-        const enteredValue = event.target.value;
-        name = enteredValue;
-    }
+  
 </script>
 <style>
-    h1 {
-        color: red
+    #meetups {
+        margin-top: 5rem;
     }
+
     h2 {
         color: orange
     }
@@ -74,8 +71,20 @@ import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
     .fire {
         color: red;
     }
+
+    .appleh1 {
+        color:red;
+    }
 </style>
 
+
+<Hedar/>
+
+<section id="meetups">
+{#each meetups as meetup}
+    <MeetupItem />
+{/each}
+</section>
 
 <h1>Luke's space</h1>
 <h3>January 29</h3>
@@ -179,33 +188,9 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 
 <p>Hello everyone today i'm going to write in rainbow so lets get to it, I'm gonna right all of my favorite fruit</p>
 
-<h1>Apples</h1>
+<h1 class="appleh1">Apples</h1>
 <h2>Oranges</h2>
 <h3>Bananas</h3>
 <h4>Kiwi</h4>
 <h5>Blue berries</h5>
 <h6>Grapes</h6>
-
-  
-<div class="heading">Hover over this code!</div>
-
-<p>Today I will test something ordinary.</p>
-
-<h1>Hello {uppercaseName}, my age is {age}!</h1>
-<button on:click="{incrementAge}">Change Age</button>
-<input type="text" bind:value={name} />
-<input type="text" bind:value={title} />
-<input type="text" bind:value={image}>
-<textarea rows="3" bind:value={description}></textarea>
-
-<ContactCard 
-userName="{name}" 
-jobTitle={title}  
-{description} 
-userImage={image} />
-
-<p>So it worked actually looks cool I guess... so that's fun. Right? or Wrong.</p>
-<p>So like my day was like basically cleaning. but the best part about it, was to eat cookies!</p>
-<p>The cookies were so delicious the cookies were sugar cookies which are really good! so yeah well I hope to post something tomorrow, goodbye.</p>
-
-<list>Posted on March 24th at 6:41 PM 2022</list>  
