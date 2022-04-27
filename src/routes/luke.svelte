@@ -1,5 +1,28 @@
 <script>
-import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
+
+import Hedar from "$lib/LukesMeetups/Hedar.svelte";  
+import MeetupItem from "$lib/LukesMeetups/MeetupItem.svelte";
+
+    const meetups = [
+        {
+            id: "m1",
+            title: "Computer Geek Club",
+            subtitle: "Learn to be a Computer Geek in 2 hours of watching computers",
+            description: "In this meetup, we will have some experts that teach you how to be a Computer Geek. ",
+            imageUrl: ".bp.blogspot.com/-3Rv2Pg9Y2nw/WnKNaho6Y8I/AAAAAAAAo6U/He6tXZX_jz8hOAz_AEpFx68qzqugRZe-ACK4BGAYYCw/s1600/Geek%2B-%2BComputer%2BGeek-745390.png",
+            address: "29th Geek road, 41579 New York",
+            contactEmail: "computergeek@test.com",
+        },
+        {
+            id:"m2",
+            title: "Swim Together" ,
+            subtitle: "Let's go for some swimming",
+            description: "We will simply swim some rounds!",
+            imageUrl: "5.walmartimages.com/asr/937a786e-81a4-4b76-a88e-0584849b602d.e1090a8e863a4a223131a30a79618636.jpeg",
+            addressL: "30th Cherry Road, 54675 North Carolina",
+            contactEmail: "swim@test.com",
+        }
+    ];
 
     let paragraphClass = 'water';
     const changer = () => {
@@ -12,55 +35,13 @@ import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
 
 
     }
-    let name = "Max";
-  let title = "";
-  let image = "";
-  let description = "";
-  let formState = "empty";
-
-  let createdContacts = [];
-
-  function addContact() {
-    // event.preventDefault();
-    if (
-      name.trim().length == 0 ||
-      title.trim().length == 0 ||
-      image.trim().length == 0 ||
-      description.trim().length == 0
-    ) {
-      formState = "invalid";
-      return;
-    }
-    createdContacts = [
-      ...createdContacts,
-      {
-          id: Math.random(),
-        name: name,
-        jobTitle: title,
-        imageUrl: image,
-        desc: description
-      }
-    ];
-    formState = "done";
-  }
-
-  function deleteFirst() {
-      createdContacts = createdContacts.slice(1);
-  }
-
-  function deleteLast() {
-      createdContacts = createdContacts.slice(0, -1);
-  }
+  
 </script>
 <style>
-    #form {
-        width: 30rem;
-        max-width: 100%;
-        margin: 1rem 0;
+    #meetups {
+        margin-top: 5rem;
     }
-    h1 {
-        color: red
-    }
+
     h2 {
         color: orange
     }
@@ -90,8 +71,20 @@ import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
     .fire {
         color: red;
     }
+
+    .appleh1 {
+        color:red;
+    }
 </style>
 
+
+<Hedar/>
+
+<section id="meetups">
+{#each meetups as meetup}
+    <MeetupItem />
+{/each}
+</section>
 
 <h1>Luke's space</h1>
 <h3>January 29</h3>
@@ -195,53 +188,9 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 
 <p>Hello everyone today i'm going to write in rainbow so lets get to it, I'm gonna right all of my favorite fruit</p>
 
-<h1>Apples</h1>
+<h1 class="appleh1">Apples</h1>
 <h2>Oranges</h2>
 <h3>Bananas</h3>
 <h4>Kiwi</h4>
 <h5>Blue berries</h5>
 <h6>Grapes</h6>
-
-  
-<form id="form">
-    <div class="form-control">
-      <label for="userName">User Name</label>
-      <input type="text" bind:value={name} id="userName" />
-    </div>
-    <div class="form-control">
-      <label for="jobTitle">Job Title</label>
-      <input type="text" bind:value={title} id="jobTitle" />
-    </div>
-    <div class="form-control">
-      <label for="image">Image URL</label>
-      <input type="text" bind:value={image} id="image" />
-    </div>
-    <div class="form-control">
-      <label for="desc">Description</label>
-      <textarea rows="3" bind:value={description} id="desc" />
-    </div>
-    <button on:click|preventDefault={addContact} type="submit">Add Contact Card</button>
-  </form>
-  
-<button 
-  on:click={(event) => {createdContacts = createdContacts = createdContacts.slice(1)}}> 
-  Delete First
-</button>
-<button on:click={deleteLast}>Delete Last</button>
-  
-  {#if formState === 'invalid'}
-    <p>Invalid input.</p>
-  {:else}
-    <p>Please enter some data and hit the button!</p>
-  {/if}
-  
-  {#each createdContacts as contact, i (contact.id)}
-    <h2># {i + 1}</h2>
-    <ContactCard
-      userName={contact.name}
-      jobTitle={contact.jobTitle}
-      description={contact.desc}
-      userImage={contact.imageUrl} />
-  {:else}
-    <p>Please start adding some contacts, we found none!</p>
-  {/each}
