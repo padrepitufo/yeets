@@ -1,25 +1,31 @@
 <script>
-
 import Hedar from "$lib/LukesMeetups/Hedar.svelte";  
-import MeetupItem from "$lib/LukesMeetups/MeetupItem.svelte";
+import MeetupGrid from "$lib/LukesMeetups/MeetupGrid.svelte";
 
-    const meetups = [
+let title = '';
+let subtitle = '';
+let address = ''; 
+let email = '';
+let description = '';
+let imageUrl = '';
+
+    let meetups = [
         {
             id: "m1",
-            title: "Computer Geek Club",
-            subtitle: "Learn to be a Computer Geek in 2 hours of watching computers",
-            description: "In this meetup, we will have some experts that teach you how to be a Computer Geek. ",
-            imageUrl: ".bp.blogspot.com/-3Rv2Pg9Y2nw/WnKNaho6Y8I/AAAAAAAAo6U/He6tXZX_jz8hOAz_AEpFx68qzqugRZe-ACK4BGAYYCw/s1600/Geek%2B-%2BComputer%2BGeek-745390.png",
-            address: "29th Geek road, 41579 New York",
-            contactEmail: "computergeek@test.com",
+            title: "Coding Bootcamp",
+            subtitle: "Learn to code in about 2 hours",
+            description: "In this meetup, we will have some experts that teach you how to code! ",
+            imageUrl: "https://imgs.search.brave.com/k4O1u07QUwKWvJK_hsjhgjf0Iv9L2dDxYvW8_4sVlBE/rs:fit:1200:840:1/g:ce/aHR0cHM6Ly93d3cu/amFtZXNnbWFydGlu/LmNlbnRlci93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNy8wOS9G/b3RvbGlhXzE2OTUz/OTc5M19TdWJzY3Jp/cHRpb25fTW9udGhs/eV9NLTEyMDB4ODQw/LmpwZw",
+            address: "29th Apple road, 41579 New York",
+            contactEmail: "code@test.com",
         },
         {
             id:"m2",
             title: "Swim Together" ,
             subtitle: "Let's go for some swimming",
             description: "We will simply swim some rounds!",
-            imageUrl: "5.walmartimages.com/asr/937a786e-81a4-4b76-a88e-0584849b602d.e1090a8e863a4a223131a30a79618636.jpeg",
-            addressL: "30th Cherry Road, 54675 North Carolina",
+            imageUrl: "https://imgs.search.brave.com/EsnvgGzmUdFlHTPblAds6ssLCsIEsG6BJYM8VR9sgEU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/bGl0dGxlZm9yZXN0/cGhvdG9ncmFwaHku/Y29tLmF1L3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE3LzAxLzA4/LTI2ODYtcG9zdC8y/MDE3LTAxLTA4XzAw/MDUuanBn",
+            address: "30th Cherry Road, 54675 North Carolina",
             contactEmail: "swim@test.com",
         }
     ];
@@ -35,10 +41,23 @@ import MeetupItem from "$lib/LukesMeetups/MeetupItem.svelte";
 
 
     }
-  
+  function addMeetup() {
+      const newMeetup = {
+        id: Math.random().toString(),
+        title: title,
+        subtitle: subtitle,
+        description: description,
+        imageUrl: imageUrl,
+        contactEmail: email,
+        address: address
+      };
+
+     // meetups.push(newMeetup); // DOES NOT WORK!
+     meetups= [newMeetup, ...meetups];
+  }
 </script>
 <style>
-    #meetups {
+    main {
         margin-top: 5rem;
     }
 
@@ -77,14 +96,38 @@ import MeetupItem from "$lib/LukesMeetups/MeetupItem.svelte";
     }
 </style>
 
-
 <Hedar/>
 
-<section id="meetups">
-{#each meetups as meetup}
-    <MeetupItem />
-{/each}
-</section>
+<main>
+    <form on:submit|preventDefault="{addMeetup}">
+        <div class="form-control">
+            <label for="title">Title</label>
+            <input type="text" id="title" bind:value={title} />
+        </div>
+        <div class="form-control">
+            <label for="subtitle">Subtitle</label>
+            <input type="text" id="subtitle" bind:value={subtitle} />
+        </div>
+        <div class="form-control">
+            <label for="address">Address</label>
+            <input type="text" id="address" bind:value={address} />
+        </div>
+        <div class="form-control">
+            <label for="imageUrl">Image URL</label>
+            <input type="text" id="imageUrl" bind:value={imageUrl} />
+        </div>
+        <div class="form-control">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" bind:value={email} />
+        </div>
+        <div class="form-control">
+            <label for="description">Description</label>
+            <textarea rows="3" id="description" bind:value={description} />
+        </div>
+        <button type="submit">Save</button>
+    </form>
+    <MeetupGrid {meetups} />
+</main>
 
 <h1>Luke's space</h1>
 <h3>January 29</h3>
