@@ -1,6 +1,5 @@
 <script>
 </script>
-
 <header> 
     <nav>
         <ul>
@@ -9,11 +8,11 @@
             <li><a href="/nena">nena</a></li>
             <li><a href="/ruth">Ruth</a></li>
             <li><a href="/luke">luke</a></li>
-            <li><a href="/nenasudemy">nenados?O:</a></li>
+            <li><a href="/janes">jane</a></li>
+            <li><a href="/nenasudemy">nena</a></li>
+            <li><a href="/makeyeets">posts</a></li>
         </ul>
     </nav>
-</header> 
-
-<style lang="scss">
-    
+</header>
+<style>
 </style>

@@ -1,9 +1,6 @@
 <script>
-    import ContactCard from "$lib/ContactCard.svelte";
+
     let name = 'Samantha';
-    let title = "";
-    let image = "";
-    let description = "";
     let number = 1;
     let pressed = "";
     const imgPikachu = "https://img.search.brave.com/-lLDW2QYHL6j8kN-kl8WLjhAW3lflpx4CKuAvAKxKOc/rs:fit:207:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/ZDFnQ1luMW9OVV9V/MW5jdTNoZ1lBQUFB/QSZwaWQ9QXBp";
@@ -19,23 +16,6 @@
         number = 10;
     }
 
-    function incrementNumber() {
-        number += 1;
-    }
-
-    function changeName() {
-        name = 'Velma';
-    }
-
-    function nameInput(event) {
-        console.log(event);
-        const enteredValue = event.target.value; 
-        name = enteredValue;
-        if(event.data == null){
-            return;
-        }
-        pressed = event.data;
-    }
     function switchTogglePic() { 
         // when someone clicks on the image
         // the image is supposed to change to
@@ -60,12 +40,12 @@
         
     }
 </script>
-<style lang="scss">
+<style>
     h1 {
         color: rgb(0, 255, 157);
     }
 
-    button {
+    /* button {
         font: inherit;
         border: 1px solid #cf0056;
         background: #cf0056;
@@ -74,20 +54,17 @@
         border-radius: 5px;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
         cursor: pointer;
-
-        &:hover,
+    } */
+        /* &:hover,
         &:active {
             background: #e40763;
             border-color: blue;
             box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
-        }
-    }
-
-    
+        } */
 
 </style>
 
-<h1>Ruth's Log/ COOL STUFF AT THE BOTTEM</h1>
+<h1>Ruth's Log/ COOL STUFF AT THE BOTTEM-ish</h1>
 <h3>January 29 2022</h3>
 <h4>Things I've Been Doing!</h4>
 <p>Yesterday, I Haved Indian Food! And Whatched Encanto!</p>
@@ -254,22 +231,61 @@
 <h4>R I G H T !</h4>
 <h1>Testing Testing {uppercaseName}, my numbers is {number}</h1>
 <h4>LET ME MAKE UP A FAKE NAME!</h4>
-<button on:click="{incrementNumber}">Change Number</button>
-<input placeholder="name" type="text" value="{name}" on:input={nameInput}>
-<input placeholder="title" type="text" bind:value={title}>
-<input placeholder="image" type="text" bind:value={image}>
-<textarea rows="3" bind:value={description}></textarea>
-
-<ContactCard 
-    userName={name}
-    jobTitle={title}
-    description={description}
-    userImage={image}
-/>
 <h4>Sorry Still working on it (I just got your key press though {pressed})!</h4>
 <h4>TRY CLICKING ON THE PICTURE</h4>
 <p>IT SHOULD WORK</p>
 <h4>YA!</h4>
 <p>IT WORKED</p>
 
+<h4>Hi (again) umm... Sorry i have not been on for to long
+    but I'm Back!
+</h4>
+
+<h4>So i watched Sing 2 yesterday and It was amazing
+    I loved it!
+</h4>
+<p>SPIDER AHHHHHHHH!</p>
+<p>Let me start from the start!</p>
+<h4>Hi my name is ruth!</h4>
+
+<p>and i am stupid</p>
+<h4>Hehe</h4>
+
+<p>lalala ya i'm amazzzzing</p>
+<h4>Snap out of it RUth!</h4>
+<h4>okay okay I'm me AGAIN!</h4>
+<p>Ya here me!</p>
+<p>(echo-ing)</p>
+
+<h4>sorry to INTENSE</h4>
+<p>What is wrong with me AHHHHH!</p>
+
+<h4>None WILL JUDGE ME!</h4>
+
+<h4>HAHAH!!</h4>
+
+<h4>I tell you NONE!</h4>
+<p>posted april 15 12:47 pm</p>
+
+<h4>:Stickers:</h4>
+<p>stickers are very 
+    Ccccool and they Stick To YOU!
+</p>
+<h4>DoO yOu YyoOUu hhhhAAAVeee Sssssssstttttiiiickers!</h4>
+
+<p>(Nvm) So WhO has StIcKeRs</p>
+<h4>ANYONE! (Sobs)</h4>
+
+<p>ughhh So bored  plew tahw od ew od txen hhgu </p>
+<h4>Guess what it was back wards</h4>
+<p>Posted apr 21</p>
+
 <img on:click="{switchTogglePic}" src="{togglePic}" alt="">
+
+<!-- LINK ON WEBSITE FOR RUTHHIES UDEMY STOOF -->
+
+<nav>
+    <ul>
+        <li><a href="/ruthudemy">Click here to see my udemy progress!!!</a></li>
+    </ul>
+</nav>

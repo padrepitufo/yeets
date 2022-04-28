@@ -1,76 +1,84 @@
 <!-- ACTUALLY FOLLOWING UDEMY STUFF -->
 
+
 <script>
-    let name = 'Nena';
-    let age = 0;
+	import Hederr from "$lib/nenasudemy/Hederr.svelte";
+	import MeatUpGrid from "$lib/nenasudemy/MeatUpGrid.svelte";
+	import TextInput from "$lib/nenasudemy/TextInput.svelte";
+	import Button from "$lib/nenasudemy/Button.svelte";
+	import EditNewMeatup from "$lib/nenasudemy/EditNewMeatup.svelte";
+	
 
-// let uppercaseName; not required!
+	let editMode = null;
 
-$: beegerName = name.toUpperCase();
+	let meatups = [
+		{
+			id:'m1',
+			title:'Coding Bootcamp',
+			subtitle:'Learn to code in 5 boring hours!',
+			description:'In this MeatUp, our best, but boring, experts will be teaching the basics of code!',
+			imageUrl:'https://i.pinimg.com/originals/1f/5a/2a/1f5a2ae53ad9cc5c4051d34b79b12321.jpg',
+			address:'69th Geek Road, 21210 Your Moms House ',
+			contactEmail:'XxcodergeekxX1277@test.com',
+			isFavorite:false,
+		},
+		{
+			id:'m2',
+			title:'Swim Together',
+			subtitle:'Let\'s go for some swimming!',
+			description:'We will be teaching how to swim, and some fun games! No drowning allowed!!',
+			imageUrl:'https://i.pinimg.com/564x/df/8f/27/df8f2774d1ec45a0c2ff43647103e947.jpg',
+			address:'96th Slippy Sea, 12345 Artic Ocean',
+			contactEmail:'AquaMansMothersHusbandsWife@test.com',
+			isFavorite:false,
+		}
+	  ];
 
-$: console.log(name);
+	function addMeatup (event) {
+		const newMeatup = {
+			id: Math.random().toString(),
+			title: event.detail.title,
+			subtitle: event.detail.subtitle,
+			description: event.detail.description,
+			imageUrl: event.detail.imageUrl,
+			contactEmail: event.detail.email,
+			address: event.detail.address
+		};
+			meatups = [newMeatup,...meatups];
+			editMode = null;
+	};
 
-$: if(name === 'Fina') {
-    console.log('Deez Nuts');
-    age = 69;
-}
+	function toggleFavorite(event) {
+		const id = event.detail;
+		const updatedMeatup = { ...meatups.find(m => m.id === id) };
 
-    function incrementToshi() {
-        age += 1;
-    }
-    function changeNamaeDesu() {
-        name = 'Fina';
-    }
-</script>
+		updatedMeatup.isFavorite = !updatedMeatup.isFavorite;
+		const meatupIndex = meatups.findIndex(m => m.id === id);
+		const updatedMeatups = [...meatups];
+		updatedMeatups[meatupIndex] = updatedMeatup;
+		meatups = updatedMeatups;
 
-<style>
+	}
+	</script>
+	
+	<style>
+		main {
+			margin-top: 5rem;
+		}
 
+		.meatups-controls {
+			margin: 1rem;
+		}
+	</style>
 
+	<Hederr></Hederr>
 
-    @import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab');
-
-    * {
-      box-sizing: border-box;
-    }
-
-    /* html,
-    body {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        font-family: 'Lato', sans-serif;
-    } */
-
-    /* body {
-        color: #333;
-        margin: 0;
-        padding: 2rem;
-        background: #f3f3f3;
-    } */
-
-    button {
-        font: inherit;
-        border: 1px solid #cf0056;
-        background: #cf0056;
-        padding: 0.5rem 1rem;
-        color: white;
-        border-radius: 5px;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
-        cursor: pointer;
-    }
-
-    button:hover,
-    button:active {
-        background: #e40763;
-        border-color: #e40763;
-        box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
-    }
-    h1{
-        color:cadetblue;
-    }
-
-</style>
-
-<h1>Konnichiwa! Watashi wa {name} desu. {age}-sai desu! </h1>
-<button on:click="{incrementToshi}">Nenrei o kaeyou!</button>
-<button on:click="{changeNamaeDesu}">Namae o henkō suru!</button>
+	<main>
+		<div class="meatups-controls">
+			<Button caption="New Meatup" on:click="{() => editMode = 'add'}"/>
+		</div>
+		{#if editMode === 'add'}
+			<EditNewMeatup on:save="{addMeatup}"/>
+		{/if}
+		<MeatUpGrid {meatups} on:togglefavorite="{toggleFavorite}" />
+	</main>
