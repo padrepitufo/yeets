@@ -1,5 +1,34 @@
 <script>
-import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
+import Hedar from "$lib/LukesMeetups/Hedar.svelte";  
+import MeetupGrid from "$lib/LukesMeetups/MeetupGrid.svelte";
+
+let title = '';
+let subtitle = '';
+let address = ''; 
+let email = '';
+let description = '';
+let imageUrl = '';
+
+    let meetups = [
+        {
+            id: "m1",
+            title: "Coding Bootcamp",
+            subtitle: "Learn to code in about 2 hours",
+            description: "In this meetup, we will have some experts that teach you how to code! ",
+            imageUrl: "https://imgs.search.brave.com/k4O1u07QUwKWvJK_hsjhgjf0Iv9L2dDxYvW8_4sVlBE/rs:fit:1200:840:1/g:ce/aHR0cHM6Ly93d3cu/amFtZXNnbWFydGlu/LmNlbnRlci93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNy8wOS9G/b3RvbGlhXzE2OTUz/OTc5M19TdWJzY3Jp/cHRpb25fTW9udGhs/eV9NLTEyMDB4ODQw/LmpwZw",
+            address: "29th Apple road, 41579 New York",
+            contactEmail: "code@test.com",
+        },
+        {
+            id:"m2",
+            title: "Swim Together" ,
+            subtitle: "Let's go for some swimming",
+            description: "We will simply swim some rounds!",
+            imageUrl: "https://imgs.search.brave.com/EsnvgGzmUdFlHTPblAds6ssLCsIEsG6BJYM8VR9sgEU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/bGl0dGxlZm9yZXN0/cGhvdG9ncmFwaHku/Y29tLmF1L3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE3LzAxLzA4/LTI2ODYtcG9zdC8y/MDE3LTAxLTA4XzAw/MDUuanBn",
+            address: "30th Cherry Road, 54675 North Carolina",
+            contactEmail: "swim@test.com",
+        }
+    ];
 
     let paragraphClass = 'water';
     const changer = () => {
@@ -12,75 +41,26 @@ import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
 
 
     }
+  function addMeetup() {
+      const newMeetup = {
+        id: Math.random().toString(),
+        title: title,
+        subtitle: subtitle,
+        description: description,
+        imageUrl: imageUrl,
+        contactEmail: email,
+        address: address
+      };
 
-    let name = "You";
-    let title = "";
-    let image = "";
-    let description = "";
-    let formState = 'empty';
-
-    let createdContacts = [];
-
-    function addContact() {
-      if (
-        name.trim().length == 0 || 
-        title.trim().length == 0 || 
-        image.trim().length == 0 || 
-        description.trim().length == 0 
-       ) {
-            formState = 'invalid';
-            return;
-        }
-        createdContacts = [
-            ...createdContacts,
-            {
-             id: Math.random(),
-            name: name, 
-            jobTitle: title, 
-            imageUrl: image, 
-            desc: description 
-        }];
-        formState = 'done';
-      }
-
-      function deleteFirst() {
-          createdContacts = createdContacts.slice(1);
-      }
-
-      function deleteLast() {
-          createdContacts = createdContacts.slice(0, -1);
-      }
-
-    $:  uppercaseName = name.toUpperCase();
-
-    $: console.log(name);
-
-    $: if (name === 'Maximilian') {
-        console.log('It runs!');
-        age = 31;
-    }
-
-    function incrementAge() {
-        age += 1;
-    }
-
-    function changeName() {
-        name = 'Maximilian';
-    }
-
-    function nameInput(event) {
-        const enteredValue = event.target.value;
-        name = enteredValue;
-    }
+     // meetups.push(newMeetup); // DOES NOT WORK!
+     meetups= [newMeetup, ...meetups];
+  }
 </script>
 <style>
-    #form {
-        width: 30rem;
-        max-width: 100%;
+    main {
+        margin-top: 5rem;
     }
-    h1 {
-        color: red
-    }
+
     h2 {
         color: orange
     }
@@ -110,8 +90,44 @@ import ContactCard from "$lib/lukesUdemy/ContactCard.svelte";
     .fire {
         color: red;
     }
+
+    .appleh1 {
+        color:red;
+    }
 </style>
 
+<Hedar/>
+
+<main>
+    <form on:submit|preventDefault="{addMeetup}">
+        <div class="form-control">
+            <label for="title">Title</label>
+            <input type="text" id="title" bind:value={title} />
+        </div>
+        <div class="form-control">
+            <label for="subtitle">Subtitle</label>
+            <input type="text" id="subtitle" bind:value={subtitle} />
+        </div>
+        <div class="form-control">
+            <label for="address">Address</label>
+            <input type="text" id="address" bind:value={address} />
+        </div>
+        <div class="form-control">
+            <label for="imageUrl">Image URL</label>
+            <input type="text" id="imageUrl" bind:value={imageUrl} />
+        </div>
+        <div class="form-control">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" bind:value={email} />
+        </div>
+        <div class="form-control">
+            <label for="description">Description</label>
+            <textarea rows="3" id="description" bind:value={description} />
+        </div>
+        <button type="submit">Save</button>
+    </form>
+    <MeetupGrid {meetups} />
+</main>
 
 <h1>Luke's space</h1>
 <h3>January 29</h3>
@@ -215,55 +231,9 @@ and there is 4 gamemodes you can try! Now I will write them in a list.
 
 <p>Hello everyone today i'm going to write in rainbow so lets get to it, I'm gonna right all of my favorite fruit</p>
 
-<h1>Apples</h1>
+<h1 class="appleh1">Apples</h1>
 <h2>Oranges</h2>
 <h3>Bananas</h3>
 <h4>Kiwi</h4>
 <h5>Blue berries</h5>
 <h6>Grapes</h6>
-
-  
-<div class="heading">Hover over this code!</div>
-
-<p>Today I will test something ordinary.</p>
-
-<div id="form">
-    <div class="form-control">
-      <label for="userName">User Name</label>
-      <input type="text" bind:value={name} id="userName" />
-    </div>
-    <div class="form-control">
-      <label for="jobTitle">Job Title</label>
-      <input type="text" bind:value={title} id="jobTitle" />
-    </div>
-    <div class="form-control">
-      <label for="image">Image URL</label>
-      <input type="text" bind:value={image} id="image" />
-    </div>
-    <div class="form-control">
-      <label for="desc">Description</label>
-      <textarea rows="3" bind:value={description} id="desc" />
-    </div>
-  </div>
-
-  <button on:click={addContact}>Add Contact Card</button>
-  <button on:click={deleteFirst}>Delete First</button>
-  <button on:click={deleteLast}>Delete Last</button>
-
-{#if formState === 'invalid'}
-<p>Invalid input.</p>
-{:else}
-  <p>Please enter some data and hit the button! </p>
-{/if}
-
-{#each createdContacts as contact, i (contact.id)}
-    <h2># {i + 1}</h2>
-<ContactCard 
-    userName={contact.name} 
-    jobTitle={contact.jobTitle} 
-    description ={contact.desc}
-    userImage={contact.imageUrl} 
-    />
-    {:else}
-      <p>Please start adding some contacts, we found none!</p>
-    {/each}
