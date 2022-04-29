@@ -45,7 +45,7 @@
     .success:hover,
     .success:active {
         background: #1ac745;
-        border-color: #1ac745;
+        border-color: #1a26c7;
     }
 
     .outline {
@@ -74,20 +74,23 @@
 
     .outline.success:hover,
     .outline.success:active {
-        background: #c2ffd1;
+        background: #e6ffc4;
     }
 </style>
 
 <script>
     export let type = "button";
-    export let caption;
     export let href = null;
     export let mode = null;
     export let color = null;
 
 </script>
 {#if href}
-<a {href}>{caption}</a>
+    <a {href}>
+        <slot></slot>
+    </a>
 {:else}
-<button class="{mode} {color}" {type} on:click>{caption}</button>
+    <button class="{mode} {color}" {type} on:click>
+        <slot></slot>
+    </button>
 {/if}

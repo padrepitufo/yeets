@@ -78,6 +78,7 @@
  <!-- Card thing o//o -->
 
 <article>
+
     <header>
         <h1>
           {title} 
@@ -94,18 +95,20 @@
     <div class="content">
         <p>{description}</p>
     </div>
+
     <footer>
-        <Button href="mailto:{email}" caption="Contact"/>
+        <Button href="mailto:{email}" >Contact</Button>
 
         <Button 
-        mode="outline"
-        color={isFav ? null : 'success'}
-        type="button" 
-        caption="{isFav ? 'Unfavorite' : 'Favorite'}"
-        on:click={() => dispatch('togglefavorite', id)}/>
+          mode="outline"
+          color={isFav ? null : 'success'}
+          type="button" 
+          on:click={() => dispatch('togglefavorite', id)}>
+          {isFav ? 'Unfavorite' : 'Favorite'}
+        </Button>
 
-        <Button type="button" caption="Show More"/>
-        
+        <Button type="button">Show More</Button>
        
     </footer>
+
 </article>

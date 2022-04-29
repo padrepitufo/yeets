@@ -20,5 +20,5 @@ h1 {
 </style>
 
 <header>
-    <h1>If you are reading this, you are wasting your time.</h1>
+    <h1>If you are reading this, you are wasting your time. 😈😈😈😈😈😈😈😈</h1>
 </header>
