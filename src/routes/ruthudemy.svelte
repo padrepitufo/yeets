@@ -1,95 +1,36 @@
 <script>
-    import ContactCarddd from "$lib/ruthsudemy/ContactCarddd.svelte";
-  
-    let name = "Max";
-    let title = "";
-    let image = "";
-    let description = "";
-    let formState = 'empty';
+    import Header from '$lib/ruthsudemy/MeetupItem.svelte';
+    import MeetupItem from '$lib/Meetups/MeetupItem.svelte';
 
-    let createdContacts = [];
+    const meetups = [
+        {
+            id: 'm1',
+            title: 'Coding on a Computer 💻',
+            subtitle: 'Learn to code in 4 Wonderful Hours ⏳',
+            description: 'Hi In this MeetUs we want to TEACH little kids to code and have A wonDerful LIFE! 💬',
+            imageUrl: 'https://imgs.search.brave.com/T-8VuORPLOZzs3HVEGom-ZUTq3bxfaVOl6orAZ3TJp8/rs:fit:1200:1080:1/g:ce/aHR0cDovL3d3dy5w/aXhlbHN0YWxrLm5l/dC93cC1jb250ZW50/L3VwbG9hZHMvMjAx/Ni8xMC9CaW5hcnkt/Q29kZS1CYWNrZ3Jv/dW5kLWZvci1EZXNr/dG9wLmpwZw',
+            address: '27th Code Road, 32523 New York',
+            contactEmail: 'wonderWorld@test.com'
+        },
+        {
+            id: 'm2',
+            title: '😆 Jokes to make you laugh! 🤣',
+            subtitle: '🤣 mabye you can make one of the jokes like i did JK hahahahahah! 😆',
+            description: '😭 me my mom telled me that there was no more Ice Cream.🍨 the next day i saw all the kids eating Ice Cream without me!🍦 ME:',
+            imageUrl: 'https://imgs.search.brave.com/Lpcf4XCsGQuJsqffHbMzZwL3_ovK54LRuXAVvNbGD_0/rs:fit:1200:1080:1/g:ce/aHR0cDovL2dldHdh/bGxwYXBlcnMuY29t/L3dhbGxwYXBlci9m/dWxsL2IvMS83Lzk2/MDcyMy13aWRlc2Ny/ZWVuLXRoZS1hbWF6/aW5nLXdvcmxkLW9m/LWd1bWJhbGwtd2Fs/bHBhcGVycy0xOTIw/eDEwODAtZm9yLWRl/c2t0b3AuanBn',
+            address: '10th joke road 778901 New York',
+            contactEmail: 'joke@test.com',
+        },
+    ];
+        
+            
+           
+            
+    
+</script>
 
-    function addContact() {
-        //event.preventDefault();
-        if (
-            name.trim().length == 0 ||
-            title.trim().length == 0 ||
-            image.trim().length == 0 ||
-            description.trim().length == 0
-            ) {
-        formState = 'invalid';
-        return;
-    }
-    createdContacts = [
-        ...createdContacts,
-    {
-        name: name, 
-        jobTitle: title, 
-        imageUrl: image, 
-        desc: description
-    }];
+<Header />
 
-    formState = 'done';
-}
-
-function deleteFirst () {
-    createdContacts = createdContacts.slice(1);
-}
-
-function deleteLast () {
-    createdContacts = createdContacts.slice(0, -1);
-}
-  </script>
-  
-  <style>
-    #form {
-      width: 30rem;
-      max-width: 100%;
-      margin: 1rem 0;
-    }
-  </style>
-
-
-  
-  <form id="form">
-    <div class="form-control">
-      <label for="userName">User Name</label>
-      <input type="text" bind:value={name} id="userName" />
-    </div>
-    <div class="form-control">
-      <label for="jobTitle">Job Title</label>
-      <input type="text" bind:value={title} id="jobTitle" />
-    </div>
-    <div class="form-control">
-      <label for="image">Image URL</label>
-      <input type="text" bind:value={image} id="image" />
-    </div>
-    <div class="form-control">
-      <label for="desc">Description</label>
-      <textarea rows="3" bind:value={description} id="desc" />
-    </div>
-    <button on:click|preventDefault={addContact} type="submit">Add Contact Card</button>
-</form>
-
-
-  <button on:click={(event) => createdContacts = createdContacts.slice(1)}
-    >Delete Joe First Card
-</button>
-  <button on:click={deleteLast}>Delete Joe Last Card</button>
-  
-  {#if formState === 'invalid'}
-  <p>Invalid input.😡</p>
-  {:else}
-  <p>Please enter some data and press the button!👍</p>
-  {/if}
-
-  {#each createdContacts as contact, i}
-    <p># {i + 1}</p>
-  <ContactCarddd 
-  userName={contact.name} 
-  jobTitle={contact.jobTitle} 
-  description={contact.desc}
-  userImage={contact.imageUrl} />
-  {:else}
-    <p>Enter data 🦮 and then you can have as Many contact cards 🫂 as you want!🤝 Just keep pressing the 🔴 button!</p>
-  {/each}
+{#each meetups as meetup}
+    <MeetupItem />
+{/each}
