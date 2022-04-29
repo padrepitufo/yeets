@@ -59,6 +59,10 @@
 		meatups = updatedMeatups;
 
 	}
+
+	function cancelEdit() {
+		editMode=null;
+	};
 	</script>
 	
 	<style>
@@ -75,10 +79,10 @@
 
 	<main>
 		<div class="meatups-controls">
-			<Button caption="New Meatup" on:click="{() => editMode = 'add'}"/>
+			<Button on:click="{() => editMode = 'add'}">Add Meatup</Button>
 		</div>
 		{#if editMode === 'add'}
-			<EditNewMeatup on:save="{addMeatup}"/>
+			<EditNewMeatup on:save="{addMeatup}" on:cancel={cancelEdit} />
 		{/if}
 		<MeatUpGrid {meatups} on:togglefavorite="{toggleFavorite}" />
 	</main>
