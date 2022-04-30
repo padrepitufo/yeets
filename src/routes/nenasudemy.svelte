@@ -61,8 +61,8 @@
 	}
 
 	function cancelEdit() {
-		editMode=null;
-	};
+		editMode = null;
+	}
 	</script>
 	
 	<style>
@@ -79,10 +79,10 @@
 
 	<main>
 		<div class="meatups-controls">
-			<Button on:click="{() => editMode = 'add'}">Add Meatup</Button>
+			<Button on:click="{() => (editMode = 'add')}">Add Meatup</Button>
 		</div>
 		{#if editMode === 'add'}
-			<EditNewMeatup on:save="{addMeatup}" on:cancel={cancelEdit} />
+			<EditNewMeatup on:save={addMeatup} on:cancel={cancelEdit} />
 		{/if}
-		<MeatUpGrid {meatups} on:togglefavorite="{toggleFavorite}" />
+		<MeatUpGrid {meatups} on:togglefavorite={toggleFavorite} />
 	</main>

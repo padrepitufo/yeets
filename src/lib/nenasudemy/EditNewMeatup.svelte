@@ -44,6 +44,10 @@
 		    	address: address
             });
         };
+
+        function cancel() {
+            dispatch('cancel');
+        }
 </script>
 
  <Modal title="Add Meatup" on:cancel>
@@ -82,7 +86,10 @@
             controlType="textarea"
             rows="3"
             on:input={event => (description = event.target.value)} />
-            <!-- <Button type="submit" >Save</Button> -->
+        
     </form>
-
+    <div slot="footer">
+        <Button type="submit" mode="outline" on:click={cancel}>Cancel</Button>
+        <Button type="submit" on:click={submitForm}>Save</Button>
+    </div>
 </Modal>

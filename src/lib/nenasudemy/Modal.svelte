@@ -1,6 +1,6 @@
 <script>
-    import Button from '$lib/nenasudemy/Badge.svelte';
-    import { createEventDispatcher } from 'svelte';
+   import { createEventDispatcher } from 'svelte';
+   import Button from '$lib/nenasudemy/Button.svelte';
 
     export let title;
 
@@ -63,13 +63,12 @@
 </style>
 
 
-<div class="modal-backdrop" on:click={closeModal}/>
-
+<div class="modal-backdrop" on:click={closeModal}></div>
 <div class="modal">
 
     <h1>{title}</h1>
     <div class="content">
-        <slot></slot>
+        <slot />
     </div>
     <footer>
         <slot name="footer">
