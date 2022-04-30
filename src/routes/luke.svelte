@@ -3,34 +3,8 @@ import Hedar from "$lib/LukesMeetups/Hedar.svelte";
 import MeetupGrid from "$lib/LukesMeetups/MeetupGrid.svelte";
 import TextInput from "$lib/LukesMeetups/TextInput.svelte";
 import Button from "$lib/LukesMeetups/Button.svelte";
-
-let title = '';
-let subtitle = '';
-let address = ''; 
-let email = '';
-let description = '';
-let imageUrl = '';
-
-    let meetups = [
-        {
-            id: "m1",
-            title: "Coding Bootcamp",
-            subtitle: "Learn to code in about 2 hours",
-            description: "In this meetup, we will have some experts that teach you how to code! ",
-            imageUrl: "https://imgs.search.brave.com/k4O1u07QUwKWvJK_hsjhgjf0Iv9L2dDxYvW8_4sVlBE/rs:fit:1200:840:1/g:ce/aHR0cHM6Ly93d3cu/amFtZXNnbWFydGlu/LmNlbnRlci93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNy8wOS9G/b3RvbGlhXzE2OTUz/OTc5M19TdWJzY3Jp/cHRpb25fTW9udGhs/eV9NLTEyMDB4ODQw/LmpwZw",
-            address: "29th Apple Road, 41579 New York",
-            contactEmail: "code@test.com",
-        },
-        {
-            id:"m2",
-            title: "Swim Together" ,
-            subtitle: "Let's go for some swimming",
-            description: "We will simply swim some rounds!",
-            imageUrl: "https://imgs.search.brave.com/EsnvgGzmUdFlHTPblAds6ssLCsIEsG6BJYM8VR9sgEU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/bGl0dGxlZm9yZXN0/cGhvdG9ncmFwaHku/Y29tLmF1L3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE3LzAxLzA4/LTI2ODYtcG9zdC8y/MDE3LTAxLTA4XzAw/MDUuanBn",
-            address: "30th Cherry Road, 54675 North Carolina",
-            contactEmail: "swim@test.com",
-        }
-    ];
+import Product from  "$lib/LukesMeetups/Product.svelte";
+import Modal from "$lib/LukesMeetups/Modal.svelte";
 
     let paragraphClass = 'water';
     const changer = () => {
@@ -43,32 +17,27 @@ let imageUrl = '';
 
 
     }
-  function addMeetup() {
-      const newMeetup = {
-        id: Math.random().toString(),
-        title: title,
-        subtitle: subtitle,
-        description: description,
-        imageUrl: imageUrl,
-        contactEmail: email,
-        address: address
-      };
 
-     // meetups.push(newMeetup); // DOES NOT WORK!
-     meetups= [newMeetup, ...meetups];
-  }
+    let products = [
+        {
+            id: "p1",
+            title: "A book",
+            price: 9.99
+        }
+    ]; 
+
+    let showModal = false;
+
+    function addToCart(event) {
+    console.log(event);
+}
+
+function deleteProduct(event) {
+    console.log(event.detail);
+}
+
 </script>
 <style>
-    main {
-        margin-top: 5rem;
-    }
-
-    form {
-        width: 30rem;
-        max-width: 90%;
-        margin: auto;
-    }
-
     h2 {
         color: orange
     }
@@ -104,50 +73,21 @@ let imageUrl = '';
     }
 </style>
 
-<Hedar/>
+{#each products as product }
+<Product {...product}on:add-to-cart={addToCart} on:delete={deleteProduct} />
+{/each}
 
-<main>
-    <form on:submit|preventDefault={addMeetup}>
-       <TextInput 
-       id="title"
-       label="Title" 
-       type="text" 
-       value={title} 
-       on:input={(event) => title = event.target.value} />
-       <TextInput 
-       id="subtitle"
-       label="Subtitle" 
-       type="text" 
-       value={subtitle} 
-       on:input={(event) => subtitle = event.target.value} />
-       <TextInput 
-       id="address"
-       label="Adress"
-       type="text"
-       value={address} 
-       on:input={(event) => address = event.target.value} />
-       <TextInput 
-       id="imageUrl"
-       label="Image URL"
-       type="text"  
-       value={imageUrl} 
-       on:input={(event) => imageUrl = event.target.value} />
-       <TextInput 
-       id="email"
-       label="E-mail"  
-       type="email"
-       value={email}
-       on:input={(event) => email = event.target.value} />
-        <TextInput 
-        id="description"
-        label="Description" 
-        controlType="text" 
-        value={description} 
-        on:input={(event) => description = event.target.value} />
-        <button type="submit" caption="Save" />
-    </form>
-    <MeetupGrid {meetups} />
-</main>
+<button on:click="{() => showModal = true}">Show Modal</button>
+
+{#if showModal}
+<Modal 
+    on:cancel={() => showModal = false}
+    on:close={() => showModal = false}>
+   <h1 slot="header">Hello!</h1>
+   <p>This works!</p>
+   <!-- <button slot="footer" on:click={() => showModal = false}>Confirm</button> -->
+</Modal>
+{/if}
 
 <h1>Luke's space</h1>
 <h3>January 29</h3>
