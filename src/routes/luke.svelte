@@ -1,28 +1,10 @@
 <script>
-
 import Hedar from "$lib/LukesMeetups/Hedar.svelte";  
-import MeetupItem from "$lib/LukesMeetups/MeetupItem.svelte";
-
-    const meetups = [
-        {
-            id: "m1",
-            title: "Computer Geek Club",
-            subtitle: "Learn to be a Computer Geek in 2 hours of watching computers",
-            description: "In this meetup, we will have some experts that teach you how to be a Computer Geek. ",
-            imageUrl: ".bp.blogspot.com/-3Rv2Pg9Y2nw/WnKNaho6Y8I/AAAAAAAAo6U/He6tXZX_jz8hOAz_AEpFx68qzqugRZe-ACK4BGAYYCw/s1600/Geek%2B-%2BComputer%2BGeek-745390.png",
-            address: "29th Geek road, 41579 New York",
-            contactEmail: "computergeek@test.com",
-        },
-        {
-            id:"m2",
-            title: "Swim Together" ,
-            subtitle: "Let's go for some swimming",
-            description: "We will simply swim some rounds!",
-            imageUrl: "5.walmartimages.com/asr/937a786e-81a4-4b76-a88e-0584849b602d.e1090a8e863a4a223131a30a79618636.jpeg",
-            addressL: "30th Cherry Road, 54675 North Carolina",
-            contactEmail: "swim@test.com",
-        }
-    ];
+import MeetupGrid from "$lib/LukesMeetups/MeetupGrid.svelte";
+import TextInput from "$lib/LukesMeetups/TextInput.svelte";
+import Button from "$lib/LukesMeetups/Button.svelte";
+import Product from  "$lib/LukesMeetups/Product.svelte";
+import Modal from "$lib/LukesMeetups/Modal.svelte";
 
     let paragraphClass = 'water';
     const changer = () => {
@@ -35,13 +17,27 @@ import MeetupItem from "$lib/LukesMeetups/MeetupItem.svelte";
 
 
     }
-  
+
+    let products = [
+        {
+            id: "p1",
+            title: "A book",
+            price: 9.99
+        }
+    ]; 
+
+    let showModal = false;
+
+    function addToCart(event) {
+    console.log(event);
+}
+
+function deleteProduct(event) {
+    console.log(event.detail);
+}
+
 </script>
 <style>
-    #meetups {
-        margin-top: 5rem;
-    }
-
     h2 {
         color: orange
     }
@@ -77,14 +73,21 @@ import MeetupItem from "$lib/LukesMeetups/MeetupItem.svelte";
     }
 </style>
 
-
-<Hedar/>
-
-<section id="meetups">
-{#each meetups as meetup}
-    <MeetupItem />
+{#each products as product }
+<Product {...product}on:add-to-cart={addToCart} on:delete={deleteProduct} />
 {/each}
-</section>
+
+<button on:click="{() => showModal = true}">Show Modal</button>
+
+{#if showModal}
+<Modal 
+    on:cancel={() => showModal = false}
+    on:close={() => showModal = false}>
+   <h1 slot="header">Hello!</h1>
+   <p>This works!</p>
+   <!-- <button slot="footer" on:click={() => showModal = false}>Confirm</button> -->
+</Modal>
+{/if}
 
 <h1>Luke's space</h1>
 <h3>January 29</h3>

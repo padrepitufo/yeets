@@ -1,3 +1,13 @@
+<script>
+    import Button from "./Button.svelte";
+
+  export let title;
+  export let subtitle;
+  export let  imageUrl;
+  export let description;
+  export let address;
+  export let email;
+</script>
 
 <style>
  article {
@@ -52,21 +62,27 @@
     text-align: right;
   }
 
+  .content {
+    height: 4rem;
+  }
+
 </style>
 
 <article>
     <header>
-        <h1>TITLE</h1>
-        <h2>SUBTITLE</h2>
+        <h1>{title}</h1>
+        <h2>{subtitle}}</h2>
+        <p>{address}</p>
     </header>
     <div class="image">
-        <img src="" alt="">
+        <img src="{imageUrl}" alt="{title}">
     </div>
     <div class="content">
-        <p></p>
+        <p>{description}</p>
     </div>
     <footer>
-        <button>Show Details</button>
-        <button>Favorite</button>
+        <Button href="mailto:{email}" caption="contact" />
+        <Button mode="outline" type="button" caption="Favorite" />
+        <Button type="button" caption="Show Details" />
     </footer>
 </article>
