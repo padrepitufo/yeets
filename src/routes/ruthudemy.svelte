@@ -1,6 +1,6 @@
 <script>
-    import Header from '$lib/ruthsudemy/MeetupItem.svelte';
-    import MeetupItem from '$lib/Meetups/MeetupItem.svelte';
+    import Header from '$lib/ruthsudemy/Header.svelte';
+    import MeetupItem from '$lib/ruthsudemy/MeetupItem.svelte';
 
     const meetups = [
         {

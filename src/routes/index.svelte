@@ -62,20 +62,20 @@
     box-sizing: inherit;
     } 
 
-    html{
-        font-size: 62.5%;
-    }
+    // html{
+    //     font-size: 62.5%;
+    // }
 
-    .root {
-        font-family: "lato", sans-serif;
-        font-weight: 400;
-        /* font-size: 16px; */
-        line-height: 1.7;
-        color: $color-grey-dark;
-        padding: 3rem;
+    // .root {
+    //     font-family: "lato", sans-serif;
+    //     font-weight: 400;
+    //     /* font-size: 16px; */
+    //     line-height: 1.7;
+    //     color: $color-grey-dark;
+    //     padding: 3rem;
 
-        box-sizing: border-box;
-    }
+    //     box-sizing: border-box;
+    // }
 
     .header {
         height: 95vh;
