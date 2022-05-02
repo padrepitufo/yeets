@@ -1,3 +1,5 @@
+<!-- put on pausu -->
+
 <script>
    import { createEventDispatcher } from 'svelte';
    import Button from '$lib/nenasudemy/Button.svelte';
