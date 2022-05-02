@@ -36,6 +36,7 @@
 	function setValue(event) {
 		val = event.target.value;
 	}
+<<<<<<< HEAD
 
 	function saveData() {
 		// console.log(document.querySelector('#username').value);
@@ -101,3 +102,4 @@
 	<button type="submit" disabled={!formIsValid}></button>
 
 </form>
+
