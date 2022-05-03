@@ -1,12 +1,9 @@
 <script>
-
     export let val;
-
+  
     export function empty() {
-        val='';
+      val = "";
     }
-</script>
-
-<style></style>
-
-<input type="text" bind:value={val}>
+  </script>
+  
+  <input type="text" bind:value={val} />

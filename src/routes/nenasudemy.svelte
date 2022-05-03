@@ -2,104 +2,102 @@
 
 <script>
 	import CustomInput from "$lib/nenasudemy/CustomInput.svelte";
-	import Toggle from '$lib/nenasudemy/Toggle.svelte';
-
-	let val = "Finna Beanna Bobinna";
-	let selectedOption = 1;
+	import Toggle from "$lib/nenasudemy/Toggle.svelte";
+	import { isValidEmail } from "$lib/nenasudemy/validation.js";
+  
+	let val = "Finna Neanna Bobbinna";
 	let price = 0;
+	let selectedOption = 1;
 	let agreed;
-//   let favColor = 'red';
-	let favColor = ['red'];
-	let singleFavColor = 'blue';
+	//   let favColor = 'green';
+	let favColor = ["green"];
+	let singleFavColor = "red";
 	let usernameInput;
 	let someDiv;
-	let customInp;
-	let enteredEmail = '';
+	let customInput;
+	let enteredEmail = "";
 	let formIsValid = false;
-
-	customInp.empty();
-
-	$: if (enteredEmail.includes("@")) {
-		formIsValid = true;
+  
+	$: if (isValidEmail(enteredEmail)) {
+	  formIsValid = true;
 	} else {
-		formIsValid = false;
+	  formIsValid = false;
 	}
-
+  
 	$: console.log(val);
 	$: console.log(selectedOption);
 	$: console.log(price);
 	$: console.log(agreed);
 	$: console.log(favColor);
 	$: console.log(singleFavColor);
-	$: console.log(customInp);
-
+	$: console.log(customInput);
+  
 	function setValue(event) {
-		val = event.target.value;
+	  val = event.target.value;
 	}
-<<<<<<< HEAD
-
+  
 	function saveData() {
-		// console.log(document.querySelector('#username').value);
-		console.log(usernameInput.value);
-		console.dir(usernameInput);
-		console.dir(someDiv);
-		customInp.empty();
+	  //   console.log(document.querySelector('#username').value);
+	  console.log(usernameInput.value);
+	  console.dir(usernameInput);
+	  console.dir(someDiv);
+	  customInput.empty();
 	}
-</script>
-
-<!-- <input type="text" value={val} on:input={setValue}> -->
-<!-- <input type="text" bind:value={val} /> -->
-
-<CustomInput bind:val={val} bind:this={customInp}/>
-
-<Toggle bind:chosenOption={selectedOption} />
-
-<input 
-	type="number" 
-	bind:value={price}>
-
-
-<label>
-	<input type="checkbox" bind:checked={agreed}>
+  </script>
+  
+  <style>
+	.invalid {
+	  border: 1px solid red;
+	}
+  </style>
+  
+  <!-- <input type="text" value={val} on:input={setValue}> -->
+  <!-- <input type="text" bind:value={val} /> -->
+  <CustomInput bind:val bind:this={customInput} />
+  
+  <Toggle bind:chosenOption={selectedOption} />
+  
+  <input type="number" bind:value={price} />
+  
+  <label>
+	<input type="checkbox" bind:checked={agreed} />
 	Agree to terms?
-</label>
-
-<h1>Favorite color(s)?</h1>
-
-<label>
-	<input type="checkbox" name="color" value="green" bind:group={favColor}>
-	Green
-</label>
-
-<label>
-	<input type="checkbox" name="color" value="red" bind:group={favColor}>
+  </label>
+  
+  <!-- Replace "checkbox" with "radio" and update the "favColor" variable above to see the radio example -->
+  <h1>Favorite Color?</h1>
+  <label>
+	<input type="checkbox" name="color" value="red" bind:group={favColor} />
 	Red
-</label>
-
-<label>
-	<input type="checkbox" name="color" value="blue" bind:group={favColor}>
+  </label>
+  <label>
+	<input type="checkbox" name="color" value="green" bind:group={favColor} />
+	Green
+  </label>
+  <label>
+	<input type="checkbox" name="color" value="blue" bind:group={favColor} />
 	Blue
-</label>
-
-
-
-<select bind:value={singleFavColor}>
-	<option value="green"></option>
-	<option value="red"></option>
-	<option value="blue"></option>
-</select>
-
-<hr>
-
-<input type="text" bind:this={usernameInput}>
-<button on:click={saveData}>Save</button>
-
-<div bind:this={someDiv}></div>
-
-<form on:submit|preventDefault>
-
-	<input type="email" bind:value={enteredEmail}>
-	<button type="submit" disabled={!formIsValid}></button>
-
-</form>
-
+  </label>
+  
+  <select bind:value={singleFavColor}>
+	<option value="green">Green</option>
+	<option value="red">Red</option>
+	<option value="blue">Blue</option>
+  </select>
+  
+  <hr />
+  
+  <input type="text" bind:this={usernameInput} />
+  <button on:click={saveData}>Save</button>
+  
+  <div bind:this={someDiv} />
+  
+  <hr />
+  
+  <form on:submit|preventDefault>
+	<input
+	  type="email"
+	  bind:value={enteredEmail}
+	  class={isValidEmail(enteredEmail) ? '' : 'invalid'} />
+	<button type="submit" disabled={!formIsValid}>Save</button>
+  </form>
