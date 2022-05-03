@@ -17,7 +17,7 @@
 	</div>
 </header> 
 <h1>Welcome to Yeeters!</h1>
-<p>Yeeting all the day long ---- hey James!</p>
+<p>Yeeting all the day long</p>
 <img src="/img/pinkie.png" alt="pinkie" />
 
 <style lang="scss">

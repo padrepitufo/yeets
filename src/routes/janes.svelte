@@ -1,6 +1,3 @@
-<script>
-    
-</script>
 <style lang="scss">
 
     $gutter-vertical: 8rem;

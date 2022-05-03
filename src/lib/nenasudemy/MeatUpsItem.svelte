@@ -1,4 +1,3 @@
-<!-- put on pausu -->
 
 <script>
     import Button from "$lib/nenasudemy/Button.svelte";

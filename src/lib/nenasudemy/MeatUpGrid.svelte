@@ -1,4 +1,3 @@
-<!-- put on pausu -->
 
 <style>
     section {

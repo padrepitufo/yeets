@@ -1,7 +1,3 @@
-<!-- put on pausu -->
-
-<script></script>
-
 <style>
 
     span {

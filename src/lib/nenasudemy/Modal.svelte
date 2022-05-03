@@ -1,4 +1,3 @@
-<!-- put on pausu -->
 
 <script>
    import { createEventDispatcher } from 'svelte';
