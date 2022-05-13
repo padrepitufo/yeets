@@ -2,25 +2,44 @@
 
 
 <script>
-	import Cart from "$lib/nenasudemy/Cart.svelte";
-	import Products from "$lib/nenasudemy/Products.svelte";
-  import Button from "$lib/nenasudemy/Button.svelte";
-  import { timer } from "$lib/nenasudemy/timer-store.js";
+  import meatups from "$lib/nenasudemy/meatups-store.js";
+	import Hederr from "$lib/nenasudemy/Hederr.svelte";
+	import MeatUpGrid from "$lib/nenasudemy/MeatUpGrid.svelte";
+	// import TextInput from "$lib/nenasudemy/TextInput.svelte";
+	import Button from "$lib/nenasudemy/Button.svelte";
+	import EditNewMeatup from "$lib/nenasudemy/EditNewMeatup.svelte";
+		
+	// let meatups = ;
 
-  let showCart = true;
+  let editMode;
 
-  // timer.subscribe(count => {
-  //   console.log('App: ' + count);
-  // })
+  function addMeatup(event) {
+    editMode = null;
+  }
 
+  function cancelEdit() {
+    editMode = null;
+  }
 </script>
-  
 
-<Button on:click={() => {showCart = !showCart}}>Toggle Cart</Button>
+<style>
+  main {
+    margin-top: 5rem;
+  }
 
-{#if showCart}
-  <Cart />
-{/if}
-<Products />
+  .meatup-controls {
+    margin: 1rem;
+  }
+</style>
 
-<!-- <p>Count: {$timer}</p> -->
+<Hederr />
+
+<main>
+  <div class="meatup-controls">
+    <Button on:click={() => (editMode = 'add')}>New Meatup</Button>
+  </div>
+  {#if editMode === 'add'}
+    <EditNewMeatup on:save={addMeatup} on:cancel={cancelEdit} />
+  {/if}
+  <MeatUpGrid meatups={$meatups}/>
+</main>

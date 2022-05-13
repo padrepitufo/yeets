@@ -1,78 +1,80 @@
 
 <script>
+    import meatups from "$lib/nenasudemy/meatups-store.js";
     import Button from "$lib/nenasudemy/Button.svelte";
-    import { createEventDispatcher } from "svelte";
     import Badge from "$lib/nenasudemy/Badge.svelte";
 
-    export let id;
-    export let title;
-    export let subtitle;
-    export let imageUrl;
-    export let description;
-    export let address;
-    export let email;
-    export let isFav;
+  export let id;
+  export let title;
+  export let subtitle;
+  export let imageUrl;
+  export let description;
+  export let address;
+  export let email;
+  export let isFav;
 
-    const dispatch = createEventDispatcher();
+  function toggleFavorite() {
+    meatups.toggleFavorite(id);
+  };
 
- </script>
+</script>
 
 
  <style>
-   @import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab');
-   @import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wdth,wght@87.1,400;100,300&family=Hind+Siliguri&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab');
+    @import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wdth,wght@87.1,400;100,300&family=Hind+Siliguri&display=swap');
    
    
-   article {
-       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-       border-radius: 5px;
-       background: white;
-       margin: 1rem;
-     }
+  article {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    background: white;
+    margin: 1rem;
+  }
 
-   header,
-   .content,
-   footer {
-     padding: 1rem;
-   }
+  header,
+  .content,
+  footer {
+    padding: 1rem;
+  }
 
-   .image {
-     width: 100%;
-     height: 14rem;
-   }
+  .image {
+    width: 100%;
+    height: 14rem;
+  }
 
-   .image img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-   }
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-   h1 {
-     font-size: 1.25rem;
-     margin: 0.5rem 0;
-     font-family: "Roboto Slab", sans-serif;
-   }
+  h1 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    font-family: "Roboto Slab", sans-serif;
+  }
 
-   h2 {
-     font-family: 'Anek Tamil', sans-serif;
-     font-size: 1rem;
-     color: #947c97;
-     margin: 0.5rem 0;
-   }
+  h2 {
+    font-family: 'Anek Tamil', sans-serif;
+    font-size: 1rem;
+    color: #947c97;
+    margin: 0.5rem 0;
+  }
 
-   p {
-     font-size: 1.25rem;
-     margin: 0;
-     font-family: 'Anek Tamil', sans-serif;
-   }
+  p {
+    font-size: 1.25rem;
+    margin: 0;
+    font-family: 'Anek Tamil', sans-serif;
+  }
 
-   div {
-     text-align: right;
-   }
+  div {
+    text-align: right;
+  }
 
-   .content {
-     height:4rem;
-   }
+  .content {
+    height:4rem;
+  }
 
    </style>
  
@@ -104,7 +106,7 @@
           mode="outline"
           color={isFav ? null : 'success'}
           type="button" 
-          on:click={() => dispatch('togglefavorite', id)}>
+          on:click={toggleFavorite}>
           {isFav ? 'Unfavorite' : 'Favorite'}
         </Button>
 
