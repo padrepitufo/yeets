@@ -92,7 +92,7 @@ function deleteProduct(event) {
 <h1>Luke's space</h1>
 <h3>January 29</h3>
 <p>
-    My thoughts about Minecraft.
+    My thoughts about Boringcraft.
 Minecraft I would say it's fun because you have infinite possibilties.
 You can create anything, Like cars, trains, houses, and boats.
 and there is 4 gamemodes you can try! Now I will write them in a list.
