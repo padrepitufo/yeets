@@ -15,14 +15,15 @@
   
   
   <script>
-    import MeatUpsItem from "./MeatUpsItem.svelte";
+    import MeatUpsItem from "$lib/nenasudemy/MeatUpsItem.svelte";
+
     export let meatups;
+
   </script>
   
   
   
 <section id="meatups">
-  
   {#each meatups as meatup}
     <MeatUpsItem 
       id={meatup.id}
@@ -33,7 +34,7 @@
       email={meatup.contactEmail}
       address={meatup.address}
       isFav={meatup.isFavorite}
-      on:togglefavorite 
+      on:showDetails 
     />
   {/each}
 </section>
