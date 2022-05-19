@@ -3,6 +3,7 @@
     import TextInput from "$lib/LukesMeetups/TextInput.svelte";
     import Button from "$lib/LukesMeetups/Button.svelte";
 import { add_render_callback } from "svelte/internal";
+import Modal from '$lib/LukesMeetups/Modal.svelte'
 
     let title = '';
     let subtitle = '';
@@ -23,17 +24,20 @@ import { add_render_callback } from "svelte/internal";
             imageUrl: imageUrl,
         });
     }
+
+    function cancel() {
+      dispatch('cancel');  
+    }
 </script>
 
 <style>
     form {
-            width: 30rem;
-            max-width: 90%;
-            margin: auto;
+            width: 100%;
+           
         }
 </style>
 
-
+<Modal title="Edit Meetup Data" on:cancel>
 <form on:submit|preventDefault={submitForm}>
     <TextInput 
     id="title"
@@ -64,8 +68,12 @@ import { add_render_callback } from "svelte/internal";
      <TextInput 
      id="description"
      label="Description" 
-     controlType="text" 
+     controlType="textarea" 
      value={description} 
-     on:input={(event) => description = event.target.value} />
-     <Button type="submit">Save</Button>
+     on:input={event => (description = event.target.value)} />
  </form>
+ <div slot="footer">
+    <Button type="button" mode="outline" on:click={cancel}>Cancel</Button>
+    <Button type="button" on:click={submitForm}>Save</Button>
+ </div>
+</Modal>
