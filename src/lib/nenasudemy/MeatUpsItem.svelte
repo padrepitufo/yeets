@@ -1,5 +1,6 @@
 
 <script>
+    import { createEventDispatcher } from "svelte";
     import meatups from "$lib/nenasudemy/meatups-store.js";
     import Button from "$lib/nenasudemy/Button.svelte";
     import Badge from "$lib/nenasudemy/Badge.svelte";
@@ -12,6 +13,8 @@
   export let address;
   export let email;
   export let isFav;
+
+  const dispatch = createEventDispatcher();
 
   function toggleFavorite() {
     meatups.toggleFavorite(id);
@@ -50,9 +53,9 @@
   }
 
   h1 {
-    font-size: 1.25rem;
+    font-size: 1.50rem;
     margin: 0.5rem 0;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: 'Anek Tamil', sans-serif;
   }
 
   h2 {
@@ -80,38 +83,32 @@
  
  <!-- Card thing o//o -->
 
-<article>
-
-    <header>
-        <h1>
-          {title} 
-          {#if isFav}
-            <Badge>FAVORITE</Badge>
-          {/if}
-        </h1>
-        <h2>{subtitle}</h2>  
-        <p>{address}</p>
-    </header>
-    <div class="image">
-        <img src="{imageUrl}" alt="{title}">
-    </div>
-    <div class="content">
-        <p>{description}</p>
-    </div>
-
-    <footer>
-        <Button href="mailto:{email}" >Contact</Button>
-
-        <Button 
-          mode="outline"
-          color={isFav ? null : 'success'}
-          type="button" 
-          on:click={toggleFavorite}>
-          {isFav ? 'Unfavorite' : 'Favorite'}
-        </Button>
-
-        <Button type="button">Show More</Button>
-       
-    </footer>
-
+ <article>
+  <header>
+    <h1>
+      {title}
+      {#if isFav}
+        <Badge>FAVORITE</Badge>
+      {/if}
+    </h1>
+    <h2>{subtitle}</h2>
+    <p>{address}</p>
+  </header>
+  <div class="image">
+    <img src={imageUrl} alt={title} />
+  </div>
+  <div class="content">
+    <p>{description}</p>
+  </div>
+  <footer>
+    <Button href="mailto:{email}">Contact</Button>
+    <Button
+      mode="outline"
+      color={isFav ? null : 'success'}
+      type="button"
+      on:click={toggleFavorite}>
+      {isFav ? 'Unfavorite' : 'Favorite'}
+    </Button>
+    <Button type="button" on:click={() => dispatch('showDetails', id)}>Show Details</Button>
+  </footer>
 </article>
