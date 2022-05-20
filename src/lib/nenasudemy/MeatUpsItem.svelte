@@ -53,9 +53,9 @@
   }
 
   h1 {
-    font-size: 1.25rem;
+    font-size: 1.50rem;
     margin: 0.5rem 0;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: 'Anek Tamil', sans-serif;
   }
 
   h2 {
@@ -109,6 +109,6 @@
       on:click={toggleFavorite}>
       {isFav ? 'Unfavorite' : 'Favorite'}
     </Button>
-    <Button type="button" on:click={() => dispatch('showdetails', id)}>Show Details</Button>
+    <Button type="button" on:click={() => dispatch('showDetails', id)}>Show Details</Button>
   </footer>
 </article>

@@ -19,6 +19,8 @@
 </script>
 
 <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab');
+    @import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wdth,wght@87.1,400;100,300&family=Hind+Siliguri&display=swap');
     section {
     margin-top: 4rem;
     }
@@ -46,17 +48,19 @@
 
     h1 {
     font-size: 2rem;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: 'Anek Tamil', sans-serif;
     margin: 0.5rem 0;
     }
 
     h2 {
     font-size: 1.25rem;
     color: #6b6b6b;
+    font-family: 'Anek Tamil', sans-serif;
     }
 
     p {
     font-size: 1.5rem;
+    font-family: 'Anek Tamil', sans-serif;
     }
 </style>
 

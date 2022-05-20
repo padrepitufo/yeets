@@ -18,7 +18,6 @@
     import MeatUpsItem from "$lib/nenasudemy/MeatUpsItem.svelte";
 
     export let meatups;
-
   </script>
   
   
