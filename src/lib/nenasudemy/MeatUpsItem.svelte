@@ -11,7 +11,7 @@
   export let imageUrl;
   export let description;
   export let address;
-  export let email;
+  // export let email;
   export let isFav;
 
   const dispatch = createEventDispatcher();
@@ -101,7 +101,9 @@
     <p>{description}</p>
   </div>
   <footer>
-    <Button href="mailto:{email}">Contact</Button>
+    <Button mode="outline" type="button" on:click={() => dispatch('edit', id)}>
+      Edit
+    </Button>
     <Button
       mode="outline"
       color={isFav ? null : 'success'}
@@ -109,6 +111,8 @@
       on:click={toggleFavorite}>
       {isFav ? 'Unfavorite' : 'Favorite'}
     </Button>
-    <Button type="button" on:click={() => dispatch('showDetails', id)}>Show Details</Button>
+    <Button type="button" on:click={() => dispatch('showDetails', id)}>
+      Show Details
+    </Button>
   </footer>
 </article>

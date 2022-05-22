@@ -6,13 +6,30 @@
     import { isEmpty, isValidEmail } from "$lib/nenasudemy/validation.js";
     import meatups from "$lib/nenasudemy/meatups-store.js";
 
-  
+    export let id = null;
+
   let title = "";
   let subtitle = "";
   let address = "";
   let email = "";
   let description = "";
   let imageUrl = "";
+
+  if (id) {
+    const unsubscribe = meatups.subscribe(items => {
+      const selectedMeatup = items.find(i => i.id === id);
+      title = selectedMeatup.title;
+      subtitle = selectedMeatup.subtitle;
+      address = selectedMeatup.address;
+      email = selectedMeatup.contactEmail;
+      description = selectedMeatup.description;
+      imageUrl = selectedMeatup.imageUrl;
+    });
+
+    unsubscribe();
+  }
+  
+  
 
   const dispatch = createEventDispatcher();
 
@@ -38,10 +55,20 @@
       imageUrl: imageUrl,
       contactEmail: email,
       address: address
-    };
+  };
+
 
     // meatups.push(newMeatup); // DOES NOT WORK!
-    meatups.addMeatup(meatupData);
+    if (id) {
+      meatups.updateMeatup(id,meatupData);
+    } else {
+      meatups.addMeatup(meatupData);
+    }
+    dispatch("save");
+  }
+
+  function deleteMeatup() {
+    meatups.removeMeatup(id);
     dispatch("save");
   }
 
@@ -107,5 +134,8 @@
     <Button type="button" on:click={submitForm} disabled={!formIsValid}>
       Save
     </Button>
+    {#if id}
+      <Button type="button" on:click={deleteMeatup}>Delete</Button>
+    {/if}
   </div>
 </Modal>

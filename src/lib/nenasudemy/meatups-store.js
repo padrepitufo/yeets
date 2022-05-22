@@ -35,6 +35,20 @@ const meatups = writable([
         return [newMeatup, ...items];
       });
     },
+    updateMeatup: (id, meatupData) => {
+      meatups.update(items => {
+        const meatupIndex = items.findIndex(i => i.id === id);
+        const updatedMeatup = { ...items[meatupIndex], ...meatupData };
+        const updatedMeatups = [...items];
+        updatedMeatups[meatupIndex] = updatedMeatup;
+        return updatedMeatups;
+      });
+    },
+    removeMeatup: (id) => {
+      meatups.update(items => {
+        return items.filter(i => i.id !== id);
+      });
+    },
     toggleFavorite: id => {
       meatups.update(items => {
         const updatedMeatup = { ...items.find(m => m.id === id) };
