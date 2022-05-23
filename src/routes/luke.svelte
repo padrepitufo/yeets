@@ -39,7 +39,7 @@
         $: console.log(selectedOption);
         $: console.log(price);
         $: console.log(agreed);
-        $: console.log(favColor);
+        $: console.log(`${favColor}hello0`);
         $: console.log(singleFavColor);
         $: console.log(customInput);
         
