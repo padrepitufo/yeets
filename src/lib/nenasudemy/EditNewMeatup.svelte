@@ -1,3 +1,5 @@
+<!-- putu onu pausu -->
+
 <script>
     import { createEventDispatcher } from "svelte";
     import TextInput from "$lib/nenasudemy/TextInput.svelte";

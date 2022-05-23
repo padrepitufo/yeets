@@ -1,3 +1,5 @@
+//putu onu pausu 
+
 import { writable } from 'svelte/store';
 
 const meatups = writable([

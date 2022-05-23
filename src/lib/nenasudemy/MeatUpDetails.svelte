@@ -1,3 +1,5 @@
+<!-- putu onu pausu -->
+
 <script>
     import { onDestroy, createEventDispatcher } from "svelte";
     import meatups from "$lib/nenasudemy/meatups-store.js";
