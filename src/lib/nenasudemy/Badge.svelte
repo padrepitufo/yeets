@@ -1,5 +1,11 @@
 <!-- putu onu pausu -->
 
+<script>
+    import { slide } from "svelte/transition";
+
+
+</script>
+
 <style>
 
     span {
@@ -17,4 +23,6 @@
 
 </style>
 
-<span> <slot></slot> </span>
+<span transition:slide> 
+    <slot></slot> 
+</span>

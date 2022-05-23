@@ -21,25 +21,28 @@
   </style>
   
   
-  <script>
-      import { createEventDispatcher } from "svelte";
-    import MeatUpsItem from "$lib/nenasudemy/MeatUpsItem.svelte";
-    import MeatUpFilter from "$lib/nenasudemy/MeatUpFilter.svelte";
-    import Button from "$lib/nenasudemy/Button.svelte";
+<script>
+    import { scale } from "svelte/transition";
+    import { flip } from "svelte/animate";
+    import { createEventDispatcher } from "svelte";
 
-    export let meatups;
+  import MeatUpsItem from "$lib/nenasudemy/MeatUpsItem.svelte";
+  import MeatUpFilter from "$lib/nenasudemy/MeatUpFilter.svelte";
+  import Button from "$lib/nenasudemy/Button.svelte";
 
-    const dispatch = createEventDispatcher();
+  export let meatups;
 
-    let favsOnly = false;
+  const dispatch = createEventDispatcher();
 
-    $: filteredMeatups = favsOnly ? meatups.filter(m => m.isFavorite) : meatups;
+  let favsOnly = false;
 
-    function setFilter(event) {
-      favsOnly = event.detail === 1;
-    }
+  $: filteredMeatups = favsOnly ? meatups.filter(m => m.isFavorite) : meatups;
 
-  </script>
+  function setFilter(event) {
+    favsOnly = event.detail === 1;
+  }
+
+</script>
   
 <section id="meatup-controls">
   <MeatUpFilter on:select="{setFilter}"/>
@@ -47,18 +50,20 @@
 </section>
   
 <section id="meatups">
-  {#each filteredMeatups as meatup}
-    <MeatUpsItem 
-      id={meatup.id}
-      title={meatup.title} 
-      subtitle={meatup.subtitle} 
-      description={meatup.description}
-      imageUrl={meatup.imageUrl}
-      email={meatup.contactEmail}
-      address={meatup.address}
-      isFav={meatup.isFavorite}
-      on:showDetails 
-      on:edit
-    />
+  {#each filteredMeatups as meatup (meatup.id)}
+    <div  transition:scale animate:flip={{duration: 500}}>
+      <MeatUpsItem 
+        id={meatup.id}
+        title={meatup.title} 
+        subtitle={meatup.subtitle} 
+        description={meatup.description}
+        imageUrl={meatup.imageUrl}
+        email={meatup.contactEmail}
+        address={meatup.address}
+        isFav={meatup.isFavorite}
+        on:showDetails 
+        on:edit
+      />
+    </div>
   {/each}
 </section>
