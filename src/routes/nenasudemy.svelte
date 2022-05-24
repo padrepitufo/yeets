@@ -1,6 +1,4 @@
 <!-- ACTUALLY FOLLOWING UDEMY STUFF -->
-
-
 <script>
   import meatups from "$lib/nenasudemy/meatups-store.js";
 	import Hederr from "$lib/nenasudemy/Hederr.svelte";
@@ -11,27 +9,29 @@
   import MeatUpDetails from "$lib/nenasudemy/MeatUpDetails.svelte";
 		
 	// let meatups = ;
-
   let editMode;
+  let editedId;
   let page = "overview";
   let pageData = {};
-
-  function addMeatup(event) {
+  function savedMeatup(event) {
     editMode = null;
+    editedId = null;
   }
-
   function cancelEdit() {
     editMode = null;
+    editedId = null;
   }
-
   function showDetails(event) {
     page = "details";
     pageData.id = event.detail;
   }
-
   function closeDetails() {
     page = 'overview';
     pageData = {};
+  }
+  function startEdit(event) {
+    editMode = 'edit';
+    editedId = event.detail;
   }
 </script>
 
@@ -39,23 +39,16 @@
   main {
     margin-top: 5rem;
   }
-
-  .meatup-controls {
-    margin: 1rem;
-  }
 </style>
 
 <Hederr />
 
 <main>
   {#if page === 'overview'}
-    <div class="meatup-controls">
-      <Button on:click={() => (editMode = 'add')}>New Meatup</Button>
-    </div>
-    {#if editMode === 'add'}
-      <EditNewMeatup on:save={addMeatup} on:cancel={cancelEdit} />
+    {#if editMode === 'edit'}
+      <EditNewMeatup id={editedId} on:save={savedMeatup} on:cancel={cancelEdit} />
     {/if}
-    <MeatUpGrid meatups={$meatups} on:showDetails={showDetails} />
+    <MeatUpGrid meatups={$meatups} on:showDetails={showDetails} on:edit={startEdit} on:add={() => {editMode = 'edit'}} />
   {:else}
     <MeatUpDetails id={pageData.id} on:close={closeDetails} />
   {/if}

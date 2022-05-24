@@ -3,7 +3,8 @@
     import TextInput from "$lib/LukesMeetups/TextInput.svelte";
     import Button from "$lib/LukesMeetups/Button.svelte";
 import { add_render_callback } from "svelte/internal";
-import Modal from '$lib/LukesMeetups/Modal.svelte'
+import Modal from '$lib/LukesMeetups/Modal.svelte';
+import { isEmpty, isValidEmail } from '$lib/LukesMeetups/validayshun';
 
     let title = '';
     let subtitle = '';
@@ -11,8 +12,22 @@ import Modal from '$lib/LukesMeetups/Modal.svelte'
     let email = '';
     let description = '';
     let imageUrl = '';
-
+    
     const dispatch = createEventDispatcher();
+
+    $: titleValid = !isEmpty(title);
+    $: subtitleValid = !isEmpty(subtitle);
+    $: addressValid = !isEmpty(address);
+    $: descriptionValid = !isEmpty(description);
+    $: imageUrlValid = !isEmpty(imageUrl);
+    $: emailValid = isValidEmail(email);
+    $: formIsValid = 
+    titleValid && 
+    subtitleValid && 
+    addressValid && 
+    descriptionValid && 
+    imageUrlValid && 
+    emailValid;
 
     function submitForm() {
         dispatch('save', {
@@ -41,39 +56,50 @@ import Modal from '$lib/LukesMeetups/Modal.svelte'
 <form on:submit|preventDefault={submitForm}>
     <TextInput 
     id="title"
-    label="Title"  
+    label="Title"
+     valid={titleValid}
+     validityMessage="Please enter a valid title."
     value={title} 
     on:input={(event) => title = event.target.value} />
     <TextInput 
     id="subtitle"
     label="Subtitle" 
+    valid={subtitleValid}
+    validityMessage="Please enter a valid subtitle."
     value={subtitle} 
     on:input={(event) => subtitle = event.target.value} />
     <TextInput 
     id="address"
     label="Adress"
+    valid={addressValid}
+    validityMessage="Please enter a valid address."
     value={address} 
     on:input={(event) => address = event.target.value} />
     <TextInput 
     id="imageUrl"
     label="Image URL" 
+    valid={imageUrlValid}
+    validityMessage="Please enter a valid image url."
     value={imageUrl} 
     on:input={(event) => imageUrl = event.target.value} />
     <TextInput 
     id="email"
-    label="E-mail"  
+    label="E-Mail"
+    valid={emailValid}
+    validityMessage="Please enter a valid email address." 
     type="email"
     value={email}
     on:input={(event) => email = event.target.value} />
      <TextInput 
      id="description"
      label="Description" 
+     valid={descriptionValid}
+    validityMessage="Please enter a valid description."
      controlType="textarea" 
-     value={description} 
-     on:input={event => (description = event.target.value)} />
+     bind:value={description} />
  </form>
  <div slot="footer">
     <Button type="button" mode="outline" on:click={cancel}>Cancel</Button>
-    <Button type="button" on:click={submitForm}>Save</Button>
+    <Button type="button" on:click={submitForm} disabled={!formIsValid}>Save</Button>
  </div>
 </Modal>
