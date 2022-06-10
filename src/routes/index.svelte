@@ -16,14 +16,50 @@
 		<a href="/nena" class="btn btn--white btn--animated">Discover our tours</a>
 	</div>
 </header> 
+
+<main>
+    <section class="section-about">
+        <div class="u-center-text">
+            <h2 class="heading-secondary">
+                Yeeting all day long   
+            </h2>
+        </div>
+
+      
+    </section>
+</main>
+
 <h1>Welcome to Yeeters!</h1>
-<p>Yeeting all the day long ---- hey James!</p>
+<p>Yeeting all the day long </p>
 <img src="/img/pinkie.png" alt="pinkie" />
 
+
+
 <style lang="scss">
+    //COLORS
+    $color-primary:#55c57a;
+    $color-primary-light: #7ed56f;
+    $color-primary-dark: #28b485;   
+
+    $color-grey-light-1: #f7f7f7;
+
+    $color-grey-dark: #777;
+    $color-white: white;
+    $color-black: #000;
+
+    // FONT 
+    $default-font-size: 1.6rem;
+
+    .section-about {
+        background-color: $color-grey-light-1;
+        padding: 25rem 0;
+        margin-top: -20vh;
+    }
+
 	h1 {
 		color: #7ed56f;
 	}
+
 	p {
 		color: rgb(214, 116, 36);
 	}
@@ -35,21 +71,14 @@
     Medium green: #55c5ya
     Dark green: #28b485
 
-    */
+*/
     /* --color-primary: #55c57a; */
     /* --color-primary-light: #7ed56f; */
     /* --color-primary-dark: #28b485; */
     /* $color-grey-dark: #777 */
     
 
-	//COLORS
-    $color-primary:   #55c57a;
-    $color-primary-light: #7ed56f;
-    $color-primary-dark: #28b485;   
 
-    $color-grey-dark: #777;
-    $color-white: white;
-    $color-black: #000;
 
 
   
@@ -143,6 +172,37 @@
         animation: moveInRight 1s ease-in-out;
     }
 
+    .heading-secondary {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        background-image: linear-gradient(to right,$color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: .2rem;
+        transition: all .2s;
+
+        &:hover {
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+            text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+        }
+    }
+    
+    .heading-tertiary {
+        font-size: $default-font-size;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .paragraph {
+        font-size: $default-font-size;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
     @keyframes moveInLeft {
         0% {
             opacity: 0;
@@ -196,7 +256,7 @@
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
     }
 
     .btn:hover {
@@ -241,4 +301,5 @@
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
     } 
+    .u-margin-bottom-8 {margin-bottom: 8rem ; }
 </style>
