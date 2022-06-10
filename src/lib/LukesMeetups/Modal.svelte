@@ -1,11 +1,18 @@
 <script>
-import { createEventDispatcher } from "svelte";
+    import {createEventDispatcher} from 'svelte';
+    import Button from "./Button.svelte";
 
-const dispatch = createEventDispatcher();
+    export let title;
+
+    const dispatch = createEventDispatcher();
+
+    function closeModal() {
+        dispatch('cancel');
+    }
 </script>
 
 <style>
-    .backdrop {
+    .modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +23,6 @@ const dispatch = createEventDispatcher();
 }
 
 .modal {
-  padding: 1rem;
   position: fixed;
   top: 10vh;
   left: 10%;
@@ -29,22 +35,38 @@ const dispatch = createEventDispatcher();
   overflow: scroll;
 }
 
-header {
-    border-bottom: 1px solid #ccc;
+h1 {
+  padding: 1rem;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.content {
+  padding: 1rem;
+}
+
+footer {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
 }
 </style>
 
-<div class="backdrop" on:click="{() => dispatch('cancel')}" />
+<div class="modal-backdrop" on:click={closeModal} />
 <div class="modal">
-    <header>
-        <slot name="header"/>
-    </header>
+    <h1>{title}</h1>
     <div class="content">
-     <slot />
+        <slot />
     </div>
     <footer>
         <slot name="footer">
-            <button on:click="{() => dispatch('close')}">Close</button>
+            <Button on:click={closeModal}>Close</Button>
         </slot>
     </footer>
 </div>

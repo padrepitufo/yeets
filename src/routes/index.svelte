@@ -30,7 +30,7 @@
 </main>
 
 <h1>Welcome to Yeeters!</h1>
-<p>Yeeting all the day long </p>
+<p>Yeeting all the day long</p>
 <img src="/img/pinkie.png" alt="pinkie" />
 
 

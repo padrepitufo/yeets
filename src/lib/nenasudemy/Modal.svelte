@@ -1,6 +1,11 @@
+<!-- putu onu pausu -->
+
 <script>
-   import { createEventDispatcher } from 'svelte';
-   import Button from '$lib/nenasudemy/Button.svelte';
+    import { fly, fade } from 'svelte/transition';
+
+    import { createEventDispatcher } from 'svelte';
+
+    import Button from '$lib/nenasudemy/Button.svelte';
 
     export let title;
 
@@ -63,16 +68,16 @@
 </style>
 
 
-<div class="modal-backdrop" on:click={closeModal}></div>
-<div class="modal">
+<div class="modal-backdrop" on:click={closeModal} transition:fade></div>
+<div class="modal" transition:fly={{duration: 450, x:550,}}>
 
     <h1>{title}</h1>
     <div class="content">
         <slot />
     </div>
-    <footer>
+    <footer >
         <slot name="footer">
-            <Button on:click={closeModal}>Close</Button>
+            <Button  on:click={closeModal} >Close</Button>
         </slot>
     </footer>
 </div>
