@@ -12,7 +12,6 @@
     $: console.log(name);
 
     $: if (name === 'Velma' ) {
-        console.log('It runs!')
         number = 10;
     }
 
@@ -26,11 +25,9 @@
         // turn to uno reverse
 
         if (togglePic == imgPikachu) {
-        console.log ('imgPikachu is not equal') 
             togglePic = imgReverse;
 
         } else {
-        console.log ('imgReverse is equal')
         togglePic = imgPikachu;
         }
             

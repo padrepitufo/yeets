@@ -5,48 +5,36 @@
     export let postTitle;
     export let postContent;
     export let postDate;
-    export let yeetId;
-    import axios from "axios";
+    export let yeetId = undefined;
     import { 
         getStars,
         giveStars,
         takeStars 
     } from "$lib/yeets.js";
 
-    const api = axios.create({
-        baseURL: "http://localhost:8081"
-    });
-    let name = "Nena's Face";
-    let age = "As Old As Your Mom";
     let likes = 0;
+    const notAYeet = () => yeetId == undefined;
     onMount(async () => {
-       const thumbs = await getStars(yeetId);
-       for (const thumb of thumbs) {
-           likes = likes + thumb.rating;
-       }
-       console.log(thumbs);
+        if (notAYeet()) return;
+        const thumbs = await getStars(yeetId);
+        for (const thumb of thumbs) {
+            likes = likes + thumb.rating;
+        }
     });
 
     const thumbsup  = async () => {
+        if (notAYeet()) return;
         const response = await giveStars(yeetId);
-        console.log(response);
         console.error("increment likes!");
         likes += 1;
     };
 
     const thumbsdown  = async () => {
+        if (notAYeet()) return;
         console.error("decrementing likes");
-        const response = await takeStars(yeetId);
+        await takeStars(yeetId);
         likes -= 1;
-        api.get("/stars/")
-        .then(res => {
-            console.log(`got data ${res.data}`);
-            return Promise.resolve(res.data);
-        })
-        .catch(err => {
-            console.log(`got err ${err}`);
-            return Promise.reject(err);
-        });
+        return getStars();
     };
     
     // import Header from "$lib/header.svelte";
@@ -68,6 +56,7 @@
         border-style: ridge;
         border-radius: 10px;
         box-shadow: 0 5px 8px rgba(221, 173, 84, 0.26);
+        margin-bottom: 45px;
     }
     h3{
         padding-left: 71px;
@@ -107,8 +96,10 @@
     <p>{postContent}</p>
     <sub>Posted {postDate}</sub>
     <div class="tumby">
-        <button on:click="{thumbsup}">👍</button>
-        <button on:click="{thumbsdown}">👎</button>
-        {likes}
+        {#if !notAYeet()}
+            <button on:click="{thumbsup}">👍</button>
+            <button on:click="{thumbsdown}">👎</button>
+            {likes}
+        {/if}
     </div>
 </div>

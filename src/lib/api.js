@@ -4,6 +4,7 @@ const yeetsAPI = axios.create({
     baseURL : "https://api.kube.watch"
 });
 const apiRequest = (method, url, request) => {
+    console.log("api requstot");
     const headers = {
         authorization: ""
     };
@@ -20,8 +21,24 @@ const apiRequest = (method, url, request) => {
         return Promise.reject(err);
     });
 };
-const get = (url, request) => apiRequest("get", url,request);
-const post = (url, request) => apiRequest("post", url, request);
+
+const api = (method, url, request = undefined) => {
+    console.log("api requstotaa");
+    return fetch(`https://api.kube.watch${url}`, {
+        method: method.toUpperCase(),
+        body: request ? JSON.stringify(request) : undefined,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => {
+        return Promise.resolve(res.json());
+    })
+    .catch(err => {
+        return Promise.reject(err);
+    });
+}
+const get = (url) => api("get", url);
+const post = (url, request) => api("post", url, request);
 const API ={
     get,
     post,

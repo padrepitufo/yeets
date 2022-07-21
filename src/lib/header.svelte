@@ -11,6 +11,7 @@
             <li><a href="/janes">jane</a></li>
             <li><a href="/nenasudemy">nena</a></li>
             <li><a href="/makeyeets">posts</a></li>
+            <li><a href="/makeyeeps">users</a></li>
         </ul>
     </nav>
 </header>

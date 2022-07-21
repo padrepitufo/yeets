@@ -12,22 +12,22 @@
 </style>
 
 <script>
-	import { postYeets } from "$lib/yeets.js";
+	import { onMount } from 'svelte';
+	import { postYeets, getYeeps } from "$lib/yeets.js";
     import TextInput from "$lib/nenasudemy/TextInput.svelte";
     import Button from "$lib/nenasudemy/Button.svelte";
+	import Dropbox from '$lib/nenasudemy/Dropbox.svelte';
 
     let title = '';
     let content = '';
 
-
     const addYeet = async () => {
-		console.log('thuis isa consule loggerz');
-        const resYeets = await postYeets(title, content);
-        console.log(resYeets);
+        await postYeets(yeetAuthor, title, content);
 	};
 </script>
 
 <main>
+	 
 	<form on:submit|preventDefault="{addYeet}">
 	<TextInput 
 		id="title" 
@@ -41,7 +41,9 @@
 		controlType="textarea"
 		value={content} 
 		on:input={event => (content = event.target.value)} />
-    <Button type="submit" caption="Post"/>
+	<Dropbox/>
+    <Button type="submit" caption="Post"> Submit
+	</Button>
     </form>
 </main>
 
