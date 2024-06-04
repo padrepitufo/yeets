@@ -283,9 +283,3 @@
 <img on:click="{switchTogglePic}" src="{togglePic}" alt="">
 
 <!-- LINK ON WEBSITE FOR RUTHHIES UDEMY STOOF -->
-
-<nav>
-    <ul>
-        <li><a href="/ruthudemy">Click here to see my udemy progress!!!</a></li>
-    </ul>
-</nav>

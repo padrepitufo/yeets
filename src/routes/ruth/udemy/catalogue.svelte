@@ -1,7 +1,9 @@
 <script>
-    import Header from '$lib/ruthsudemy/Header.svelte';
-    import MeetupGrid from '$lib/components/MeetupGrid.svelte';
-    import TextInput from '$lib/components/TextInput.svelte';
+    import Header from '$lib/ruthudemy/Header.svelte';
+    import MeetupGrid from '$lib/ruthudemy/MeetupGrid.svelte';
+    import TextInput from '$lib/ruthudemy/TextInput.svelte';
+    import Button from '$lib/ruthudemy/Button.svelte';
+    
 
     let title = '';
     let subtitle = '';
@@ -22,12 +24,12 @@
         },
         {
             id: 'm2',
-            title: 'Fire 🤤',
-            subtitle: 'dO yOu LiKe FiRe 🤤',
-            description: 'hmm.. oh did not see you there enjoy this fire with me please 🥱',
-            imageUrl: 'https://imgs.search.brave.com/GHEBXPKUZK-9J0AuVimuEpOF9J1HD7w7l7qw1sl9wck/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/ZW1lcmdlbmN5LnBp/dHQuZWR1L3NpdGVz/L2RlZmF1bHQvZmls/ZXMvYmxvY2staW1n/L2ZpcmUuanBn',
-            address: 'FireRoad 32523 New York',
-            contactEmail: 'FireTime@test.com',
+            title: 'Dog Street',
+            subtitle: 'Walking Dogs',
+            description: 'Get A Job! HURRY UP!',
+            imageUrl: 'https://imgs.search.brave.com/1CyA6z5t1b4btwcaN5VWsKGtBmmtJ8--wImZfXwas1M/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly8xLmJw/LmJsb2dzcG90LmNv/bS9fTERGOXo0Wnpa/SG8vVFFBSlEwWWRf/QUkvQUFBQUFBQUFB/STAvNlpIb3RRTVVm/bWsvczE2MDAvMTYw/MERPR185MDA2Lmpw/Zw',
+            address: 'DogStreet 32523',
+            contactEmail: 'Dog@test.com',
         },
     ];
         
@@ -97,36 +99,12 @@
        value={email}
        on:input="{event => (email = event.target.value)}" />
        <TextInput 
-       id="description" 
+       id="description" dasf
        label="Description" 
        controlType="textarea"
        value={description}
        on:input="{event => (description = event.target.value)}" />
-           <div class="form-control">
-            <label for="title">Title</label>
-            <input type="text" id="title" bind:value={title} />
-        </div>
-        <div class="form-control">
-            <label for="subtitle">Subtitle</label>
-            <input type="text" id="subtitle" bind:value={subtitle} />
-        </div>
-        <div class="form-control">
-            <label for="address">Address</label>
-            <input type="text" id="address" bind:value={address} />
-        </div>
-        <div class="form-control">
-            <label for="imgUrl">Image Url</label>
-            <input type="text" id="imgUrl" bind:value={imgUrl} />
-        </div>
-        <div class="form-control">
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" bind:value={email} />
-        </div>
-        <div class="form-control">
-            <label for="description">Description</label>
-            <textarea rows="3" id="description" bind:value={description} />
-        </div>
-        <button type="submit" Save></button>
+        <Button type="submit" caption="Save" />
     </form>
     <MeetupGrid {meetups} />
 </main>

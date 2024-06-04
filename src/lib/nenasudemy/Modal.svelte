@@ -1,7 +1,7 @@
 <!-- putu onu pausu -->
 
 <script>
-    import { fly, fade } from 'svelte/transition';
+    import { fly, fade, blur } from 'svelte/transition';
 
     import { createEventDispatcher } from 'svelte';
 
