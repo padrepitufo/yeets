@@ -1,3 +1,7 @@
+# YEETS UI
+
+This is the frontend UI that consumes yeets-api for tastey taSTEY TASTEY breakfast.
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
