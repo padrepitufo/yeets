@@ -1,6 +1,6 @@
 # YEETS UI
 
-This is the frontend UI that consumes yeets-api for tastey taSTEY TASTEY breakfast.
+This frontend UI consumes the  yeets-api for tastey taSTEY TASTEY breakfast.
 
 # create-svelte
 
